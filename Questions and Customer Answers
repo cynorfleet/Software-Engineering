@@ -1,0 +1,81 @@
+1. What environment(s) should the software be able to run on?
+
+CMPS majors desktop and laptop computers
+
+2. Who will be the users of this system?
+
+CMPS majors in 1044 – CMPS 3013 courses
+
+3. Could you tell us a short story about how the user might be using this application?
+
+A CMPS1063 student will launch the application and will browse for a folder a file with
+
+source code in it. They will select options for the kind of language and type of testing
+
+they want to do. Then the application will give them a list of test cases categorized by
+
+type of testing for them to run their program on. It will allow them to enter the results
+
+they expect into the table. It will also allow them to enter the results they get into the
+
+grid or table. The app will compare their results with expected results (if possible). Then
+
+indicate if their test case passed or failed.
+
+4. Do you have a specific color scheme, or feel, in mind for the GUI?
+
+No, just a GUI
+
+5. What kind of GUI are you expecting, in terms of elements (buttons, text boxes, menus
+
+and scrollbars, etc)?
+
+Use dialog boxes to get project or file name
+
+Check boxes to look for different things
+
+A grid for test cases /w scroll bar
+
+6. Do you want to the software to analyze/read source code at all or a specific program
+
+requirements (formatted) document file?
+
+Let’s start with source code this semester
+
+7. If the software should analyze/read source code, what language should it be able to
+
+read?
+
+C++
+
+8. Should it be able to analyze/read multiple languages? Which ones? The most important
+
+ones?
+
+Later on yes, C++, Java, Python, C# (Have the last 3 languages disabled in the
+
+GUI control for now.
+
+9. Should the system have any security measures? If so what kind?
+
+No
+
+10. What functions of the system are of the highest priority?
+
+What kind of question is that to ask your customer? Determine what they are and then
+
+I’ll prioritize
+
+11. What kind of input or interaction is expected from the user?
+
+Just browse for file and then make selections from checkboxes, combo box or
+
+radiobuttons.
+
+12. What is the output expected to look like or must include?
+
+Expect a grid or a table of some sort
+
+13. Is any other specific functionality expected or required of the program?
+
+Huh?
