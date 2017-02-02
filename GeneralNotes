@@ -1,0 +1,9 @@
+From the first meeting:
+
+The test suite will open one or more .cpp and .h files.
+The user will choose from multiple levels of test which will check for different levels of exception handling.
+It will read the program and look at input variables and suggest input to test the program.
+If there are loops then the program will give an appropriate amount of test variables.
+The program will also do OOP test and propose test drivers for classes.
+The test suite will assume the read program compiles.
+Scanning for reprompts may be a future requirement.
