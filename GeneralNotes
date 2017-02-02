@@ -7,3 +7,4 @@ If there are loops then the program will give an appropriate amount of test vari
 The program will also do OOP test and propose test drivers for classes.
 The test suite will assume the read program compiles.
 Scanning for reprompts may be a future requirement.
+The test suite will read C++ but have disabled options for other languages.
