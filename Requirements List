@@ -1,0 +1,12 @@
+Test Case Design Suite
+Functional requirements
+•	Must be able to give sets of test cases for input source file code.
+•	Must be able to read source code files.
+•	Must be able to produce test variables and test drivers.
+•	Must be able to produce a template for a testing report document based on current session tests.
+•	Must be able to save testing report document.
+Nonfunctional requirements
+•	Must be extendable to reading more languages over time.
+•	Must be scalable to allow for other types of testing methods.
+•	Must be able to run on Windows Operating Systems.
+•	Source code must be in C++ (.cpp and .h).
