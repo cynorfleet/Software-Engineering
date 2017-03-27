@@ -1,0 +1,9 @@
+c:\users\damien\documents\visual studio 2015\Projects\ParadigmTestSuite\ParadigmTestSuite\bin\Debug\ParadigmTestSuite.exe.config
+c:\users\damien\documents\visual studio 2015\Projects\ParadigmTestSuite\ParadigmTestSuite\bin\Debug\ParadigmTestSuite.exe
+c:\users\damien\documents\visual studio 2015\Projects\ParadigmTestSuite\ParadigmTestSuite\bin\Debug\ParadigmTestSuite.pdb
+c:\users\damien\documents\visual studio 2015\Projects\ParadigmTestSuite\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.TestSuite.resources
+c:\users\damien\documents\visual studio 2015\Projects\ParadigmTestSuite\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.Properties.Resources.resources
+c:\users\damien\documents\visual studio 2015\Projects\ParadigmTestSuite\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.csproj.GenerateResource.Cache
+c:\users\damien\documents\visual studio 2015\Projects\ParadigmTestSuite\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.exe
+c:\users\damien\documents\visual studio 2015\Projects\ParadigmTestSuite\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.pdb
+c:\users\damien\documents\visual studio 2015\Projects\ParadigmTestSuite\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.csprojResolveAssemblyReference.cache
