@@ -47,10 +47,6 @@
             this.testMethod = new System.Windows.Forms.CheckedListBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.languageBox = new System.Windows.Forms.ComboBox();
-            this.menuBar = new System.Windows.Forms.MenuStrip();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.runToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openConfigToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -61,60 +57,34 @@
             this.generateDriverToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reportBox = new System.Windows.Forms.GroupBox();
-            this.compare15 = new System.Windows.Forms.CheckBox();
-            this.PR15 = new System.Windows.Forms.TextBox();
-            this.PR14 = new System.Windows.Forms.TextBox();
-            this.PR13 = new System.Windows.Forms.TextBox();
-            this.PR12 = new System.Windows.Forms.TextBox();
-            this.PR11 = new System.Windows.Forms.TextBox();
-            this.PR10 = new System.Windows.Forms.TextBox();
-            this.PR9 = new System.Windows.Forms.TextBox();
-            this.PR8 = new System.Windows.Forms.TextBox();
-            this.PR7 = new System.Windows.Forms.TextBox();
-            this.PR6 = new System.Windows.Forms.TextBox();
-            this.PR5 = new System.Windows.Forms.TextBox();
-            this.PR4 = new System.Windows.Forms.TextBox();
-            this.PR3 = new System.Windows.Forms.TextBox();
-            this.PR2 = new System.Windows.Forms.TextBox();
-            this.PR1 = new System.Windows.Forms.TextBox();
-            this.HW15 = new System.Windows.Forms.TextBox();
-            this.HW14 = new System.Windows.Forms.TextBox();
-            this.HW13 = new System.Windows.Forms.TextBox();
-            this.HW12 = new System.Windows.Forms.TextBox();
-            this.HW11 = new System.Windows.Forms.TextBox();
-            this.HW10 = new System.Windows.Forms.TextBox();
-            this.HW9 = new System.Windows.Forms.TextBox();
-            this.HW8 = new System.Windows.Forms.TextBox();
-            this.HW7 = new System.Windows.Forms.TextBox();
-            this.HW6 = new System.Windows.Forms.TextBox();
-            this.HW5 = new System.Windows.Forms.TextBox();
-            this.HW4 = new System.Windows.Forms.TextBox();
-            this.HW3 = new System.Windows.Forms.TextBox();
-            this.HW2 = new System.Windows.Forms.TextBox();
-            this.HW1 = new System.Windows.Forms.TextBox();
-            this.compare12 = new System.Windows.Forms.CheckBox();
-            this.compare1 = new System.Windows.Forms.CheckBox();
-            this.compare13 = new System.Windows.Forms.CheckBox();
-            this.compare3 = new System.Windows.Forms.CheckBox();
-            this.compare14 = new System.Windows.Forms.CheckBox();
-            this.compare4 = new System.Windows.Forms.CheckBox();
-            this.compare8 = new System.Windows.Forms.CheckBox();
-            this.compare5 = new System.Windows.Forms.CheckBox();
-            this.compare9 = new System.Windows.Forms.CheckBox();
-            this.compare7 = new System.Windows.Forms.CheckBox();
-            this.compare10 = new System.Windows.Forms.CheckBox();
-            this.compare6 = new System.Windows.Forms.CheckBox();
-            this.compare11 = new System.Windows.Forms.CheckBox();
-            this.compare2 = new System.Windows.Forms.CheckBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
+            this.HandEnter = new System.Windows.Forms.TextBox();
+            this.ProgramEnter = new System.Windows.Forms.TextBox();
+            this.HandResults = new System.Windows.Forms.ListBox();
+            this.ProgramResults = new System.Windows.Forms.ListBox();
+            this.reportBox = new System.Windows.Forms.GroupBox();
+            this.PassFail = new System.Windows.Forms.ListBox();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.newToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openConfigToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveConfigToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveReportToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.closeToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.runToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.generateTestToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.generateDriverToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuBar = new System.Windows.Forms.MenuStrip();
+            this.aboutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.userManualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.menuBar.SuspendLayout();
             this.reportBox.SuspendLayout();
+            this.menuBar.SuspendLayout();
             this.SuspendLayout();
             // 
             // label5
@@ -133,7 +103,7 @@
             this.generateDriverButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.generateDriverButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.generateDriverButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.generateDriverButton.Location = new System.Drawing.Point(843, 175);
+            this.generateDriverButton.Location = new System.Drawing.Point(882, 175);
             this.generateDriverButton.Name = "generateDriverButton";
             this.generateDriverButton.Size = new System.Drawing.Size(130, 46);
             this.generateDriverButton.TabIndex = 51;
@@ -163,7 +133,7 @@
             this.saveConfigButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.saveConfigButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.saveConfigButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saveConfigButton.Location = new System.Drawing.Point(843, 47);
+            this.saveConfigButton.Location = new System.Drawing.Point(882, 47);
             this.saveConfigButton.Name = "saveConfigButton";
             this.saveConfigButton.Size = new System.Drawing.Size(126, 23);
             this.saveConfigButton.TabIndex = 48;
@@ -196,7 +166,7 @@
             this.saveReportButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.saveReportButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.saveReportButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saveReportButton.Location = new System.Drawing.Point(840, 551);
+            this.saveReportButton.Location = new System.Drawing.Point(882, 549);
             this.saveReportButton.Name = "saveReportButton";
             this.saveReportButton.Size = new System.Drawing.Size(130, 46);
             this.saveReportButton.TabIndex = 43;
@@ -227,7 +197,7 @@
             this.inputBox.FormattingEnabled = true;
             this.inputBox.Location = new System.Drawing.Point(230, 273);
             this.inputBox.Name = "inputBox";
-            this.inputBox.Size = new System.Drawing.Size(199, 290);
+            this.inputBox.Size = new System.Drawing.Size(199, 316);
             this.inputBox.TabIndex = 40;
             // 
             // variableBox
@@ -235,7 +205,7 @@
             this.variableBox.FormattingEnabled = true;
             this.variableBox.Location = new System.Drawing.Point(25, 273);
             this.variableBox.Name = "variableBox";
-            this.variableBox.Size = new System.Drawing.Size(199, 290);
+            this.variableBox.Size = new System.Drawing.Size(199, 316);
             this.variableBox.TabIndex = 39;
             // 
             // generateTestButton
@@ -245,7 +215,7 @@
             this.generateTestButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.generateTestButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.generateTestButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.generateTestButton.Location = new System.Drawing.Point(843, 123);
+            this.generateTestButton.Location = new System.Drawing.Point(882, 123);
             this.generateTestButton.Name = "generateTestButton";
             this.generateTestButton.Size = new System.Drawing.Size(130, 46);
             this.generateTestButton.TabIndex = 38;
@@ -354,36 +324,6 @@
             this.languageBox.TabIndex = 0;
             this.languageBox.SelectedIndexChanged += new System.EventHandler(this.languageBox_SelectedIndexChanged);
             // 
-            // menuBar
-            // 
-            this.menuBar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1,
-            this.runToolStripMenuItem,
-            this.helpToolStripMenuItem});
-            this.menuBar.Location = new System.Drawing.Point(0, 0);
-            this.menuBar.Name = "menuBar";
-            this.menuBar.Size = new System.Drawing.Size(1034, 24);
-            this.menuBar.TabIndex = 50;
-            this.menuBar.Text = "menuStrip1";
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(37, 20);
-            this.toolStripMenuItem1.Text = "File";
-            // 
-            // runToolStripMenuItem
-            // 
-            this.runToolStripMenuItem.Name = "runToolStripMenuItem";
-            this.runToolStripMenuItem.Size = new System.Drawing.Size(40, 20);
-            this.runToolStripMenuItem.Text = "Run";
-            // 
-            // helpToolStripMenuItem
-            // 
-            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
-            this.helpToolStripMenuItem.Text = "Help";
-            // 
             // newToolStripMenuItem
             // 
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
@@ -394,541 +334,51 @@
             // openFileToolStripMenuItem
             // 
             this.openFileToolStripMenuItem.Name = "openFileToolStripMenuItem";
-            this.openFileToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.openFileToolStripMenuItem.Text = "Open File";
-            this.openFileToolStripMenuItem.Click += new System.EventHandler(this.openFileToolStripMenuItem_Click);
+            this.openFileToolStripMenuItem.Size = new System.Drawing.Size(32, 19);
             // 
             // openConfigToolStripMenuItem
             // 
             this.openConfigToolStripMenuItem.Name = "openConfigToolStripMenuItem";
-            this.openConfigToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.openConfigToolStripMenuItem.Text = "Open Config";
-            this.openConfigToolStripMenuItem.Click += new System.EventHandler(this.openConfigToolStripMenuItem_Click);
+            this.openConfigToolStripMenuItem.Size = new System.Drawing.Size(32, 19);
             // 
             // saveConfigToolStripMenuItem
             // 
             this.saveConfigToolStripMenuItem.Name = "saveConfigToolStripMenuItem";
-            this.saveConfigToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.saveConfigToolStripMenuItem.Text = "Save Config";
-            this.saveConfigToolStripMenuItem.Click += new System.EventHandler(this.saveConfigToolStripMenuItem_Click);
+            this.saveConfigToolStripMenuItem.Size = new System.Drawing.Size(32, 19);
             // 
             // saveReportToolStripMenuItem
             // 
             this.saveReportToolStripMenuItem.Name = "saveReportToolStripMenuItem";
-            this.saveReportToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.saveReportToolStripMenuItem.Text = "Save Report";
-            this.saveReportToolStripMenuItem.Click += new System.EventHandler(this.saveReportToolStripMenuItem_Click);
+            this.saveReportToolStripMenuItem.Size = new System.Drawing.Size(32, 19);
             // 
             // closeToolStripMenuItem
             // 
             this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
-            this.closeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.closeToolStripMenuItem.Text = "Close";
-            this.closeToolStripMenuItem.Click += new System.EventHandler(this.closeToolStripMenuItem_Click);
+            this.closeToolStripMenuItem.Size = new System.Drawing.Size(32, 19);
             // 
             // generateTestToolStripMenuItem
             // 
             this.generateTestToolStripMenuItem.Name = "generateTestToolStripMenuItem";
-            this.generateTestToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
-            this.generateTestToolStripMenuItem.Text = "Generate Test";
-            this.generateTestToolStripMenuItem.Click += new System.EventHandler(this.generateTestToolStripMenuItem_Click);
+            this.generateTestToolStripMenuItem.Size = new System.Drawing.Size(32, 19);
             // 
             // generateDriverToolStripMenuItem
             // 
             this.generateDriverToolStripMenuItem.Name = "generateDriverToolStripMenuItem";
-            this.generateDriverToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
-            this.generateDriverToolStripMenuItem.Text = "Generate Driver";
-            this.generateDriverToolStripMenuItem.Click += new System.EventHandler(this.generateDriverToolStripMenuItem_Click);
+            this.generateDriverToolStripMenuItem.Size = new System.Drawing.Size(32, 19);
             // 
             // aboutToolStripMenuItem
             // 
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.aboutToolStripMenuItem.Text = "About";
-            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+            this.aboutToolStripMenuItem1.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.aboutToolStripMenuItem1.Text = "About";
+            this.aboutToolStripMenuItem1.Click += new System.EventHandler(this.aboutToolStripMenuItem1_Click);
             // 
             // manualToolStripMenuItem
             // 
-            this.manualToolStripMenuItem.Name = "manualToolStripMenuItem";
-            this.manualToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.manualToolStripMenuItem.Text = "Manual";
-            this.manualToolStripMenuItem.Click += new System.EventHandler(this.manualToolStripMenuItem_Click);
-            // 
-            // reportBox
-            // 
-            this.reportBox.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.reportBox.Controls.Add(this.compare15);
-            this.reportBox.Controls.Add(this.PR15);
-            this.reportBox.Controls.Add(this.PR14);
-            this.reportBox.Controls.Add(this.PR13);
-            this.reportBox.Controls.Add(this.PR12);
-            this.reportBox.Controls.Add(this.PR11);
-            this.reportBox.Controls.Add(this.PR10);
-            this.reportBox.Controls.Add(this.PR9);
-            this.reportBox.Controls.Add(this.PR8);
-            this.reportBox.Controls.Add(this.PR7);
-            this.reportBox.Controls.Add(this.PR6);
-            this.reportBox.Controls.Add(this.PR5);
-            this.reportBox.Controls.Add(this.PR4);
-            this.reportBox.Controls.Add(this.PR3);
-            this.reportBox.Controls.Add(this.PR2);
-            this.reportBox.Controls.Add(this.PR1);
-            this.reportBox.Controls.Add(this.HW15);
-            this.reportBox.Controls.Add(this.HW14);
-            this.reportBox.Controls.Add(this.HW13);
-            this.reportBox.Controls.Add(this.HW12);
-            this.reportBox.Controls.Add(this.HW11);
-            this.reportBox.Controls.Add(this.HW10);
-            this.reportBox.Controls.Add(this.HW9);
-            this.reportBox.Controls.Add(this.HW8);
-            this.reportBox.Controls.Add(this.HW7);
-            this.reportBox.Controls.Add(this.HW6);
-            this.reportBox.Controls.Add(this.HW5);
-            this.reportBox.Controls.Add(this.HW4);
-            this.reportBox.Controls.Add(this.HW3);
-            this.reportBox.Controls.Add(this.HW2);
-            this.reportBox.Controls.Add(this.HW1);
-            this.reportBox.Controls.Add(this.compare12);
-            this.reportBox.Controls.Add(this.compare1);
-            this.reportBox.Controls.Add(this.compare13);
-            this.reportBox.Controls.Add(this.compare3);
-            this.reportBox.Controls.Add(this.compare14);
-            this.reportBox.Controls.Add(this.compare4);
-            this.reportBox.Controls.Add(this.compare8);
-            this.reportBox.Controls.Add(this.compare5);
-            this.reportBox.Controls.Add(this.compare9);
-            this.reportBox.Controls.Add(this.compare7);
-            this.reportBox.Controls.Add(this.compare10);
-            this.reportBox.Controls.Add(this.compare6);
-            this.reportBox.Controls.Add(this.compare11);
-            this.reportBox.Controls.Add(this.compare2);
-            this.reportBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.reportBox.Location = new System.Drawing.Point(12, 229);
-            this.reportBox.Name = "reportBox";
-            this.reportBox.Size = new System.Drawing.Size(799, 368);
-            this.reportBox.TabIndex = 53;
-            this.reportBox.TabStop = false;
-            this.reportBox.Text = "Report";
-            // 
-            // compare15
-            // 
-            this.compare15.AutoSize = true;
-            this.compare15.Enabled = false;
-            this.compare15.Location = new System.Drawing.Point(710, 310);
-            this.compare15.Name = "compare15";
-            this.compare15.Size = new System.Drawing.Size(15, 14);
-            this.compare15.TabIndex = 66;
-            this.compare15.UseVisualStyleBackColor = true;
-            // 
-            // PR15
-            // 
-            this.PR15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PR15.Location = new System.Drawing.Point(593, 307);
-            this.PR15.MaxLength = 20;
-            this.PR15.Name = "PR15";
-            this.PR15.Size = new System.Drawing.Size(100, 20);
-            this.PR15.TabIndex = 98;
-            // 
-            // PR14
-            // 
-            this.PR14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PR14.Location = new System.Drawing.Point(593, 288);
-            this.PR14.MaxLength = 20;
-            this.PR14.Name = "PR14";
-            this.PR14.Size = new System.Drawing.Size(100, 20);
-            this.PR14.TabIndex = 97;
-            // 
-            // PR13
-            // 
-            this.PR13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PR13.Location = new System.Drawing.Point(593, 270);
-            this.PR13.MaxLength = 20;
-            this.PR13.Name = "PR13";
-            this.PR13.Size = new System.Drawing.Size(100, 20);
-            this.PR13.TabIndex = 96;
-            // 
-            // PR12
-            // 
-            this.PR12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PR12.Location = new System.Drawing.Point(593, 251);
-            this.PR12.MaxLength = 20;
-            this.PR12.Name = "PR12";
-            this.PR12.Size = new System.Drawing.Size(100, 20);
-            this.PR12.TabIndex = 95;
-            // 
-            // PR11
-            // 
-            this.PR11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PR11.Location = new System.Drawing.Point(593, 232);
-            this.PR11.MaxLength = 20;
-            this.PR11.Name = "PR11";
-            this.PR11.Size = new System.Drawing.Size(100, 20);
-            this.PR11.TabIndex = 94;
-            // 
-            // PR10
-            // 
-            this.PR10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PR10.Location = new System.Drawing.Point(593, 214);
-            this.PR10.MaxLength = 20;
-            this.PR10.Name = "PR10";
-            this.PR10.Size = new System.Drawing.Size(100, 20);
-            this.PR10.TabIndex = 93;
-            // 
-            // PR9
-            // 
-            this.PR9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PR9.Location = new System.Drawing.Point(593, 195);
-            this.PR9.MaxLength = 20;
-            this.PR9.Name = "PR9";
-            this.PR9.Size = new System.Drawing.Size(100, 20);
-            this.PR9.TabIndex = 92;
-            // 
-            // PR8
-            // 
-            this.PR8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PR8.Location = new System.Drawing.Point(593, 176);
-            this.PR8.MaxLength = 20;
-            this.PR8.Name = "PR8";
-            this.PR8.Size = new System.Drawing.Size(100, 20);
-            this.PR8.TabIndex = 91;
-            // 
-            // PR7
-            // 
-            this.PR7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PR7.Location = new System.Drawing.Point(593, 157);
-            this.PR7.MaxLength = 20;
-            this.PR7.Name = "PR7";
-            this.PR7.Size = new System.Drawing.Size(100, 20);
-            this.PR7.TabIndex = 90;
-            // 
-            // PR6
-            // 
-            this.PR6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PR6.Location = new System.Drawing.Point(593, 138);
-            this.PR6.MaxLength = 20;
-            this.PR6.Name = "PR6";
-            this.PR6.Size = new System.Drawing.Size(100, 20);
-            this.PR6.TabIndex = 89;
-            // 
-            // PR5
-            // 
-            this.PR5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PR5.Location = new System.Drawing.Point(593, 119);
-            this.PR5.MaxLength = 20;
-            this.PR5.Name = "PR5";
-            this.PR5.Size = new System.Drawing.Size(100, 20);
-            this.PR5.TabIndex = 88;
-            // 
-            // PR4
-            // 
-            this.PR4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PR4.Location = new System.Drawing.Point(593, 101);
-            this.PR4.MaxLength = 20;
-            this.PR4.Name = "PR4";
-            this.PR4.Size = new System.Drawing.Size(100, 20);
-            this.PR4.TabIndex = 87;
-            // 
-            // PR3
-            // 
-            this.PR3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PR3.Location = new System.Drawing.Point(593, 82);
-            this.PR3.MaxLength = 20;
-            this.PR3.Name = "PR3";
-            this.PR3.Size = new System.Drawing.Size(100, 20);
-            this.PR3.TabIndex = 86;
-            // 
-            // PR2
-            // 
-            this.PR2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PR2.Location = new System.Drawing.Point(593, 64);
-            this.PR2.MaxLength = 20;
-            this.PR2.Name = "PR2";
-            this.PR2.Size = new System.Drawing.Size(100, 20);
-            this.PR2.TabIndex = 85;
-            // 
-            // PR1
-            // 
-            this.PR1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PR1.Location = new System.Drawing.Point(593, 45);
-            this.PR1.MaxLength = 20;
-            this.PR1.Name = "PR1";
-            this.PR1.Size = new System.Drawing.Size(100, 20);
-            this.PR1.TabIndex = 84;
-            // 
-            // HW15
-            // 
-            this.HW15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HW15.Location = new System.Drawing.Point(479, 307);
-            this.HW15.MaxLength = 20;
-            this.HW15.Name = "HW15";
-            this.HW15.Size = new System.Drawing.Size(100, 20);
-            this.HW15.TabIndex = 83;
-            // 
-            // HW14
-            // 
-            this.HW14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HW14.Location = new System.Drawing.Point(479, 288);
-            this.HW14.MaxLength = 20;
-            this.HW14.Name = "HW14";
-            this.HW14.Size = new System.Drawing.Size(100, 20);
-            this.HW14.TabIndex = 82;
-            // 
-            // HW13
-            // 
-            this.HW13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HW13.Location = new System.Drawing.Point(479, 270);
-            this.HW13.MaxLength = 20;
-            this.HW13.Name = "HW13";
-            this.HW13.Size = new System.Drawing.Size(100, 20);
-            this.HW13.TabIndex = 81;
-            // 
-            // HW12
-            // 
-            this.HW12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HW12.Location = new System.Drawing.Point(479, 251);
-            this.HW12.MaxLength = 20;
-            this.HW12.Name = "HW12";
-            this.HW12.Size = new System.Drawing.Size(100, 20);
-            this.HW12.TabIndex = 80;
-            // 
-            // HW11
-            // 
-            this.HW11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HW11.Location = new System.Drawing.Point(479, 232);
-            this.HW11.MaxLength = 20;
-            this.HW11.Name = "HW11";
-            this.HW11.Size = new System.Drawing.Size(100, 20);
-            this.HW11.TabIndex = 79;
-            // 
-            // HW10
-            // 
-            this.HW10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HW10.Location = new System.Drawing.Point(479, 214);
-            this.HW10.MaxLength = 20;
-            this.HW10.Name = "HW10";
-            this.HW10.Size = new System.Drawing.Size(100, 20);
-            this.HW10.TabIndex = 78;
-            // 
-            // HW9
-            // 
-            this.HW9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HW9.Location = new System.Drawing.Point(479, 195);
-            this.HW9.MaxLength = 20;
-            this.HW9.Name = "HW9";
-            this.HW9.Size = new System.Drawing.Size(100, 20);
-            this.HW9.TabIndex = 77;
-            // 
-            // HW8
-            // 
-            this.HW8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HW8.Location = new System.Drawing.Point(479, 176);
-            this.HW8.MaxLength = 20;
-            this.HW8.Name = "HW8";
-            this.HW8.Size = new System.Drawing.Size(100, 20);
-            this.HW8.TabIndex = 76;
-            // 
-            // HW7
-            // 
-            this.HW7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HW7.Location = new System.Drawing.Point(479, 157);
-            this.HW7.MaxLength = 20;
-            this.HW7.Name = "HW7";
-            this.HW7.Size = new System.Drawing.Size(100, 20);
-            this.HW7.TabIndex = 75;
-            // 
-            // HW6
-            // 
-            this.HW6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HW6.Location = new System.Drawing.Point(479, 138);
-            this.HW6.MaxLength = 20;
-            this.HW6.Name = "HW6";
-            this.HW6.Size = new System.Drawing.Size(100, 20);
-            this.HW6.TabIndex = 74;
-            // 
-            // HW5
-            // 
-            this.HW5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HW5.Location = new System.Drawing.Point(479, 119);
-            this.HW5.MaxLength = 20;
-            this.HW5.Name = "HW5";
-            this.HW5.Size = new System.Drawing.Size(100, 20);
-            this.HW5.TabIndex = 73;
-            // 
-            // HW4
-            // 
-            this.HW4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HW4.Location = new System.Drawing.Point(479, 101);
-            this.HW4.MaxLength = 20;
-            this.HW4.Name = "HW4";
-            this.HW4.Size = new System.Drawing.Size(100, 20);
-            this.HW4.TabIndex = 72;
-            // 
-            // HW3
-            // 
-            this.HW3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HW3.Location = new System.Drawing.Point(479, 82);
-            this.HW3.MaxLength = 20;
-            this.HW3.Name = "HW3";
-            this.HW3.Size = new System.Drawing.Size(100, 20);
-            this.HW3.TabIndex = 71;
-            // 
-            // HW2
-            // 
-            this.HW2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HW2.Location = new System.Drawing.Point(479, 64);
-            this.HW2.MaxLength = 20;
-            this.HW2.Name = "HW2";
-            this.HW2.Size = new System.Drawing.Size(100, 20);
-            this.HW2.TabIndex = 70;
-            // 
-            // HW1
-            // 
-            this.HW1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HW1.Location = new System.Drawing.Point(479, 45);
-            this.HW1.MaxLength = 20;
-            this.HW1.Name = "HW1";
-            this.HW1.Size = new System.Drawing.Size(100, 20);
-            this.HW1.TabIndex = 68;
-            // 
-            // compare12
-            // 
-            this.compare12.AutoSize = true;
-            this.compare12.Enabled = false;
-            this.compare12.Location = new System.Drawing.Point(710, 254);
-            this.compare12.Name = "compare12";
-            this.compare12.Size = new System.Drawing.Size(15, 14);
-            this.compare12.TabIndex = 67;
-            this.compare12.UseVisualStyleBackColor = true;
-            // 
-            // compare1
-            // 
-            this.compare1.AutoSize = true;
-            this.compare1.Enabled = false;
-            this.compare1.Location = new System.Drawing.Point(710, 47);
-            this.compare1.Name = "compare1";
-            this.compare1.Size = new System.Drawing.Size(15, 14);
-            this.compare1.TabIndex = 54;
-            this.compare1.UseVisualStyleBackColor = true;
-            // 
-            // compare13
-            // 
-            this.compare13.AutoSize = true;
-            this.compare13.Enabled = false;
-            this.compare13.Location = new System.Drawing.Point(710, 273);
-            this.compare13.Name = "compare13";
-            this.compare13.Size = new System.Drawing.Size(15, 14);
-            this.compare13.TabIndex = 66;
-            this.compare13.UseVisualStyleBackColor = true;
-            // 
-            // compare3
-            // 
-            this.compare3.AutoSize = true;
-            this.compare3.Enabled = false;
-            this.compare3.Location = new System.Drawing.Point(710, 85);
-            this.compare3.Name = "compare3";
-            this.compare3.Size = new System.Drawing.Size(15, 14);
-            this.compare3.TabIndex = 55;
-            this.compare3.UseVisualStyleBackColor = true;
-            // 
-            // compare14
-            // 
-            this.compare14.AutoSize = true;
-            this.compare14.Enabled = false;
-            this.compare14.Location = new System.Drawing.Point(710, 291);
-            this.compare14.Name = "compare14";
-            this.compare14.Size = new System.Drawing.Size(15, 14);
-            this.compare14.TabIndex = 65;
-            this.compare14.UseVisualStyleBackColor = true;
-            // 
-            // compare4
-            // 
-            this.compare4.AutoSize = true;
-            this.compare4.Enabled = false;
-            this.compare4.Location = new System.Drawing.Point(710, 104);
-            this.compare4.Name = "compare4";
-            this.compare4.Size = new System.Drawing.Size(15, 14);
-            this.compare4.TabIndex = 56;
-            this.compare4.UseVisualStyleBackColor = true;
-            // 
-            // compare8
-            // 
-            this.compare8.AutoSize = true;
-            this.compare8.Enabled = false;
-            this.compare8.Location = new System.Drawing.Point(710, 179);
-            this.compare8.Name = "compare8";
-            this.compare8.Size = new System.Drawing.Size(15, 14);
-            this.compare8.TabIndex = 64;
-            this.compare8.UseVisualStyleBackColor = true;
-            // 
-            // compare5
-            // 
-            this.compare5.AutoSize = true;
-            this.compare5.Enabled = false;
-            this.compare5.Location = new System.Drawing.Point(710, 122);
-            this.compare5.Name = "compare5";
-            this.compare5.Size = new System.Drawing.Size(15, 14);
-            this.compare5.TabIndex = 57;
-            this.compare5.UseVisualStyleBackColor = true;
-            // 
-            // compare9
-            // 
-            this.compare9.AutoSize = true;
-            this.compare9.Enabled = false;
-            this.compare9.Location = new System.Drawing.Point(710, 198);
-            this.compare9.Name = "compare9";
-            this.compare9.Size = new System.Drawing.Size(15, 14);
-            this.compare9.TabIndex = 63;
-            this.compare9.UseVisualStyleBackColor = true;
-            // 
-            // compare7
-            // 
-            this.compare7.AutoSize = true;
-            this.compare7.Enabled = false;
-            this.compare7.Location = new System.Drawing.Point(710, 160);
-            this.compare7.Name = "compare7";
-            this.compare7.Size = new System.Drawing.Size(15, 14);
-            this.compare7.TabIndex = 58;
-            this.compare7.UseVisualStyleBackColor = true;
-            // 
-            // compare10
-            // 
-            this.compare10.AutoSize = true;
-            this.compare10.Enabled = false;
-            this.compare10.Location = new System.Drawing.Point(710, 217);
-            this.compare10.Name = "compare10";
-            this.compare10.Size = new System.Drawing.Size(15, 14);
-            this.compare10.TabIndex = 62;
-            this.compare10.UseVisualStyleBackColor = true;
-            // 
-            // compare6
-            // 
-            this.compare6.AutoSize = true;
-            this.compare6.Enabled = false;
-            this.compare6.Location = new System.Drawing.Point(710, 141);
-            this.compare6.Name = "compare6";
-            this.compare6.Size = new System.Drawing.Size(15, 14);
-            this.compare6.TabIndex = 59;
-            this.compare6.UseVisualStyleBackColor = true;
-            // 
-            // compare11
-            // 
-            this.compare11.AutoSize = true;
-            this.compare11.Enabled = false;
-            this.compare11.Location = new System.Drawing.Point(710, 235);
-            this.compare11.Name = "compare11";
-            this.compare11.Size = new System.Drawing.Size(15, 14);
-            this.compare11.TabIndex = 61;
-            this.compare11.UseVisualStyleBackColor = true;
-            // 
-            // compare2
-            // 
-            this.compare2.AutoSize = true;
-            this.compare2.Enabled = false;
-            this.compare2.Location = new System.Drawing.Point(710, 67);
-            this.compare2.Name = "compare2";
-            this.compare2.Size = new System.Drawing.Size(15, 14);
-            this.compare2.TabIndex = 60;
-            this.compare2.UseVisualStyleBackColor = true;
+            this.userManualToolStripMenuItem.Name = "manualToolStripMenuItem";
+            this.userManualToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.userManualToolStripMenuItem.Text = "Manual";
+            this.userManualToolStripMenuItem.Click += new System.EventHandler(this.userManualToolStripMenuItem_Click);
             // 
             // textBox3
             // 
@@ -951,6 +401,179 @@
             this.textBox4.Size = new System.Drawing.Size(100, 20);
             this.textBox4.TabIndex = 72;
             // 
+            // HandEnter
+            // 
+            this.HandEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HandEnter.Location = new System.Drawing.Point(479, 45);
+            this.HandEnter.MaxLength = 20;
+            this.HandEnter.Name = "HandEnter";
+            this.HandEnter.Size = new System.Drawing.Size(100, 20);
+            this.HandEnter.TabIndex = 68;
+            this.HandEnter.KeyDown += new System.Windows.Forms.KeyEventHandler(this.HandEnter_KeyDown);
+            // 
+            // ProgramEnter
+            // 
+            this.ProgramEnter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProgramEnter.Location = new System.Drawing.Point(593, 45);
+            this.ProgramEnter.MaxLength = 20;
+            this.ProgramEnter.Name = "ProgramEnter";
+            this.ProgramEnter.Size = new System.Drawing.Size(100, 20);
+            this.ProgramEnter.TabIndex = 84;
+            this.ProgramEnter.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ProgramEnter_KeyDown);
+            // 
+            // HandResults
+            // 
+            this.HandResults.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HandResults.FormattingEnabled = true;
+            this.HandResults.Location = new System.Drawing.Point(479, 72);
+            this.HandResults.Name = "HandResults";
+            this.HandResults.Size = new System.Drawing.Size(105, 290);
+            this.HandResults.TabIndex = 85;
+            // 
+            // ProgramResults
+            // 
+            this.ProgramResults.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProgramResults.FormattingEnabled = true;
+            this.ProgramResults.Location = new System.Drawing.Point(593, 72);
+            this.ProgramResults.Name = "ProgramResults";
+            this.ProgramResults.Size = new System.Drawing.Size(105, 290);
+            this.ProgramResults.TabIndex = 86;
+            // 
+            // reportBox
+            // 
+            this.reportBox.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.reportBox.Controls.Add(this.PassFail);
+            this.reportBox.Controls.Add(this.ProgramResults);
+            this.reportBox.Controls.Add(this.HandResults);
+            this.reportBox.Controls.Add(this.ProgramEnter);
+            this.reportBox.Controls.Add(this.HandEnter);
+            this.reportBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.reportBox.Location = new System.Drawing.Point(12, 229);
+            this.reportBox.Name = "reportBox";
+            this.reportBox.Size = new System.Drawing.Size(822, 420);
+            this.reportBox.TabIndex = 53;
+            this.reportBox.TabStop = false;
+            this.reportBox.Text = "Report";
+            // 
+            // PassFail
+            // 
+            this.PassFail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PassFail.FormattingEnabled = true;
+            this.PassFail.Location = new System.Drawing.Point(721, 70);
+            this.PassFail.Name = "PassFail";
+            this.PassFail.Size = new System.Drawing.Size(21, 290);
+            this.PassFail.TabIndex = 87;
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.newToolStripMenuItem1,
+            this.openToolStripMenuItem,
+            this.openConfigToolStripMenuItem1,
+            this.saveConfigToolStripMenuItem1,
+            this.saveReportToolStripMenuItem1,
+            this.closeToolStripMenuItem1});
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(37, 20);
+            this.toolStripMenuItem1.Text = "File";
+            // 
+            // newToolStripMenuItem1
+            // 
+            this.newToolStripMenuItem1.Name = "newToolStripMenuItem1";
+            this.newToolStripMenuItem1.Size = new System.Drawing.Size(142, 22);
+            this.newToolStripMenuItem1.Text = "New";
+            // 
+            // openToolStripMenuItem
+            // 
+            this.openToolStripMenuItem.Name = "openToolStripMenuItem";
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.openToolStripMenuItem.Text = "Open File";
+            this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
+            // 
+            // openConfigToolStripMenuItem1
+            // 
+            this.openConfigToolStripMenuItem1.Name = "openConfigToolStripMenuItem1";
+            this.openConfigToolStripMenuItem1.Size = new System.Drawing.Size(142, 22);
+            this.openConfigToolStripMenuItem1.Text = "Open Config";
+            this.openConfigToolStripMenuItem1.Click += new System.EventHandler(this.openConfigToolStripMenuItem1_Click);
+            // 
+            // saveConfigToolStripMenuItem1
+            // 
+            this.saveConfigToolStripMenuItem1.Name = "saveConfigToolStripMenuItem1";
+            this.saveConfigToolStripMenuItem1.Size = new System.Drawing.Size(142, 22);
+            this.saveConfigToolStripMenuItem1.Text = "Save Config";
+            this.saveConfigToolStripMenuItem1.Click += new System.EventHandler(this.saveConfigToolStripMenuItem1_Click);
+            // 
+            // saveReportToolStripMenuItem1
+            // 
+            this.saveReportToolStripMenuItem1.Name = "saveReportToolStripMenuItem1";
+            this.saveReportToolStripMenuItem1.Size = new System.Drawing.Size(142, 22);
+            this.saveReportToolStripMenuItem1.Text = "Save Report";
+            this.saveReportToolStripMenuItem1.Click += new System.EventHandler(this.saveReportToolStripMenuItem1_Click);
+            // 
+            // closeToolStripMenuItem1
+            // 
+            this.closeToolStripMenuItem1.Name = "closeToolStripMenuItem1";
+            this.closeToolStripMenuItem1.Size = new System.Drawing.Size(142, 22);
+            this.closeToolStripMenuItem1.Text = "Close";
+            this.closeToolStripMenuItem1.Click += new System.EventHandler(this.closeToolStripMenuItem1_Click);
+            // 
+            // runToolStripMenuItem
+            // 
+            this.runToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.generateTestToolStripMenuItem1,
+            this.generateDriverToolStripMenuItem1});
+            this.runToolStripMenuItem.Name = "runToolStripMenuItem";
+            this.runToolStripMenuItem.Size = new System.Drawing.Size(40, 20);
+            this.runToolStripMenuItem.Text = "Run";
+            // 
+            // generateTestToolStripMenuItem1
+            // 
+            this.generateTestToolStripMenuItem1.Name = "generateTestToolStripMenuItem1";
+            this.generateTestToolStripMenuItem1.Size = new System.Drawing.Size(155, 22);
+            this.generateTestToolStripMenuItem1.Text = "Generate Test";
+            this.generateTestToolStripMenuItem1.Click += new System.EventHandler(this.generateTestToolStripMenuItem1_Click);
+            // 
+            // generateDriverToolStripMenuItem1
+            // 
+            this.generateDriverToolStripMenuItem1.Name = "generateDriverToolStripMenuItem1";
+            this.generateDriverToolStripMenuItem1.Size = new System.Drawing.Size(155, 22);
+            this.generateDriverToolStripMenuItem1.Text = "Generate Driver";
+            this.generateDriverToolStripMenuItem1.Click += new System.EventHandler(this.generateDriverToolStripMenuItem1_Click);
+            // 
+            // helpToolStripMenuItem
+            // 
+            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aboutToolStripMenuItem1,
+            this.userManualToolStripMenuItem});
+            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.helpToolStripMenuItem.Text = "Help";
+            // 
+            // menuBar
+            // 
+            this.menuBar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1,
+            this.runToolStripMenuItem,
+            this.helpToolStripMenuItem});
+            this.menuBar.Location = new System.Drawing.Point(0, 0);
+            this.menuBar.Name = "menuBar";
+            this.menuBar.Size = new System.Drawing.Size(1184, 24);
+            this.menuBar.TabIndex = 50;
+            this.menuBar.Text = "menuStrip1";
+            // 
+            // aboutToolStripMenuItem1
+            // 
+            this.aboutToolStripMenuItem1.Name = "aboutToolStripMenuItem1";
+            this.aboutToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.aboutToolStripMenuItem1.Text = "About";
+            // 
+            // userManualToolStripMenuItem
+            // 
+            this.userManualToolStripMenuItem.Name = "userManualToolStripMenuItem";
+            this.userManualToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.userManualToolStripMenuItem.Text = "User Manual";
+            // 
             // TestSuite
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -958,7 +581,7 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = global::ParadigmTestSuite.Properties.Resources.TestBack;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1034, 638);
+            this.ClientSize = new System.Drawing.Size(1184, 711);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.generateDriverButton);
             this.Controls.Add(this.loadConfigButton);
@@ -984,10 +607,10 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
-            this.menuBar.ResumeLayout(false);
-            this.menuBar.PerformLayout();
             this.reportBox.ResumeLayout(false);
             this.reportBox.PerformLayout();
+            this.menuBar.ResumeLayout(false);
+            this.menuBar.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1014,69 +637,39 @@
         private System.Windows.Forms.CheckedListBox testMethod;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ComboBox languageBox;
-        private System.Windows.Forms.MenuStrip menuBar;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem openFileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem openConfigToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem saveConfigToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem saveReportToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem closeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem runToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem generateTestToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem generateDriverToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem manualToolStripMenuItem;
-        private System.Windows.Forms.GroupBox reportBox;
-        private System.Windows.Forms.CheckBox compare12;
-        private System.Windows.Forms.CheckBox compare1;
-        private System.Windows.Forms.CheckBox compare13;
-        private System.Windows.Forms.CheckBox compare3;
-        private System.Windows.Forms.CheckBox compare14;
-        private System.Windows.Forms.CheckBox compare4;
-        private System.Windows.Forms.CheckBox compare8;
-        private System.Windows.Forms.CheckBox compare5;
-        private System.Windows.Forms.CheckBox compare9;
-        private System.Windows.Forms.CheckBox compare7;
-        private System.Windows.Forms.CheckBox compare10;
-        private System.Windows.Forms.CheckBox compare6;
-        private System.Windows.Forms.CheckBox compare11;
-        private System.Windows.Forms.CheckBox compare2;
-        private System.Windows.Forms.CheckBox compare15;
-        private System.Windows.Forms.TextBox PR15;
-        private System.Windows.Forms.TextBox PR14;
-        private System.Windows.Forms.TextBox PR13;
-        private System.Windows.Forms.TextBox PR12;
-        private System.Windows.Forms.TextBox PR11;
-        private System.Windows.Forms.TextBox PR10;
-        private System.Windows.Forms.TextBox PR9;
-        private System.Windows.Forms.TextBox PR8;
-        private System.Windows.Forms.TextBox PR7;
-        private System.Windows.Forms.TextBox PR6;
-        private System.Windows.Forms.TextBox PR5;
-        private System.Windows.Forms.TextBox PR4;
-        private System.Windows.Forms.TextBox PR3;
-        private System.Windows.Forms.TextBox PR2;
-        private System.Windows.Forms.TextBox PR1;
-        private System.Windows.Forms.TextBox HW15;
-        private System.Windows.Forms.TextBox HW14;
-        private System.Windows.Forms.TextBox HW13;
-        private System.Windows.Forms.TextBox HW12;
-        private System.Windows.Forms.TextBox HW11;
-        private System.Windows.Forms.TextBox HW10;
-        private System.Windows.Forms.TextBox HW9;
-        private System.Windows.Forms.TextBox HW8;
-        private System.Windows.Forms.TextBox HW7;
-        private System.Windows.Forms.TextBox HW6;
-        private System.Windows.Forms.TextBox HW5;
-        private System.Windows.Forms.TextBox HW4;
-        private System.Windows.Forms.TextBox HW3;
-        private System.Windows.Forms.TextBox HW2;
-        private System.Windows.Forms.TextBox HW1;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox HandEnter;
+        private System.Windows.Forms.TextBox ProgramEnter;
+        private System.Windows.Forms.ListBox HandResults;
+        private System.Windows.Forms.ListBox ProgramResults;
+        private System.Windows.Forms.GroupBox reportBox;
+        private System.Windows.Forms.ListBox PassFail;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem openConfigToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem runToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
+        private System.Windows.Forms.MenuStrip menuBar;
+        private System.Windows.Forms.ToolStripMenuItem saveConfigToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem saveReportToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem closeToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem generateTestToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem generateDriverToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem userManualToolStripMenuItem;
     }
 }
 

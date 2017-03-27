@@ -38,8 +38,7 @@ namespace ParadigmTestSuite
 
         private void testMethod_SelectedIndexChanged(object sender, EventArgs e)
         {
-            checkSelected();
-            
+            checkSelected();        
         }
 
         private void testLevel_SelectedIndexChanged(object sender, EventArgs e)
@@ -68,7 +67,7 @@ namespace ParadigmTestSuite
             saveFile();
         }
 
-        private void saveReportToolStripMenuItem_Click(object sender, EventArgs e)
+        private void saveReportToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             saveFile();
         }
@@ -176,7 +175,7 @@ namespace ParadigmTestSuite
             }
         }
 
-        private void openFileToolStripMenuItem_Click(object sender, EventArgs e)
+        private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
             openSource();
         }
@@ -191,12 +190,12 @@ namespace ParadigmTestSuite
             saveFile();
         }
 
-        private void openConfigToolStripMenuItem_Click(object sender, EventArgs e)
+        private void openConfigToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             openConfig();
         }
 
-        private void saveConfigToolStripMenuItem_Click(object sender, EventArgs e)
+        private void saveConfigToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             saveFile();
         }
@@ -211,22 +210,22 @@ namespace ParadigmTestSuite
 
         }
 
-        private void generateTestToolStripMenuItem_Click(object sender, EventArgs e)
+        private void generateTestToolStripMenuItem1_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void generateDriverToolStripMenuItem_Click(object sender, EventArgs e)
+        private void generateDriverToolStripMenuItem1_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        private void aboutToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Paradigm Test Suite" + "\n" + "Version 1" + "\n" + "Test case generator", "About", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        private void manualToolStripMenuItem_Click(object sender, EventArgs e)
+        private void userManualToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
@@ -236,9 +235,51 @@ namespace ParadigmTestSuite
             Application.Restart();
         }
 
-        private void closeToolStripMenuItem_Click(object sender, EventArgs e)
+        private void closeToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void HandEnter_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter && !String.IsNullOrWhiteSpace(HandEnter.Text))
+            {
+                HandResults.Items.Add(HandEnter.Text);
+                HandEnter.Clear();
+                int thisIndex = HandResults.Items.Count - 1;
+                if(ProgramResults.Items.Count >= HandResults.Items.Count)
+                {
+                    if (HandResults.Items[thisIndex].ToString() == ProgramResults.Items[thisIndex].ToString())
+                    {
+                        PassFail.Items.Add('√');
+                    }
+                    else
+                    {
+                        PassFail.Items.Add('X');
+                    }
+                }
+            }
+        }
+
+        private void ProgramEnter_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter && !String.IsNullOrWhiteSpace(ProgramEnter.Text))
+            {
+                ProgramResults.Items.Add(ProgramEnter.Text);
+                ProgramEnter.Clear();
+                int thisIndex = ProgramResults.Items.Count - 1;
+                if (HandResults.Items.Count >= ProgramResults.Items.Count)
+                {
+                    if (HandResults.Items[thisIndex].ToString() == ProgramResults.Items[thisIndex].ToString())
+                    {
+                        PassFail.Items.Add('√');
+                    }
+                    else
+                    {
+                        PassFail.Items.Add('X');
+                    }
+                }
+            }
         }
     }
 }
