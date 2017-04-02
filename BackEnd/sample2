@@ -64,4 +64,5 @@ void OpenFiles (ifstream & infile, ofstream & outfile)
   cout << "Enter name of output file > ";
   cin >> outfilename;
   outfile.open (outfilename);
+  cin.getline (name,256);
 }
