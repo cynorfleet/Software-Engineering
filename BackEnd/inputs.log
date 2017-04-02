@@ -1,0 +1,8 @@
+--------------------------------------------
+Inputs Found:
+(61, 'infilename')
+(65, 'outfilename')
+--------------------------------------------
+Type Found:
+(58, 'int infilename')
+(59, 'int outfilename')
