@@ -95,12 +95,22 @@ namespace ParadigmTestSuite
         {
             if (languageBox.SelectedIndex != -1 && testMethod.SelectedIndex != -1 && testLevel.SelectedIndex != -1)
             {
-                generateDriverButton.Enabled = true;
-                generateTestButton.Enabled = true;
+                if(testMethod.SelectedIndex == 0)
+                {
+                    generateDriverButton.Enabled = true;
+                    generateDriverToolStripMenuItem.Enabled = true;
+                    generateTestButton.Enabled = false;
+                    generateTestToolStripMenuItem.Enabled = false;
+                }
+                else
+                {
+                    generateTestButton.Enabled = true;
+                    generateTestToolStripMenuItem.Enabled = true;
+                    generateDriverButton.Enabled = false;
+                    generateDriverToolStripMenuItem.Enabled = false;
+                }
                 saveConfigButton.Enabled = true;
                 saveReportButton.Enabled = true;
-                generateDriverToolStripMenuItem.Enabled = true;
-                generateTestToolStripMenuItem.Enabled = true;
                 saveConfigToolStripMenuItem.Enabled = true;
                 saveReportToolStripMenuItem.Enabled = true;
             }
@@ -117,33 +127,17 @@ namespace ParadigmTestSuite
             }
         }
 
-        private void openSource()
+        private String[] openSource()
         {
-            Stream myStream = null;
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
 
             openFileDialog1.InitialDirectory = "c:\\";
             openFileDialog1.Filter = "C++ files (*.cpp)|*.cpp|header files (*.h)|*.h|All files (*.*)|*.*";
             openFileDialog1.FilterIndex = 3;
+            openFileDialog1.Multiselect = true;
             openFileDialog1.RestoreDirectory = true;
 
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
-            {
-                try
-                {
-                    if ((myStream = openFileDialog1.OpenFile()) != null)
-                    {
-                        using (myStream)
-                        {
-                            // Insert code to read the stream here.
-                        }
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error: Could not read file from disk. Original error: " + ex.Message);
-                }
-            }
+            return openFileDialog1.FileNames;
         }
 
         private void openConfig()
@@ -182,22 +176,32 @@ namespace ParadigmTestSuite
 
         private void loadConfigButton_Click(object sender, EventArgs e)
         {
-            openConfig();
+            languageBox.SelectedIndex = Properties.Settings.Default.TestLang;
+            testMethod.SetItemCheckState(Properties.Settings.Default.TestMeth, CheckState.Checked);
+            testLevel.SelectedIndex = Properties.Settings.Default.TestInt;
         }
 
         private void saveConfigButton_Click(object sender, EventArgs e)
         {
-            saveFile();
+            Properties.Settings.Default.TestLang = languageBox.SelectedIndex;
+            Properties.Settings.Default.TestMeth = testMethod.SelectedIndex;
+            Properties.Settings.Default.TestInt = testLevel.SelectedIndex;
+            Properties.Settings.Default.Save();
         }
 
         private void openConfigToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            openConfig();
+            languageBox.SelectedIndex = Properties.Settings.Default.TestLang;
+            testMethod.SetItemCheckState(Properties.Settings.Default.TestMeth, CheckState.Checked);
+            testLevel.SelectedIndex = Properties.Settings.Default.TestInt;
         }
 
         private void saveConfigToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            saveFile();
+            Properties.Settings.Default.TestLang = languageBox.SelectedIndex;
+            Properties.Settings.Default.TestMeth = testMethod.SelectedIndex;
+            Properties.Settings.Default.TestInt = testLevel.SelectedIndex;
+            Properties.Settings.Default.Save();
         }
 
         private void generateTestButton_Click(object sender, EventArgs e)
