@@ -200,7 +200,8 @@ namespace ParadigmTestSuite
             snatchData(functions, usr_functs);
             snatchData(declarations, usr_declarations);
             snatchData(userinputs, usr_inputs);
-
+            foreach (var item in userinputs)
+                Console.WriteLine(item.ToString());
 
         }
 

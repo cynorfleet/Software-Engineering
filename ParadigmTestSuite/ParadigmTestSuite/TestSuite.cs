@@ -147,7 +147,7 @@ namespace ParadigmTestSuite
             }
         }
 
-        private void openSource()
+        private string[] openSource()
         {
             Stream myStream = null;
             OpenFileDialog openFileDialog1 = new OpenFileDialog();

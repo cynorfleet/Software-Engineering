@@ -13,8 +13,8 @@ blacklist   = ['int main']
 closure     = '[ ,;]'
 functypes   = ['void', 'int', 'string', 'char', 'double', 'float']
 strprse     = '([a-zA-Z0-9 ]*([\[a-zA-Z0-9\]]*))'
-inputdic    = {'cin':re.compile(' *cin[ >]+{key}'.format(key=strprse)),
-                'getline':re.compile('.*getline[ \(]+{key}[ ,]+[a-zA-Z0-9 ]+\)'.format(key=strprse))}
+inputdic    = {'cin':re.compile('[ \t]*cin[ >]+{key}'.format(key=strprse)),
+                'getline':re.compile('[ \t]*getline[ \(]+{key}[ ,]+[a-zA-Z0-9 ]+\)'.format(key=strprse))}
 
 def getFile(file):
     # GETFILE:        this function will GET ALL LINES in a FILE
@@ -34,7 +34,7 @@ def funcparse(lines, vartype=None, getcin=False):
     for i, line in enumerate(lines):            # go thru each line and hold i(line#) and line(line data)
         for functype in functypes:              # for each function type in GLOBALS
             if getcin == False:
-                parser = re.compile(' *({type} *{keyword} *\(.*\))'.format(type=functype, keyword=strprse))
+                parser = re.compile('[ \t]*({type} *{keyword} *\(.*\))'.format(type=functype, keyword=strprse))
                 match = re.match(parser, line)      # look for the func type
             else:
                 parser =  vartype
@@ -64,7 +64,7 @@ def parseLines(lines, strip=None):
     resultlist = []
     for i, line in enumerate(lines):             # for every line in the file
         for functype in functypes[1:]:              # for each function type in GLOBALS
-            parser = re.compile(' *({type}[ ]+{key}){end}'.format(type=functype, key=strprse, end=closure))
+            parser = re.compile('[ \t]*({type}[ ]+{key}){end}'.format(type=functype, key=strprse, end=closure))
             result = re.match(parser, line)         # search for var and put in group 1
             if result != None:                       # if a match was found
                 result = result.group(1)             # throw away everythong but group 1
