@@ -9,14 +9,17 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Web;
 using System.IO;
+using System.Collections;
 
 namespace ParadigmTestSuite
 {
     public partial class TestSuite : Form
     {
+        TestCase testGen = new TestCase();
         public TestSuite()
         {
             InitializeComponent();
+            //Keep users from using functionality not yet accessable
             generateDriverButton.Enabled = false;
             generateTestButton.Enabled = false;
             saveConfigButton.Enabled = false;
@@ -29,6 +32,7 @@ namespace ParadigmTestSuite
 
         private void languageBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            //If the user selects option other than C++ change option back to C++
             if (languageBox.SelectedIndex != 0)
             {
                 languageBox.SelectedIndex = -1;
@@ -48,6 +52,7 @@ namespace ParadigmTestSuite
 
         private void testMethod_ItemCheck(object sender, ItemCheckEventArgs e)
         {
+
             if(e.NewValue == CheckState.Checked)
             {
                 for(int x = 0; x < testMethod.Items.Count; x++)
@@ -59,7 +64,32 @@ namespace ParadigmTestSuite
 
         private void openFileButton_Click(object sender, EventArgs e)
         {
-            openSource();
+            String[] filePaths;
+            filePaths = openSource();
+            if (filePaths.Length != 0)
+            {
+                testGen.readFile(filePaths[0]);
+                populateVariableBox();
+            }
+        }
+
+        //Purpose: populates the variable box with the input variables
+        //Requires: nothing
+        //Returns: nothing
+        private void populateVariableBox()
+        {
+            List<Variable> testCases = testGen.SourceInputs;
+            string i = "";
+
+            foreach (Variable v in testCases)
+            {
+                i += v.type + " " + v.identifier;
+                variableBox.Items.Add(i);
+                i = "";
+            }
+
+            
+
         }
 
         private void saveReportButton_Click(object sender, EventArgs e)
@@ -126,24 +156,8 @@ namespace ParadigmTestSuite
             openFileDialog1.Filter = "C++ files (*.cpp)|*.cpp|header files (*.h)|*.h|All files (*.*)|*.*";
             openFileDialog1.FilterIndex = 3;
             openFileDialog1.RestoreDirectory = true;
-
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
-            {
-                try
-                {
-                    if ((myStream = openFileDialog1.OpenFile()) != null)
-                    {
-                        using (myStream)
-                        {
-                            // Insert code to read the stream here.
-                        }
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error: Could not read file from disk. Original error: " + ex.Message);
-                }
-            }
+            openFileDialog1.ShowDialog();
+            return openFileDialog1.FileNames;
         }
 
         private void openConfig()
@@ -173,13 +187,9 @@ namespace ParadigmTestSuite
                     MessageBox.Show("Error: Could not read file from disk. Original error: " + ex.Message);
                 }
             }
-        }
+        } 
 
-        private void openToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            openSource();
-        }
-
+        
         private void loadConfigButton_Click(object sender, EventArgs e)
         {
             openConfig();
@@ -195,12 +205,27 @@ namespace ParadigmTestSuite
             openConfig();
         }
 
-        private void saveConfigToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void generateTestButton_Click(object sender, EventArgs e)
         {
-            saveFile();
+            Configuration testConfig = new Configuration();
+            testConfig.TestType = testMethod.SelectedIndex;
+            testConfig.TestIntensity = testLevel.SelectedIndex;
+            ArrayList myList = testGen.generateTest(testConfig);
+            string s = "";
+
+            foreach (ArrayList testList in myList)
+            {              
+                foreach (var v in testList)
+                {
+                    s += v.ToString() + "  ";
+                }
+
+                inputBox.Items.Add(s);
+                s = "";
+            }
         }
 
-        private void generateTestButton_Click(object sender, EventArgs e)
+        private void populateInputBox()
         {
 
         }
@@ -281,5 +306,7 @@ namespace ParadigmTestSuite
                 }
             }
         }
+
+       
     }
 }
