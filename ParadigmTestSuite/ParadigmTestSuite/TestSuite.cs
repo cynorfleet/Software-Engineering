@@ -9,14 +9,17 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Web;
 using System.IO;
+using System.Collections;
 
 namespace ParadigmTestSuite
 {
     public partial class TestSuite : Form
     {
+        TestCase testGen = new TestCase();
         public TestSuite()
         {
             InitializeComponent();
+            //Keep users from using functionality not yet accessable
             generateDriverButton.Enabled = false;
             generateTestButton.Enabled = false;
             saveConfigButton.Enabled = false;
@@ -29,6 +32,7 @@ namespace ParadigmTestSuite
 
         private void languageBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            //If the user selects option other than C++ change option back to C++
             if (languageBox.SelectedIndex != 0)
             {
                 languageBox.SelectedIndex = -1;
@@ -48,6 +52,7 @@ namespace ParadigmTestSuite
 
         private void testMethod_ItemCheck(object sender, ItemCheckEventArgs e)
         {
+
             if(e.NewValue == CheckState.Checked)
             {
                 for(int x = 0; x < testMethod.Items.Count; x++)
@@ -59,7 +64,10 @@ namespace ParadigmTestSuite
 
         private void openFileButton_Click(object sender, EventArgs e)
         {
-            openSource();
+            String[] filePaths;
+            filePaths = openSource();
+            if(filePaths.Length != 0)
+                testGen.readFile(filePaths[0]);
         }
 
         private void saveReportButton_Click(object sender, EventArgs e)
@@ -136,7 +144,7 @@ namespace ParadigmTestSuite
             openFileDialog1.FilterIndex = 3;
             openFileDialog1.Multiselect = true;
             openFileDialog1.RestoreDirectory = true;
-
+            openFileDialog1.ShowDialog();
             return openFileDialog1.FileNames;
         }
 
@@ -171,7 +179,10 @@ namespace ParadigmTestSuite
 
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            openSource();
+            String[] filePaths;
+            filePaths = openSource();
+            if (filePaths.Length != 0)
+                testGen.readFile(filePaths[0]);
         }
 
         private void loadConfigButton_Click(object sender, EventArgs e)
@@ -206,7 +217,14 @@ namespace ParadigmTestSuite
 
         private void generateTestButton_Click(object sender, EventArgs e)
         {
-
+            Configuration testConfig = new Configuration();
+            testConfig.TestType = testMethod.SelectedIndex;
+            testConfig.TestIntensity = testLevel.SelectedIndex;
+            ArrayList myList = testGen.generateTest(testConfig);
+            foreach(ArrayList testList in myList)
+            {
+                variableBox.Items.Add(testList); 
+            }
         }
 
         private void generateDriverButton_Click(object sender, EventArgs e)

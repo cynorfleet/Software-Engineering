@@ -7,3 +7,11 @@ c:\users\damien\documents\visual studio 2015\Projects\ParadigmTestSuite\Paradigm
 c:\users\damien\documents\visual studio 2015\Projects\ParadigmTestSuite\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.exe
 c:\users\damien\documents\visual studio 2015\Projects\ParadigmTestSuite\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.pdb
 c:\users\damien\documents\visual studio 2015\Projects\ParadigmTestSuite\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.csprojResolveAssemblyReference.cache
+C:\Users\Damien\Documents\Visual Studio 2015\Projects\ParadigmTestSuite\ParadigmTestSuite\bin\Debug\IronPython.dll
+C:\Users\Damien\Documents\Visual Studio 2015\Projects\ParadigmTestSuite\ParadigmTestSuite\bin\Debug\Microsoft.Scripting.dll
+C:\Users\Damien\Documents\Visual Studio 2015\Projects\ParadigmTestSuite\ParadigmTestSuite\bin\Debug\Microsoft.Dynamic.dll
+C:\Users\Damien\Documents\Visual Studio 2015\Projects\ParadigmTestSuite\ParadigmTestSuite\bin\Debug\Microsoft.Scripting.Metadata.dll
+C:\Users\Damien\Documents\Visual Studio 2015\Projects\ParadigmTestSuite\ParadigmTestSuite\bin\Debug\IronPython.xml
+C:\Users\Damien\Documents\Visual Studio 2015\Projects\ParadigmTestSuite\ParadigmTestSuite\bin\Debug\Microsoft.Scripting.xml
+C:\Users\Damien\Documents\Visual Studio 2015\Projects\ParadigmTestSuite\ParadigmTestSuite\bin\Debug\Microsoft.Dynamic.xml
+C:\Users\Damien\Documents\Visual Studio 2015\Projects\ParadigmTestSuite\ParadigmTestSuite\bin\Debug\Microsoft.Scripting.Metadata.xml
