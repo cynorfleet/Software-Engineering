@@ -477,41 +477,41 @@
             // newToolStripMenuItem1
             // 
             this.newToolStripMenuItem1.Name = "newToolStripMenuItem1";
-            this.newToolStripMenuItem1.Size = new System.Drawing.Size(142, 22);
+            this.newToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.newToolStripMenuItem1.Text = "New";
             // 
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.openToolStripMenuItem.Text = "Open File";
-            this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
+            this.openToolStripMenuItem.Click += new System.EventHandler(this.openFileButton_Click);
             // 
             // openConfigToolStripMenuItem1
             // 
             this.openConfigToolStripMenuItem1.Name = "openConfigToolStripMenuItem1";
-            this.openConfigToolStripMenuItem1.Size = new System.Drawing.Size(142, 22);
+            this.openConfigToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.openConfigToolStripMenuItem1.Text = "Open Config";
             this.openConfigToolStripMenuItem1.Click += new System.EventHandler(this.openConfigToolStripMenuItem1_Click);
             // 
             // saveConfigToolStripMenuItem1
             // 
             this.saveConfigToolStripMenuItem1.Name = "saveConfigToolStripMenuItem1";
-            this.saveConfigToolStripMenuItem1.Size = new System.Drawing.Size(142, 22);
+            this.saveConfigToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.saveConfigToolStripMenuItem1.Text = "Save Config";
-            this.saveConfigToolStripMenuItem1.Click += new System.EventHandler(this.saveConfigToolStripMenuItem1_Click);
+            this.saveConfigToolStripMenuItem1.Click += new System.EventHandler(this.saveConfigButton_Click);
             // 
             // saveReportToolStripMenuItem1
             // 
             this.saveReportToolStripMenuItem1.Name = "saveReportToolStripMenuItem1";
-            this.saveReportToolStripMenuItem1.Size = new System.Drawing.Size(142, 22);
+            this.saveReportToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.saveReportToolStripMenuItem1.Text = "Save Report";
             this.saveReportToolStripMenuItem1.Click += new System.EventHandler(this.saveReportToolStripMenuItem1_Click);
             // 
             // closeToolStripMenuItem1
             // 
             this.closeToolStripMenuItem1.Name = "closeToolStripMenuItem1";
-            this.closeToolStripMenuItem1.Size = new System.Drawing.Size(142, 22);
+            this.closeToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.closeToolStripMenuItem1.Text = "Close";
             this.closeToolStripMenuItem1.Click += new System.EventHandler(this.closeToolStripMenuItem1_Click);
             // 

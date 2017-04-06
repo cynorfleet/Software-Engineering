@@ -105,7 +105,7 @@ namespace ParadigmTestSuite
                             one = rand.Next(-1, 1);
 
                         //gets a random integer (can be negative)
-                        randomInt = rand.Next() * one;
+                        randomInt = rand.Next(0, 11) * one;
                         t.Add(randomInt);
                     }
 

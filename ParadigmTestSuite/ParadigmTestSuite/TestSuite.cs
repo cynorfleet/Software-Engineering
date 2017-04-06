@@ -66,8 +66,30 @@ namespace ParadigmTestSuite
         {
             String[] filePaths;
             filePaths = openSource();
-            if(filePaths.Length != 0)
+            if (filePaths.Length != 0)
+            {
                 testGen.readFile(filePaths[0]);
+                populateVariableBox();
+            }
+        }
+
+        //Purpose: populates the variable box with the input variables
+        //Requires: nothing
+        //Returns: nothing
+        private void populateVariableBox()
+        {
+            List<Variable> testCases = testGen.SourceInputs;
+            string i = "";
+
+            foreach (Variable v in testCases)
+            {
+                i += v.type + " " + v.identifier;
+                variableBox.Items.Add(i);
+                i = "";
+            }
+
+            
+
         }
 
         private void saveReportButton_Click(object sender, EventArgs e)
@@ -175,16 +197,9 @@ namespace ParadigmTestSuite
                     MessageBox.Show("Error: Could not read file from disk. Original error: " + ex.Message);
                 }
             }
-        }
+        } 
 
-        private void openToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            String[] filePaths;
-            filePaths = openSource();
-            if (filePaths.Length != 0)
-                testGen.readFile(filePaths[0]);
-        }
-
+        
         private void loadConfigButton_Click(object sender, EventArgs e)
         {
             languageBox.SelectedIndex = Properties.Settings.Default.TestLang;
@@ -207,24 +222,29 @@ namespace ParadigmTestSuite
             testLevel.SelectedIndex = Properties.Settings.Default.TestInt;
         }
 
-        private void saveConfigToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            Properties.Settings.Default.TestLang = languageBox.SelectedIndex;
-            Properties.Settings.Default.TestMeth = testMethod.SelectedIndex;
-            Properties.Settings.Default.TestInt = testLevel.SelectedIndex;
-            Properties.Settings.Default.Save();
-        }
-
         private void generateTestButton_Click(object sender, EventArgs e)
         {
             Configuration testConfig = new Configuration();
             testConfig.TestType = testMethod.SelectedIndex;
             testConfig.TestIntensity = testLevel.SelectedIndex;
             ArrayList myList = testGen.generateTest(testConfig);
-            foreach(ArrayList testList in myList)
-            {
-                variableBox.Items.Add(testList); 
+            string s = "";
+
+            foreach (ArrayList testList in myList)
+            {              
+                foreach (var v in testList)
+                {
+                    s += v.ToString() + "  ";
+                }
+
+                inputBox.Items.Add(s);
+                s = "";
             }
+        }
+
+        private void populateInputBox()
+        {
+
         }
 
         private void generateDriverButton_Click(object sender, EventArgs e)
@@ -303,5 +323,7 @@ namespace ParadigmTestSuite
                 }
             }
         }
+
+       
     }
 }
