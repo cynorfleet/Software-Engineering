@@ -1,0 +1,62 @@
+1. Introduction
+    Students from CS1 to 3013 often have probs with test drivers for programs. Students currently submit programs without proper testing due to lack of knowledge of testing methods and toolsets. Although the program might seem functional, the students may overlook possible faults and develop bad habits. This program will aid said students by parsing code and generating applicable test drivers.
+1.2.1 The main objective is to create a test suite for other students to use to test their programs with various data. This testing program will provide a user friendly GUI to produce a test report that the users can use to implement their programs. The development will transpire over a period of 4 months. This program will be open source to enable future teams to expand the feature set of functions to be implemented.
+1.2.2 The client requires testing program to be compatable with the C++ language. This program will be designed for the windows environment. The interface will feature open dialogue box for file submission, and will allow user to select various languages.
+1.3 The rest of the items in this document will address hardware requirements, software requirements, future users, all functions and constraints, and GUI requirements (Graphical User Interface).
+2. Users
+2.1  The users of this program will be computer science undergrads.
+2.3  The scenario will be a student who needs to submit an application or program that needs to be well tested and used for a grade. SO, a computer science undergraduate will launch the application and will browse for a folder or a file with source code to it. They will select options for the kind of lanugauge and type of testing they want to do. Then the application will give them a list of test cases categorized by type of testing for them to run their program on. It will allow them to enter the results they expect into the grid or table. The app will compare their results with expected to results. Then indicate if their test case passed or failed.
+3. System
+3.1. Development Environment
+
+3.2. Target environment
+    The project development environment will be as follows;
+    Software: with windows 7 and above, Microsoft Visual Studio
+    Hardware: USB Port
+3.3. Functional Requirements
+Functional requirements
+•	Must be able to give sets of test cases for input source file code.
+•	Must be able to read source code files.
+•	Must be able to produce test variables and test drivers.
+Must be able to compare expected results and program results
+•	Must be able to produce a template for a testing report document based on current session tests.
+•	Must be able to save testing report document.
+
+3.3.1. Issues
+    Issues include; Parse specified file for input, Generate a test report for current session, Create a user friendly GUI that is easy to work with, Generate the different types of test cases
+3.3.2. Major Subsystems
+
+3.3.3. Major Functions
+  Read Source code, Generate test cases or drivers, create testing report, save testing report
+3.3.4. Major Classes identified and listed
+  Test Generator
+3.3.5. Minor System Functions
+  Check Data Type
+3.4. User Interface Specifications
+  Dialogue boxes, Check Boxes, Grid for test cases and input
+3.5. Non-Functional Requirements
+Nonfunctional requirements
+•	Must be extendable to reading more languages over time.
+•	Must be scalable to allow for other types of testing methods.
+•	Must be able to run on Windows Operating Systems.
+•	Source code must be in C++ (.cpp and .h).
+3.5.1. Management
+  No financial cost during project development. It must be developed during a 4 month period within the Spring 2017 semester, and finished by May 2017.
+3.5.2. Technical
+  The program must run on windows 7 or above. It will be written in C#.
+3.5.3. Performance
+  The program will make at most one pass per test session over the source file
+3.5.4. Security
+  N/A
+3.6 System Evolution/ Maintenance
+  The program will be written with expansion in mind, in the future other languages will be able to be analyze additional languages and use various other testing methods
+4. Other Deliverables required
+  At the end of the semester the program will satisfy the requirements stated in this document. The program will be delivered to the next batch of developers for further expansions.
+5. Risks
+  The risks involved in the development of the system include lack of communication. Communication between the team and the customer. Also, another risk would be that the developers would not have a complete understanding of the program requirements or what the customer is expecting or wants.
+6.-Other things you think of
+
+7. Glossary of terms used in this document
+  GUI - Graphical user interface
+8. References following some official guidelines
+  Stringfellow, Dr. Catherine
