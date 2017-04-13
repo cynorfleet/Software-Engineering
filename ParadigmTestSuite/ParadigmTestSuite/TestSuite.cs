@@ -16,6 +16,7 @@ namespace ParadigmTestSuite
     public partial class TestSuite : Form
     {
         TestCase testGen = new TestCase();
+        string fileName = "";
         public TestSuite()
         {
             InitializeComponent();
@@ -69,6 +70,7 @@ namespace ParadigmTestSuite
             if (filePaths.Length != 0)
             {
                 testGen.readFile(filePaths[0]);
+                fileNameL.Text = fileName;
             }
         }
 
@@ -147,11 +149,13 @@ namespace ParadigmTestSuite
         {
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
 
-            openFileDialog1.InitialDirectory = "c:\\";
+           // openFileDialog1.InitialDirectory = "c:\\";
             openFileDialog1.Filter = "C++ files (*.cpp)|*.cpp|header files (*.h)|*.h|All files (*.*)|*.*";
             openFileDialog1.FilterIndex = 3;
             openFileDialog1.RestoreDirectory = true;
             openFileDialog1.ShowDialog();
+
+            fileName = openFileDialog1.SafeFileNames[0];
             return openFileDialog1.FileNames;
         }
 
@@ -191,10 +195,14 @@ namespace ParadigmTestSuite
             Configuration testConfig = new Configuration();
             testConfig.TestType = testMethod.SelectedIndex;
             testConfig.TestIntensity = testLevel.SelectedIndex;
+
+            ArrayList testCases;
             //Make the test variables
-            testGen.generateTest(testConfig);
+            testCases = testGen.generateTest(testConfig);
             //Populate the variable list
             populateVariableBox();
+            //Populate the input box with the generated test cases
+            populateInputBox(testCases);
         }
 
         private void generateTestButton_Click(object sender, EventArgs e)
@@ -207,9 +215,20 @@ namespace ParadigmTestSuite
             generateTest();
         }
 
-        private void populateInputBox()
+        private void populateInputBox(ArrayList testCases)
         {
+           
+            string s = "";
 
+            foreach (ArrayList l in testCases)
+            {
+                foreach(var i in  l)
+                {
+                    s += (i.ToString() + " ");
+                }
+                inputBox.Items.Add(s);
+                s = "";
+            }
         }
 
         private void generateDriverButton_Click(object sender, EventArgs e)

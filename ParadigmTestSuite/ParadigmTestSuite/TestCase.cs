@@ -200,11 +200,13 @@ namespace ParadigmTestSuite
             snatchData(functions, usr_functs);
             snatchData(declarations, usr_declarations);
             snatchData(userinputs, usr_inputs);
-            foreach (var item in userinputs)
-                Console.WriteLine(item.ToString());
+            
 
         }
 
+        //Purpose: Takes data from the IronPython list and stores it in a List of strings
+        //Requires: IronPython.Runtime.List raw_data, List<String> new_data
+        //Returns: nothing
         private void snatchData(IronPython.Runtime.List raw_data, List<String> new_data)
         {
             foreach (var i in raw_data)

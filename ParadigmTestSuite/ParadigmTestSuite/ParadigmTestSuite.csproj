@@ -61,6 +61,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="TestCase.cs" />
+    <Compile Include="TestDriver.cs" />
     <Compile Include="TestSuite.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -77,9 +77,11 @@
             this.generateTestToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.generateDriverToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuBar = new System.Windows.Forms.MenuStrip();
             this.aboutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.userManualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuBar = new System.Windows.Forms.MenuStrip();
+            this.fileNameL = new System.Windows.Forms.Label();
+            this.fileL = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -368,17 +370,13 @@
             // 
             // aboutToolStripMenuItem
             // 
-            this.aboutToolStripMenuItem1.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
-            this.aboutToolStripMenuItem1.Text = "About";
-            this.aboutToolStripMenuItem1.Click += new System.EventHandler(this.aboutToolStripMenuItem1_Click);
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(32, 19);
             // 
             // manualToolStripMenuItem
             // 
-            this.userManualToolStripMenuItem.Name = "manualToolStripMenuItem";
-            this.userManualToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.userManualToolStripMenuItem.Text = "Manual";
-            this.userManualToolStripMenuItem.Click += new System.EventHandler(this.userManualToolStripMenuItem_Click);
+            this.manualToolStripMenuItem.Name = "manualToolStripMenuItem";
+            this.manualToolStripMenuItem.Size = new System.Drawing.Size(32, 19);
             // 
             // textBox3
             // 
@@ -550,6 +548,20 @@
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.helpToolStripMenuItem.Text = "Help";
             // 
+            // aboutToolStripMenuItem1
+            // 
+            this.aboutToolStripMenuItem1.Name = "aboutToolStripMenuItem1";
+            this.aboutToolStripMenuItem1.Size = new System.Drawing.Size(140, 22);
+            this.aboutToolStripMenuItem1.Text = "About";
+            this.aboutToolStripMenuItem1.Click += new System.EventHandler(this.aboutToolStripMenuItem1_Click);
+            // 
+            // userManualToolStripMenuItem
+            // 
+            this.userManualToolStripMenuItem.Name = "userManualToolStripMenuItem";
+            this.userManualToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.userManualToolStripMenuItem.Text = "User Manual";
+            this.userManualToolStripMenuItem.Click += new System.EventHandler(this.userManualToolStripMenuItem_Click);
+            // 
             // menuBar
             // 
             this.menuBar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -562,17 +574,25 @@
             this.menuBar.TabIndex = 50;
             this.menuBar.Text = "menuStrip1";
             // 
-            // aboutToolStripMenuItem1
+            // fileNameL
             // 
-            this.aboutToolStripMenuItem1.Name = "aboutToolStripMenuItem1";
-            this.aboutToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
-            this.aboutToolStripMenuItem1.Text = "About";
+            this.fileNameL.AutoSize = true;
+            this.fileNameL.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fileNameL.ForeColor = System.Drawing.Color.Green;
+            this.fileNameL.Location = new System.Drawing.Point(377, 57);
+            this.fileNameL.Name = "fileNameL";
+            this.fileNameL.Size = new System.Drawing.Size(42, 13);
+            this.fileNameL.TabIndex = 54;
+            this.fileNameL.Text = "NONE";
             // 
-            // userManualToolStripMenuItem
+            // fileL
             // 
-            this.userManualToolStripMenuItem.Name = "userManualToolStripMenuItem";
-            this.userManualToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.userManualToolStripMenuItem.Text = "User Manual";
+            this.fileL.AutoSize = true;
+            this.fileL.Location = new System.Drawing.Point(304, 56);
+            this.fileL.Name = "fileL";
+            this.fileL.Size = new System.Drawing.Size(67, 13);
+            this.fileL.TabIndex = 55;
+            this.fileL.Text = "File Opened:";
             // 
             // TestSuite
             // 
@@ -582,6 +602,8 @@
             this.BackgroundImage = global::ParadigmTestSuite.Properties.Resources.TestBack;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1184, 711);
+            this.Controls.Add(this.fileL);
+            this.Controls.Add(this.fileNameL);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.generateDriverButton);
             this.Controls.Add(this.loadConfigButton);
@@ -670,6 +692,8 @@
         private System.Windows.Forms.ToolStripMenuItem generateDriverToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem userManualToolStripMenuItem;
+        private System.Windows.Forms.Label fileNameL;
+        private System.Windows.Forms.Label fileL;
     }
 }
 
