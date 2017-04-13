@@ -1,14 +1,43 @@
 --------------------------------------------
 Functions:
-void MakeFile(ofstream& outfile, ifstream& infile)
-void PrintSaleTot(ofstream& outfile, double total)
-void OutStock(ofstream& outfile, int over_order)
-string strfunct()
+void makeFiles(ifstream&, ofstream&)
+void printWelcome(ofstream&)
+int readNumber(ifstream&)
+string readItem(ifstream&)
+void printItem(ofstream&, string)
+void printListInfo(ofstream&, int)
+void printList(CircularLinked&, ofstream&)
+void printPerm(ofstream&, int)
+void printWinner(ofstream&, string)
+void printLine(ofstream&)
+void printClose(ofstream&)
+void closeFiles(ofstream&, ifstream&)
 int main()
+void makeFiles(ifstream &inFile, ofstream &outFile)
+void printWelcome(ofstream& outFile)
+int readNumber(ifstream& inFile)
+string readItem(ifstream& inFile)
+void printItem(ofstream& outFile, string item)
+void printListInfo(ofstream& outFile, int numItems)
+void printList(CircularLinked& cirList, ofstream& outFile)
+void printPerm(ofstream& outFile, int jpperm)
+void printWinner(ofstream& outFile, string winner)
+void printLine(ofstream& outFile)
+void printClose(ofstream& outFile)
+void closeFiles(ofstream& outFile, ifstream& inFile)
 --------------------------------------------
 Type:
-string stillworks
-double total
+int testing
+int numList
+int numToRead
+int perm
+int length
+string inName
+string outName
+int inNum
+string item
 --------------------------------------------
 Inputs:
-stillworks
+
+inName
+outName

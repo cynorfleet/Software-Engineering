@@ -69,7 +69,6 @@ namespace ParadigmTestSuite
             if (filePaths.Length != 0)
             {
                 testGen.readFile(filePaths[0]);
-                populateVariableBox();
             }
         }
 
@@ -87,9 +86,6 @@ namespace ParadigmTestSuite
                 variableBox.Items.Add(i);
                 i = "";
             }
-
-            
-
         }
 
         private void saveReportButton_Click(object sender, EventArgs e)
@@ -149,7 +145,6 @@ namespace ParadigmTestSuite
 
         private string[] openSource()
         {
-            Stream myStream = null;
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
 
             openFileDialog1.InitialDirectory = "c:\\";
@@ -162,33 +157,18 @@ namespace ParadigmTestSuite
 
         private void openConfig()
         {
-            Stream myStream = null;
-            OpenFileDialog openFileDialog1 = new OpenFileDialog();
-
-            openFileDialog1.InitialDirectory = "c:\\";
-            openFileDialog1.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*";
-            openFileDialog1.FilterIndex = 2;
-            openFileDialog1.RestoreDirectory = true;
-
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
-            {
-                try
-                {
-                    if ((myStream = openFileDialog1.OpenFile()) != null)
-                    {
-                        using (myStream)
-                        {
-                            // Insert code to read the stream here.
-                        }
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error: Could not read file from disk. Original error: " + ex.Message);
-                }
-            }
+            languageBox.SelectedIndex = Properties.Settings.Default.TestLang;
+            testMethod.SetItemCheckState(Properties.Settings.Default.TestMeth, CheckState.Checked);
+            testLevel.SelectedIndex = Properties.Settings.Default.TestInt;
         } 
 
+        private void saveConfig()
+        {
+            Properties.Settings.Default.TestLang = languageBox.SelectedIndex;
+            Properties.Settings.Default.TestMeth = testMethod.SelectedIndex;
+            Properties.Settings.Default.TestInt = testLevel.SelectedIndex;
+            Properties.Settings.Default.Save();
+        }
         
         private void loadConfigButton_Click(object sender, EventArgs e)
         {
@@ -197,7 +177,7 @@ namespace ParadigmTestSuite
 
         private void saveConfigButton_Click(object sender, EventArgs e)
         {
-            saveFile();
+            saveConfig();
         }
 
         private void openConfigToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -205,24 +185,26 @@ namespace ParadigmTestSuite
             openConfig();
         }
 
-        private void generateTestButton_Click(object sender, EventArgs e)
+        private void generateTest()
         {
+            //Load the configuration into a configuration class
             Configuration testConfig = new Configuration();
             testConfig.TestType = testMethod.SelectedIndex;
             testConfig.TestIntensity = testLevel.SelectedIndex;
-            ArrayList myList = testGen.generateTest(testConfig);
-            string s = "";
+            //Make the test variables
+            testGen.generateTest(testConfig);
+            //Populate the variable list
+            populateVariableBox();
+        }
 
-            foreach (ArrayList testList in myList)
-            {              
-                foreach (var v in testList)
-                {
-                    s += v.ToString() + "  ";
-                }
+        private void generateTestButton_Click(object sender, EventArgs e)
+        {
+            generateTest();
+        }
 
-                inputBox.Items.Add(s);
-                s = "";
-            }
+        private void generateTestToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            generateTest();
         }
 
         private void populateInputBox()
@@ -231,11 +213,6 @@ namespace ParadigmTestSuite
         }
 
         private void generateDriverButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void generateTestToolStripMenuItem1_Click(object sender, EventArgs e)
         {
 
         }
@@ -267,11 +244,14 @@ namespace ParadigmTestSuite
 
         private void HandEnter_KeyDown(object sender, KeyEventArgs e)
         {
+            //Once the user has entered something and hit enter
             if (e.KeyCode == Keys.Enter && !String.IsNullOrWhiteSpace(HandEnter.Text))
             {
+                //Add the item to the end of the list
                 HandResults.Items.Add(HandEnter.Text);
                 HandEnter.Clear();
                 int thisIndex = HandResults.Items.Count - 1;
+                //And compare it to the item in the other list if it has been entered.
                 if(ProgramResults.Items.Count >= HandResults.Items.Count)
                 {
                     if (HandResults.Items[thisIndex].ToString() == ProgramResults.Items[thisIndex].ToString())
@@ -288,11 +268,14 @@ namespace ParadigmTestSuite
 
         private void ProgramEnter_KeyDown(object sender, KeyEventArgs e)
         {
+            //Once the user has entered something and hit enter
             if (e.KeyCode == Keys.Enter && !String.IsNullOrWhiteSpace(ProgramEnter.Text))
             {
+                //Add the item to the end of the list
                 ProgramResults.Items.Add(ProgramEnter.Text);
                 ProgramEnter.Clear();
                 int thisIndex = ProgramResults.Items.Count - 1;
+                //And compare it to the item in the other list if it has been entered.
                 if (HandResults.Items.Count >= ProgramResults.Items.Count)
                 {
                     if (HandResults.Items[thisIndex].ToString() == ProgramResults.Items[thisIndex].ToString())
