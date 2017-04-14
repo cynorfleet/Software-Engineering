@@ -30,11 +30,13 @@ namespace ParadigmTestSuite
       
        private List<Variable> inputs;
        private string pythonOutfile;
+        private Random rand;
 
        public TestCase()
         {
             inputs = new List<Variable>();
             pythonOutfile = "data";
+            rand = new Random();
         }
 
        public void readFile(string sourceFileName)
@@ -85,7 +87,6 @@ namespace ParadigmTestSuite
         private ArrayList randomTestGen(int numTests)
         {
             ArrayList testCases = new ArrayList();
-            Random rand = new Random();
 
             foreach (Variable v in inputs)
             {
@@ -133,7 +134,7 @@ namespace ParadigmTestSuite
                     //generate a number of random floating point numbers
                     for (int f = 0; f < numTests; f++)
                     {
-                        randomFloat = rand.NextDouble() * (double.MaxValue - double.MinValue) + double.MinValue;
+                        randomFloat = rand.NextDouble() * (10 - (-10)) + (-10);
 
                         t.Add(randomFloat);
                     }
@@ -220,7 +221,7 @@ namespace ParadigmTestSuite
         private void parseInputs(List<string> usr_inputs, List<string> usr_declarations)
         {
             Variable v;
-           
+            inputs.Clear(); //clear inputs
             for(int s = 0; s < usr_inputs.Count; s++)
             {
                 v.identifier = usr_inputs[s];

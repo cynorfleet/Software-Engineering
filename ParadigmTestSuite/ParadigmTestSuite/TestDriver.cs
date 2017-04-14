@@ -7,13 +7,14 @@ using System.Threading.Tasks;
 using IronPython.Hosting;
 using Microsoft.Scripting.Hosting;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 
 namespace ParadigmTestSuite
 {
     public struct Function
     {
-
+        
         public Function(string type, string fName)
         {
             parameterList = new List<string>();
@@ -29,26 +30,16 @@ namespace ParadigmTestSuite
 
     public class TestDriver
     {
-        private string driver;
+        private string className = "Point";
         private List<Function> functions;
         private string pythonOutfile;
+        Random rand;
 
         public TestDriver()
         {
-            // driver += "#include <iostream>" + Environment.NewLine;
-            // driver += Environment.NewLine;
-            // driver 
-            driver = @"#include <iostream>
-
-                        using namespace std;
-
-                        int main()
-                        {
-	                        return 0;
-                        }";
-
             functions = new List<Function>();
             pythonOutfile = "data";
+            rand = new Random();
         }
 
         public void readFile(string sourceFileName)
@@ -60,6 +51,7 @@ namespace ParadigmTestSuite
             runPythonScript(sourceFileName, usr_functs, usr_declarations, usr_inputs);
             
             //parse function data
+            parseMethods(usr_functs);
         }
 
       
@@ -111,15 +103,230 @@ namespace ParadigmTestSuite
 
         private void parseMethods(List<String> usr_functs)
         {
+            Regex reg = new Regex(@"\w+");
+            Function f = new Function("", "");
+            int start;
+            //list for storing regex matchesof words in usr_functs elements
+            List<string> l = new List<string>();
+
+
+            functions.Clear(); // clears list 
+
+            f.name = "Point";
+            functions.Add(f);
+
+            foreach(string s in usr_functs)
+            {
+                foreach (Match m in reg.Matches(s))
+                {
+                    l.Add(m.Value);
+                    
+                }
+
+                if (l[0] == "void" || l[0] == "char" || l[0] == "int" ||
+                    l[0] == "string" || l[0] == "double" || l[0] == "float")
+                {
+                    f = new Function(l[0], l[1]);
+                    start = 2;
+                }
+                else
+                {
+                    f = new Function("", l[0]);
+                    start = 1;
+                }
+                
+                for(int i = start; i < l.Count; i++)
+                {
+                    if (l[i] == "char" || l[i] == "int" ||
+                        l[i] == "string" || l[i] == "double" || l[i] == "float")
+                    {
+                        f.parameterList.Add(l[i]);
+                    }
+                }
+
+                functions.Add(f);
+                l.Clear();
+
+            } // end foreach
 
         }
 
         //Purpose: Generates test driver to be suggested to the user
         //Requires:
-        //Returns:
-        public void generateDriver()
+        //Returns: a string - a test driver script
+        public string generateDriver()
         {
+            string driver = "#include <iostream>\n";
+            driver += "#include <string>\n";
+            driver += String.Format("#include\"{0}\" \n", className);
 
+            driver +=
+            @"using namepace std;
+            
+int main()
+{
+";
+            string vars;
+            // instantiate an appropriate object
+            vars = className + " classObject;\n";
+            driver += vars;
+
+            bool first;
+            int varCount = 0;
+            //create a call for each class method
+            foreach (Function f in functions)
+            {
+                //create parameterized constructor object
+                if (f.name == className && f.parameterList != null && f.parameterList.Count != 0)
+                {                   
+                    vars = className + " classObject(";
+
+                    first = true;
+                    //generate and concatenate a value for each parameter 
+                    foreach (string s in f.parameterList)
+                    {
+                        if (!first)
+                            vars += ", ";
+
+                        vars += randomDatGen(s);
+                        first = false;
+
+                    }
+                    vars += ");\n";
+                    driver += vars;
+                  
+                }//end if
+
+                if(f.name != className)
+                {
+                    if (f.returnType == "int")
+                    {
+                        vars = "int var" + varCount + ";\n";
+                        driver += vars;
+                        varCount++;
+                    }
+                    else if (f.returnType == "char")
+                    {
+                        vars = "char var" + varCount + ";\n";
+                        driver += vars;
+                        varCount++;
+                    }
+                    else if (f.returnType == "double" || f.returnType == "float")
+                    {
+                        vars = "double var" + varCount + ";\n";
+                        driver += vars;
+                        varCount++;
+                    }
+
+                    else if (f.returnType == "string")
+                    {
+                        vars = "string var" + varCount + ";\n";
+                        driver += vars;
+                        varCount++;
+                    }
+
+
+                    vars = "";
+                    //if the return type isnt void, make the function call
+                    //and have it return to the right variable
+                    if (f.returnType != "void")
+                    {
+                        vars = "var" + Convert.ToString(varCount - 1) + " = ";
+                                     
+                    }
+
+                    vars += ("classObject." + f.name + "(");
+
+                    first = true;
+                    foreach (string m in f.parameterList)
+                    {
+                        if (!first)
+                            vars += ", ";
+                      
+                        //quotes go around strings and chars
+                        if (m == "string")
+                            vars += "\"" + randomDatGen(m).ToString() + "\"";
+                        else if(m == "char")
+                            vars += "\'" + randomDatGen(m).ToString() + "\'";
+                        else
+                            vars += randomDatGen(m).ToString();
+
+                        first = false;
+                    }
+
+                    vars += ");\n";
+                    driver += vars;
+                }//endif
+
+            }// end foreach
+
+            vars = @"return 0;
+}";
+            driver += vars;
+
+            return driver;
+        }
+
+        //Purpose: Generates random data
+        //Requires: string type
+        //Returns: string 
+        private string randomDatGen(string type)
+        {
+            string randomDat = "";
+         
+            if (type == "int")
+            {
+                int randomInt;
+                int one;
+               
+                //generate 1 or -1 randomly
+                one = rand.Next(-1, 2);
+                while (one == 0)
+                    one = rand.Next(-1, 1);
+
+                //gets a random integer (can be negative)
+                randomInt = rand.Next(0, 11) * one;
+                randomDat = randomInt.ToString();
+                                  
+            }
+            else if (type == "char")
+            {
+                char randomChar;
+
+                //generate random char of ascii values between 32 and 127
+                randomChar = Convert.ToChar(rand.Next(32, 128));
+                randomDat = randomChar.ToString();
+            }
+            else if (type == "double" || type == "float")
+            {
+                double randomFloat;
+
+                //generate a number of random floating point numbers                   
+                randomFloat = rand.NextDouble() * (10 - (-10)) + (-10);
+                randomDat = randomFloat.ToString();                               
+            }
+
+            else if (type == "string")
+            {
+                string randomString = "";
+                char randomChar;
+                int sLength;
+
+                  
+                //get a random string length
+                sLength = rand.Next(0, 10);
+
+                //generate a random string by generating sLength random chars
+                for (int l = 0; l < sLength; l++)
+                {
+                    //generate random char of ascii values between 32 and 127
+                    randomChar = Convert.ToChar(rand.Next(65, 127));
+                    randomString += randomChar; ;
+                }
+                 randomDat = randomString;
+
+            }
+            return randomDat;
         }
 
         //Property that returns the list of source code functions

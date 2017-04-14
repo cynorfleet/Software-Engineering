@@ -1,9 +1,23 @@
 --------------------------------------------
 Functions:
+void welcomeM()
+void endM()
+void openFile(ifstream& infile, ofstream& outfile)
+void errorFile()
+void getPoint(ifstream& infile, PointList& points)
+double findDistance(PointList points, int i, int current_number)
+void printHeading(ofstream& outfile)
+void printTotalDistance(ofstream& outfile, double total_distance)
 int main()
 --------------------------------------------
 Type:
-string word
-int start
+int i
+double distance
+string fileName
+string outputfile
+double newX
+double X1
 --------------------------------------------
 Inputs:
+fileName
+outputfile

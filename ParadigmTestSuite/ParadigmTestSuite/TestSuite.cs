@@ -16,7 +16,8 @@ namespace ParadigmTestSuite
     public partial class TestSuite : Form
     {
         TestCase testGen = new TestCase();
-        string fileName = "";
+        TestDriver testDriver = new TestDriver();
+
         public TestSuite()
         {
             InitializeComponent();
@@ -70,7 +71,8 @@ namespace ParadigmTestSuite
             if (filePaths.Length != 0)
             {
                 testGen.readFile(filePaths[0]);
-                fileNameL.Text = fileName;
+                testDriver.readFile(filePaths[0]);
+                fileNameL.Text = filePaths[0];
             }
         }
 
@@ -82,6 +84,7 @@ namespace ParadigmTestSuite
             List<Variable> testCases = testGen.SourceInputs;
             string i = "";
 
+            variableBox.Items.Clear();
             foreach (Variable v in testCases)
             {
                 i += v.type + " " + v.identifier;
@@ -155,7 +158,6 @@ namespace ParadigmTestSuite
             openFileDialog1.RestoreDirectory = true;
             openFileDialog1.ShowDialog();
 
-            fileName = openFileDialog1.SafeFileNames[0];
             return openFileDialog1.FileNames;
         }
 
@@ -220,6 +222,7 @@ namespace ParadigmTestSuite
            
             string s = "";
 
+            inputBox.Items.Clear();
             foreach (ArrayList l in testCases)
             {
                 foreach(var i in  l)
@@ -233,7 +236,9 @@ namespace ParadigmTestSuite
 
         private void generateDriverButton_Click(object sender, EventArgs e)
         {
-
+            string driver;
+            driver = testDriver.generateDriver();
+            driverBox.Text = driver;
         }
 
         private void generateDriverToolStripMenuItem1_Click(object sender, EventArgs e)

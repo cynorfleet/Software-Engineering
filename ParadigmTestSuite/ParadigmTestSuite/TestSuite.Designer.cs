@@ -82,6 +82,7 @@
             this.menuBar = new System.Windows.Forms.MenuStrip();
             this.fileNameL = new System.Windows.Forms.Label();
             this.fileL = new System.Windows.Forms.Label();
+            this.driverBox = new System.Windows.Forms.RichTextBox();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -594,6 +595,14 @@
             this.fileL.TabIndex = 55;
             this.fileL.Text = "File Opened:";
             // 
+            // driverBox
+            // 
+            this.driverBox.Location = new System.Drawing.Point(882, 229);
+            this.driverBox.Name = "driverBox";
+            this.driverBox.Size = new System.Drawing.Size(290, 305);
+            this.driverBox.TabIndex = 56;
+            this.driverBox.Text = "";
+            // 
             // TestSuite
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -602,6 +611,7 @@
             this.BackgroundImage = global::ParadigmTestSuite.Properties.Resources.TestBack;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1184, 711);
+            this.Controls.Add(this.driverBox);
             this.Controls.Add(this.fileL);
             this.Controls.Add(this.fileNameL);
             this.Controls.Add(this.label5);
@@ -694,6 +704,7 @@
         private System.Windows.Forms.ToolStripMenuItem userManualToolStripMenuItem;
         private System.Windows.Forms.Label fileNameL;
         private System.Windows.Forms.Label fileL;
+        private System.Windows.Forms.RichTextBox driverBox;
     }
 }
 
