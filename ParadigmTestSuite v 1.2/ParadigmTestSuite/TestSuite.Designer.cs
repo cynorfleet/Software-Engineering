@@ -198,6 +198,7 @@
             // inputBox
             // 
             this.inputBox.FormattingEnabled = true;
+            this.inputBox.HorizontalScrollbar = true;
             this.inputBox.Location = new System.Drawing.Point(230, 273);
             this.inputBox.Name = "inputBox";
             this.inputBox.Size = new System.Drawing.Size(199, 316);
@@ -282,6 +283,7 @@
             // 
             // testMethod
             // 
+            this.testMethod.CheckOnClick = true;
             this.testMethod.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.testMethod.FormattingEnabled = true;
             this.testMethod.Items.AddRange(new object[] {
@@ -481,6 +483,7 @@
             this.newToolStripMenuItem1.Name = "newToolStripMenuItem1";
             this.newToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.newToolStripMenuItem1.Text = "New";
+            this.newToolStripMenuItem1.Click += new System.EventHandler(this.newToolStripMenuItem_Click);
             // 
             // openToolStripMenuItem
             // 
@@ -494,7 +497,7 @@
             this.openConfigToolStripMenuItem1.Name = "openConfigToolStripMenuItem1";
             this.openConfigToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.openConfigToolStripMenuItem1.Text = "Open Config";
-            this.openConfigToolStripMenuItem1.Click += new System.EventHandler(this.openConfigToolStripMenuItem1_Click);
+            this.openConfigToolStripMenuItem1.Click += new System.EventHandler(this.loadConfigButton_Click);
             // 
             // saveConfigToolStripMenuItem1
             // 
@@ -508,7 +511,7 @@
             this.saveReportToolStripMenuItem1.Name = "saveReportToolStripMenuItem1";
             this.saveReportToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.saveReportToolStripMenuItem1.Text = "Save Report";
-            this.saveReportToolStripMenuItem1.Click += new System.EventHandler(this.saveReportToolStripMenuItem1_Click);
+            this.saveReportToolStripMenuItem1.Click += new System.EventHandler(this.saveReportButton_Click);
             // 
             // closeToolStripMenuItem1
             // 
@@ -531,14 +534,14 @@
             this.generateTestToolStripMenuItem1.Name = "generateTestToolStripMenuItem1";
             this.generateTestToolStripMenuItem1.Size = new System.Drawing.Size(155, 22);
             this.generateTestToolStripMenuItem1.Text = "Generate Test";
-            this.generateTestToolStripMenuItem1.Click += new System.EventHandler(this.generateTestToolStripMenuItem1_Click);
+            this.generateTestToolStripMenuItem1.Click += new System.EventHandler(this.generateTestButton_Click);
             // 
             // generateDriverToolStripMenuItem1
             // 
             this.generateDriverToolStripMenuItem1.Name = "generateDriverToolStripMenuItem1";
             this.generateDriverToolStripMenuItem1.Size = new System.Drawing.Size(155, 22);
             this.generateDriverToolStripMenuItem1.Text = "Generate Driver";
-            this.generateDriverToolStripMenuItem1.Click += new System.EventHandler(this.generateDriverToolStripMenuItem1_Click);
+            this.generateDriverToolStripMenuItem1.Click += new System.EventHandler(this.generateDriverButton_Click);
             // 
             // helpToolStripMenuItem
             // 

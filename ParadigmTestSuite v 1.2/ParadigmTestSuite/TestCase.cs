@@ -64,14 +64,15 @@ namespace ParadigmTestSuite
             switch (config.TestType)
             {
                 case 2: //If testType is 0, then random test cases are generated for each input
-                    testCases = randomTestGen(numTests);
+
+                    testCases = randomTestGen(numTests, config.TestIntensity);
 
                     break;
 
                 default:
                     //default is random testing
-                    testCases = randomTestGen(numTests)
-                        ;
+                    testCases = randomTestGen(numTests, config.TestIntensity);
+
                      break;
              
             }
@@ -84,91 +85,126 @@ namespace ParadigmTestSuite
         //Requires: int numTests
         //Returns: an ArrayList of ArrayLists; containing test cases 
         //for each input
-        private ArrayList randomTestGen(int numTests)
+        private ArrayList randomTestGen(int numTests, int level)
         {
             ArrayList testCases = new ArrayList();
+            ArrayList t;
 
-            foreach (Variable v in inputs)
+            switch (level)
             {
-                if (v.type == "int")
-                {
-                    ArrayList t = new ArrayList();
-                    int randomInt;
-                    int one;
-
-                    // generate a number of negative and non-negative
-                    // random integers
-                    for (int n = 0; n < numTests; n++)
+                case 0:
+                    foreach (Variable v in inputs)
                     {
-                        //generate 1 or -1 randomly
-                        one = rand.Next(-1, 2);
-                        while (one == 0)
-                            one = rand.Next(-1, 1);
-
-                        //gets a random integer (can be negative)
-                        randomInt = rand.Next(0, 11) * one;
-                        t.Add(randomInt);
+                        t = randomDataGen(numTests, v.type);
+                        testCases.Add(t);
                     }
 
-                    testCases.Add(t);
-                }
-                else if (v.type == "char")
-                {
-                    ArrayList t = new ArrayList();
-                    char randomChar;
-
-                    for (int c = 0; c < numTests; c++)
+                    break;
+                case 1:
+                    //Increased max value of ints, doubles as well as length of strings generated
+                    foreach (Variable v in inputs)
                     {
-                        //generate random char of ascii values between 32 and 127
-                        randomChar = Convert.ToChar(rand.Next(32, 128));
-                        t.Add(randomChar);
+                        t = randomDataGen(numTests, v.type, Int32.MaxValue);
+                        testCases.Add(t);
+                    }
+                    break;
+                case 2:
+                    //Increased max value of ints, doubles as well as length of strings generated.
+                    //The types of data generated for each input is random
+                    string[] s = new string[] {"int", "double", "float", "char", "string"};
+                    int r;
+
+                    foreach (Variable v in inputs)
+                    {
+                        r = rand.Next(0, 5);
+                        t = randomDataGen(numTests, s[r], Int32.MaxValue);
+                        testCases.Add(t);
+                    }
+                    break;
+
+                default:
+                    foreach (Variable v in inputs)
+                    {
+                        t = randomDataGen(numTests, v.type);
+                        testCases.Add(t);
                     }
 
-                    testCases.Add(t);
-                }
-                else if (v.type == "double" || v.type == "float")
+                    break;
+          }
+            return testCases;
+        }
+        //Purpose: generates a number of random values for a specific type
+        //Requires: int num, string type, maxUnsignedVal
+        //Returns: ArrayList t with values for type
+        ArrayList randomDataGen(int num, string type, int maxUnsignedVal = 11)
+        {
+            ArrayList t = new ArrayList();
+                      
+            if (type == "int")
+            {
+                int randomInt;
+                int one;
+
+                // generate a number of negative and non-negative
+                // random integers
+                for (int n = 0; n < num; n++)
                 {
-                    ArrayList t = new ArrayList();
-                    double randomFloat;
-
-                    //generate a number of random floating point numbers
-                    for (int f = 0; f < numTests; f++)
-                    {
-                        randomFloat = rand.NextDouble() * (10 - (-10)) + (-10);
-
-                        t.Add(randomFloat);
-                    }
-
-                    testCases.Add(t);
-                }
-
-                else if (v.type == "string")
-                {
-                    ArrayList t = new ArrayList();
-                    string randomString = "";
-                    char randomChar;
-                    int sLength;
-
-                    for (int c = 0; c < numTests; c++)
-                    {
-                        //get a random string length
-                        sLength = rand.Next(0, 10);
-
-                        //generate a random string by generating sLength random chars
-                        for (int l = 0; l < sLength; l++)
-                        {
-                            //generate random char of ascii values between 32 and 127
-                            randomChar = Convert.ToChar(rand.Next(32, 127));
-                            randomString += randomChar; ;
-                        }
-                        t.Add(randomString);
-                    }
-
-                    testCases.Add(t);
+                    //gets a random integer (can be negative)
+                    randomInt = rand.Next(-maxUnsignedVal, maxUnsignedVal);
+                    t.Add(randomInt);
                 }
 
             }
-            return testCases;
+            else if (type == "char")
+            {
+                char randomChar;
+
+                for (int c = 0; c < num; c++)
+                {
+                    //generate random char of ascii values between 32 and 127
+                    randomChar = Convert.ToChar(rand.Next(32, 128));
+                    t.Add(randomChar);
+                }
+
+            }
+            else if (type == "double" || type == "float")
+            {
+                double randomFloat;
+                int one;
+                //generate a number of random floating point numbers
+                for (int f = 0; f < num; f++)
+                {
+
+                    randomFloat = rand.NextDouble() * (maxUnsignedVal/2 - (-maxUnsignedVal / 2)) + (-maxUnsignedVal / 2);
+
+                    t.Add(randomFloat.ToString("0.##"));
+                }
+
+            }
+
+            else if (type == "string")
+            {
+                string randomString = "";
+                char randomChar;
+                int sLength;
+
+                for (int c = 0; c < num; c++)
+                {
+                    //get a random string length not exceeding 20
+                    sLength = rand.Next(0, maxUnsignedVal % 21);
+
+                    //generate a random string by generating sLength random chars
+                    for (int l = 0; l < sLength; l++)
+                    {
+                        //generate random char of ascii values between 32 and 127
+                        randomChar = Convert.ToChar(rand.Next(32, 127));
+                        randomString += randomChar; ;
+                    }
+                    t.Add(randomString);
+                }
+            }                
+              
+            return t;
         }
 
         //Purpose:Runs a python script that will parse the source file and write data about inputs,

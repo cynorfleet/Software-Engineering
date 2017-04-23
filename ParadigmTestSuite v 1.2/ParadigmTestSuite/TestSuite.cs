@@ -59,7 +59,8 @@ namespace ParadigmTestSuite
             {
                 for(int x = 0; x < testMethod.Items.Count; x++)
                 {
-                    if (e.Index != x) testMethod.SetItemChecked(x, false);
+                    if (e.Index != x)
+                        testMethod.SetItemChecked(x, false);
                 }
             }
         }
@@ -72,7 +73,6 @@ namespace ParadigmTestSuite
             {
                 testGen.readFile(filePaths[0]);
                 testDriver.readFile(filePaths[0]);
-                fileNameL.Text = filePaths[0];
             }
         }
 
@@ -98,11 +98,6 @@ namespace ParadigmTestSuite
             saveFile();
         }
 
-        private void saveReportToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            saveFile();
-        }
-
         private void saveFile()
         {
             Stream myStream;
@@ -124,14 +119,27 @@ namespace ParadigmTestSuite
 
         private void checkSelected()
         {
-            if (languageBox.SelectedIndex != -1 && testMethod.SelectedIndex != -1 && testLevel.SelectedIndex != -1)
+            if (languageBox.SelectedIndex != -1 && testMethod.CheckedItems.Count != 0 && testLevel.SelectedIndex != -1)
             {
-                generateDriverButton.Enabled = true;
-                generateTestButton.Enabled = true;
+                //Enable generating test driver if O-O testing is checked
+                if (testMethod.CheckedItems[0].ToString() == "O-O")
+                {
+                    generateDriverButton.Enabled = true;
+                    generateDriverToolStripMenuItem.Enabled = true;
+                    generateTestButton.Enabled = false;
+                    generateTestToolStripMenuItem.Enabled = false;
+                }
+                //Enable generating test cases if O-O testing is not checked
+                else
+                {
+                    generateTestButton.Enabled = true;
+                    generateTestToolStripMenuItem.Enabled = true;
+                    generateDriverButton.Enabled = false;
+                    generateDriverToolStripMenuItem.Enabled = false;
+                }
+                
                 saveConfigButton.Enabled = true;
-                saveReportButton.Enabled = true;
-                generateDriverToolStripMenuItem.Enabled = true;
-                generateTestToolStripMenuItem.Enabled = true;
+                saveReportButton.Enabled = true;           
                 saveConfigToolStripMenuItem.Enabled = true;
                 saveReportToolStripMenuItem.Enabled = true;
             }
@@ -152,12 +160,12 @@ namespace ParadigmTestSuite
         {
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
 
-           // openFileDialog1.InitialDirectory = "c:\\";
             openFileDialog1.Filter = "C++ files (*.cpp)|*.cpp|header files (*.h)|*.h|All files (*.*)|*.*";
             openFileDialog1.FilterIndex = 3;
             openFileDialog1.RestoreDirectory = true;
             openFileDialog1.ShowDialog();
 
+            fileNameL.Text = openFileDialog1.SafeFileName;
             return openFileDialog1.FileNames;
         }
 
@@ -186,11 +194,6 @@ namespace ParadigmTestSuite
             saveConfig();
         }
 
-        private void openConfigToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            openConfig();
-        }
-
         private void generateTest()
         {
             //Load the configuration into a configuration class
@@ -212,11 +215,6 @@ namespace ParadigmTestSuite
             generateTest();
         }
 
-        private void generateTestToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            generateTest();
-        }
-
         private void populateInputBox(ArrayList testCases)
         {
            
@@ -227,7 +225,7 @@ namespace ParadigmTestSuite
             {
                 foreach(var i in  l)
                 {
-                    s += (i.ToString() + " ");
+                    s += (i.ToString() + "\t");
                 }
                 inputBox.Items.Add(s);
                 s = "";
@@ -239,11 +237,6 @@ namespace ParadigmTestSuite
             string driver;
             driver = testDriver.generateDriver();
             driverBox.Text = driver;
-        }
-
-        private void generateDriverToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void aboutToolStripMenuItem1_Click(object sender, EventArgs e)

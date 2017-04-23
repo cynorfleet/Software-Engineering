@@ -30,7 +30,7 @@ namespace ParadigmTestSuite
 
     public class TestDriver
     {
-        private string className = "Point";
+        private string className = "";
         private List<Function> functions;
         private string pythonOutfile;
         Random rand;
@@ -81,6 +81,7 @@ namespace ParadigmTestSuite
             functions.extend(scope.GetVariable("functions"));
             declarations.extend(scope.GetVariable("datatype"));
             userinputs.extend(scope.GetVariable("userinputs"));
+            className = scope.GetVariable("className");
 
             snatchData(functions, usr_functs);
             snatchData(declarations, usr_declarations);
@@ -112,7 +113,7 @@ namespace ParadigmTestSuite
 
             functions.Clear(); // clears list 
 
-            f.name = "Point";
+            f.name = className;
             functions.Add(f);
 
             foreach(string s in usr_functs)
@@ -158,7 +159,7 @@ namespace ParadigmTestSuite
         {
             string driver = "#include <iostream>\n";
             driver += "#include <string>\n";
-            driver += String.Format("#include\"{0}\" \n", className);
+            driver += String.Format("#include\"{0}.h\" \n", className);
 
             driver +=
             @"using namepace std;
@@ -277,15 +278,9 @@ int main()
             if (type == "int")
             {
                 int randomInt;
-                int one;
-               
-                //generate 1 or -1 randomly
-                one = rand.Next(-1, 2);
-                while (one == 0)
-                    one = rand.Next(-1, 1);
-
-                //gets a random integer (can be negative)
-                randomInt = rand.Next(0, 11) * one;
+              
+                //gets a random integer in the range
+                randomInt = rand.Next(-10, 11);
                 randomDat = randomInt.ToString();
                                   
             }
@@ -302,7 +297,7 @@ int main()
                 double randomFloat;
 
                 //generate a number of random floating point numbers                   
-                randomFloat = rand.NextDouble() * (10 - (-10)) + (-10);
+                randomFloat = rand.NextDouble() * (11 - (-10)) + (-10);
                 randomDat = randomFloat.ToString();                               
             }
 
@@ -314,7 +309,7 @@ int main()
 
                   
                 //get a random string length
-                sLength = rand.Next(0, 10);
+                sLength = rand.Next(0, 11);
 
                 //generate a random string by generating sLength random chars
                 for (int l = 0; l < sLength; l++)
