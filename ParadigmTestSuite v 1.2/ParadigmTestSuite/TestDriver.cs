@@ -86,8 +86,6 @@ namespace ParadigmTestSuite
             snatchData(functions, usr_functs);
             snatchData(declarations, usr_declarations);
             snatchData(userinputs, usr_inputs);
-
-
         }
 
         //Purpose:Runs a python script that will parse the source file and write data about inputs,
@@ -198,8 +196,11 @@ int main()
                   
                 }//end if
 
+                //f is not a copy constructor, construct a call for that method
                 if(f.name != className)
                 {
+                    //first figure out what type the method returns
+                    //and create a variable to hold the returned value
                     if (f.returnType == "int")
                     {
                         vars = "int var" + varCount + ";\n";
@@ -228,7 +229,7 @@ int main()
 
 
                     vars = "";
-                    //if the return type isnt void, make the function call
+                    //if the return type isnt void, construct the method call
                     //and have it return to the right variable
                     if (f.returnType != "void")
                     {
@@ -238,7 +239,8 @@ int main()
 
                     vars += ("classObject." + f.name + "(");
 
-                    first = true;
+                    //gernerate random data to pass as arguments into the method
+                    first = true; // boolean to mark first pass through loop
                     foreach (string m in f.parameterList)
                     {
                         if (!first)
@@ -252,7 +254,7 @@ int main()
                         else
                             vars += randomDatGen(m).ToString();
 
-                        first = false;
+                        first = false; //set to false indicating the first pass 
                     }
 
                     vars += ");\n";
