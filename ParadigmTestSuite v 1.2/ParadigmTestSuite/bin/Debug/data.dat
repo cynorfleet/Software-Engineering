@@ -1,21 +1,9 @@
 --------------------------------------------
 Functions:
-int main()
+void addToList(double x, double y)
+void providePoint(int index_num, double& x, double& y)
+int provideCurrentNum()
 --------------------------------------------
 Type:
-int
-int
-double
-double
-double
-double
-double
 --------------------------------------------
 Inputs:
-NumAdult
-NumChild
-AdultMeal
-DessertCost
-RoomFee
-TaxRate
-Deposit

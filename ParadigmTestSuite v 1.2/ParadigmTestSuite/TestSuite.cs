@@ -30,6 +30,11 @@ namespace ParadigmTestSuite
             generateTestToolStripMenuItem.Enabled = false;
             saveConfigToolStripMenuItem.Enabled = false;
             saveReportToolStripMenuItem.Enabled = false;
+            lowerLBox.Enabled = false;
+            upperLBox.Enabled = false;
+            enterLimitButton.Enabled = false;
+            clearButton.Enabled = false;
+
         }
 
         private void languageBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -44,7 +49,7 @@ namespace ParadigmTestSuite
 
         private void testMethod_SelectedIndexChanged(object sender, EventArgs e)
         {
-            checkSelected();        
+            checkSelected();
         }
 
         private void testLevel_SelectedIndexChanged(object sender, EventArgs e)
@@ -55,9 +60,9 @@ namespace ParadigmTestSuite
         private void testMethod_ItemCheck(object sender, ItemCheckEventArgs e)
         {
 
-            if(e.NewValue == CheckState.Checked)
+            if (e.NewValue == CheckState.Checked)
             {
-                for(int x = 0; x < testMethod.Items.Count; x++)
+                for (int x = 0; x < testMethod.Items.Count; x++)
                 {
                     if (e.Index != x)
                         testMethod.SetItemChecked(x, false);
@@ -73,6 +78,9 @@ namespace ParadigmTestSuite
             {
                 testGen.readFile(filePaths[0]);
                 testDriver.readFile(filePaths[0]);
+
+                //Populate the variable list
+                populateVariableBox();
             }
         }
 
@@ -137,9 +145,29 @@ namespace ParadigmTestSuite
                     generateDriverButton.Enabled = false;
                     generateDriverToolStripMenuItem.Enabled = false;
                 }
-                
+
+                //Enables and disables elements for boundary testing
+                if (testMethod.CheckedItems[0].ToString() == "Boundary")
+                {
+                    lowerLBox.Enabled = true;
+                    upperLBox.Enabled = true;
+                    clearButton.Enabled = true;
+
+                }
+                else
+                {
+                    lowerLBox.Enabled = false;
+                    upperLBox.Enabled = false;
+                    enterLimitButton.Enabled = false;
+                    clearButton.Enabled = false;
+                    //clear the limit boxes
+                    lowerLBox.Clear();
+                    upperLBox.Clear();
+
+                }
+
                 saveConfigButton.Enabled = true;
-                saveReportButton.Enabled = true;           
+                saveReportButton.Enabled = true;
                 saveConfigToolStripMenuItem.Enabled = true;
                 saveReportToolStripMenuItem.Enabled = true;
             }
@@ -153,6 +181,10 @@ namespace ParadigmTestSuite
                 generateTestToolStripMenuItem.Enabled = false;
                 saveConfigToolStripMenuItem.Enabled = false;
                 saveReportToolStripMenuItem.Enabled = false;
+                lowerLBox.Enabled = false;
+                upperLBox.Enabled = false;
+                enterLimitButton.Enabled = false;
+                clearButton.Enabled = false;
             }
         }
 
@@ -174,7 +206,7 @@ namespace ParadigmTestSuite
             languageBox.SelectedIndex = Properties.Settings.Default.TestLang;
             testMethod.SetItemCheckState(Properties.Settings.Default.TestMeth, CheckState.Checked);
             testLevel.SelectedIndex = Properties.Settings.Default.TestInt;
-        } 
+        }
 
         private void saveConfig()
         {
@@ -183,7 +215,7 @@ namespace ParadigmTestSuite
             Properties.Settings.Default.TestInt = testLevel.SelectedIndex;
             Properties.Settings.Default.Save();
         }
-        
+
         private void loadConfigButton_Click(object sender, EventArgs e)
         {
             openConfig();
@@ -200,12 +232,19 @@ namespace ParadigmTestSuite
             Configuration testConfig = new Configuration();
             testConfig.TestType = testMethod.SelectedIndex;
             testConfig.TestIntensity = testLevel.SelectedIndex;
-
+            
             ArrayList testCases;
+            List<string> lowerLimits = new List<string>(), upperLimits = new List<string>();
+
+            foreach (string s in limitsLBoxL.Items)
+                lowerLimits.Add(s);
+
+            foreach (string s in limitsLBoxU.Items)
+                upperLimits.Add(s);
+         
             //Make the test variables
-            testCases = testGen.generateTest(testConfig);
-            //Populate the variable list
-            populateVariableBox();
+            testCases = testGen.generateTest(testConfig, lowerLimits, upperLimits);
+
             //Populate the input box with the generated test cases
             populateInputBox(testCases);
         }
@@ -217,13 +256,13 @@ namespace ParadigmTestSuite
 
         private void populateInputBox(ArrayList testCases)
         {
-           
+
             string s = "";
 
             inputBox.Items.Clear();
             foreach (ArrayList l in testCases)
             {
-                foreach(var i in  l)
+                foreach (var i in l)
                 {
                     s += (i.ToString() + "\t");
                 }
@@ -234,9 +273,13 @@ namespace ParadigmTestSuite
 
         private void generateDriverButton_Click(object sender, EventArgs e)
         {
-            string driver;
-            driver = testDriver.generateDriver();
-            driverBox.Text = driver;
+            List<string> driverList;
+
+            driverList = testDriver.generateDriver();
+            inputBox.Items.Clear();
+
+            foreach (string s in driverList)
+                inputBox.Items.Add(s);
         }
 
         private void aboutToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -269,7 +312,7 @@ namespace ParadigmTestSuite
                 HandEnter.Clear();
                 int thisIndex = HandResults.Items.Count - 1;
                 //And compare it to the item in the other list if it has been entered.
-                if(ProgramResults.Items.Count >= HandResults.Items.Count)
+                if (ProgramResults.Items.Count >= HandResults.Items.Count)
                 {
                     if (HandResults.Items[thisIndex].ToString() == ProgramResults.Items[thisIndex].ToString())
                     {
@@ -307,6 +350,81 @@ namespace ParadigmTestSuite
             }
         }
 
-       
+        private void enterLimitButton_Click(object sender, EventArgs e)
+        {
+            int sel;
+
+            if (limitsLBoxL.SelectedIndex != -1 || limitsLBoxU.SelectedIndex != -1)
+            {
+                //set sel to the index that isn't -1
+               sel =  limitsLBoxL.SelectedIndex != -1 ?limitsLBoxL.SelectedIndex :  limitsLBoxU.SelectedIndex;
+
+                limitsLBoxL.Items[sel] = lowerLBox.Text;
+                limitsLBoxU.Items[sel] = upperLBox.Text;
+
+                //clear the selections out after
+                limitsLBoxL.ClearSelected();
+                limitsLBoxU.ClearSelected();
+            }
+            else if (variableBox.Items.Count > limitsLBoxL.Items.Count)
+            {
+                limitsLBoxL.Items.Add(lowerLBox.Text);
+                limitsLBoxU.Items.Add(upperLBox.Text);
+
+            }
+
+        }
+
+        private void clearButton_Click(object sender, EventArgs e)
+        {
+            if (limitsLBoxL.SelectedIndex == -1 && limitsLBoxU.SelectedIndex == -1)
+            {
+                //Clear both boxes completely if none is selected
+                limitsLBoxL.Items.Clear();
+                limitsLBoxU.Items.Clear();
+            }
+            else
+            {
+                //Clears the selected item if one is selected
+                if(limitsLBoxL.SelectedIndex != -1)
+                    limitsLBoxL.Items[limitsLBoxL.SelectedIndex] = "";
+
+                if (limitsLBoxU.SelectedIndex != -1)
+                    limitsLBoxU.Items[limitsLBoxU.SelectedIndex] = "";
+            }
+        }
+
+        private void limitBox_TextChanged(object sender, EventArgs e)
+       {
+
+            int result, result2;
+            bool lower = false;
+
+            //check if the integer in the lowerLBox is less than
+            //the integer in the upperLBox
+            Int32.TryParse(lowerLBox.Text, out result);
+            Int32.TryParse(upperLBox.Text, out result2);
+
+            if (result < result2)
+                lower = true;
+
+            //Disable enter button if the boxes are empty
+            if (lowerLBox.Text == "" || upperLBox.Text == "" || !lower)
+            {
+                enterLimitButton.Enabled = false;
+            }
+            else
+            {
+
+                //Only enable the enter button when the lowerLBox and upperLBox have integers in them
+                //and the number in the lower limit box is less than the number in the upper limit box
+                if (Int32.TryParse(lowerLBox.Text, out result) && 
+                    Int32.TryParse(upperLBox.Text, out result2) && lower)
+                {
+                    enterLimitButton.Enabled = true;
+                }           
+               
+            }
+        }
     }
 }

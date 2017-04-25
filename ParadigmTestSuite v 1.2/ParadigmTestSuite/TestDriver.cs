@@ -33,7 +33,8 @@ namespace ParadigmTestSuite
         private string className = "";
         private List<Function> functions;
         private string pythonOutfile;
-        Random rand;
+        private Random rand;
+        
 
         public TestDriver()
         {
@@ -152,8 +153,8 @@ namespace ParadigmTestSuite
 
         //Purpose: Generates test driver to be suggested to the user
         //Requires:
-        //Returns: a string - a test driver script
-        public string generateDriver()
+        //Returns: List<string> - a test driver script
+        public List<string> generateDriver()
         {
             string driver = "#include <iostream>\n";
             driver += "#include <string>\n";
@@ -267,7 +268,18 @@ int main()
 }";
             driver += vars;
 
-            return driver;
+            //Store each line of the driver in a list
+           List<string> driverLines = new List<string>();
+            using (StringReader r = new StringReader(driver))
+            {
+                string line;
+                while ((line = r.ReadLine()) != null)
+                {
+                    driverLines.Add(line);
+                }
+            }
+
+                return driverLines;
         }
 
         //Purpose: Generates random data

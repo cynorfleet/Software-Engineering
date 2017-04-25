@@ -53,16 +53,21 @@ namespace ParadigmTestSuite
 
         //Purpose: Generates test cases for each input, according to the configurations
         //set by the user
-        //Requires: Configuration config; Configurations for the test
+        //Requires: Configuration config,  List<string> lower, List<string> upper
         //Returns: an ArrayList of ArrayLists; containing test cases 
         //for each input
-        public ArrayList generateTest(Configuration config)
+        public ArrayList generateTest(Configuration config, List<string> lower, List<string> upper)
         {
             ArrayList testCases = new ArrayList();
             int numTests = 10;
 
             switch (config.TestType)
             {
+                case 0:
+                    break;
+                case 1:
+                    testCases = boundaryTestGen(config.TestIntensity, lower, upper);
+                    break;
                 case 2: //If testType is 0, then random test cases are generated for each input
 
                     testCases = randomTestGen(numTests, config.TestIntensity);
@@ -133,6 +138,7 @@ namespace ParadigmTestSuite
           }
             return testCases;
         }
+
         //Purpose: generates a number of random values for a specific type
         //Requires: int num, string type, maxUnsignedVal
         //Returns: ArrayList t with values for type
@@ -143,8 +149,6 @@ namespace ParadigmTestSuite
             if (type == "int")
             {
                 int randomInt;
-                int one;
-
                 // generate a number of negative and non-negative
                 // random integers
                 for (int n = 0; n < num; n++)
@@ -170,7 +174,6 @@ namespace ParadigmTestSuite
             else if (type == "double" || type == "float")
             {
                 double randomFloat;
-                int one;
                 //generate a number of random floating point numbers
                 for (int f = 0; f < num; f++)
                 {
@@ -207,6 +210,198 @@ namespace ParadigmTestSuite
             return t;
         }
 
+        //Purpose: generates a number of test case values around the boundaries
+        //of the input: Lower and upper. 
+        //Requires: Configuration config, List<string> lower, List<string> upper
+        //Returns: ArrayList of ArrayLists containing test cases for each input
+        private ArrayList boundaryTestGen(int level, List<string> lower, List<string> upper)
+        {
+            ArrayList testCases = new ArrayList();
+           
+            int count = 0;
+
+            foreach (Variable v in inputs)
+            {
+                ArrayList t = new ArrayList();
+
+                //create test cases on and around the boundaries
+                if (v.type == "int")
+                {
+                    int value;
+                
+                        value = Int32.Parse(lower[count]) - 1;
+                        t.Add(value);
+
+                        value = Int32.Parse(lower[count]);
+                        t.Add(value);
+
+                        value = Int32.Parse(lower[count]) + 1;
+                        t.Add(value);
+              
+                        value = Int32.Parse(upper[count]) - 1;
+                        t.Add(value);
+
+                        value = Int32.Parse(upper[count]);
+                        t.Add(value);
+
+                        value = Int32.Parse(upper[count]) + 1;
+                        t.Add(value);
+                 
+                
+                        //take a nominal value
+                        value = (Int32.Parse(lower[count]) + Int32.Parse(upper[count])) / 2;
+                        t.Add(value);
+
+                        if (level > 0)
+                        {
+                            t.Add(Int32.MaxValue);
+                            t.Add(Int32.MinValue);
+                        }
+
+                }
+                else if (v.type == "char")
+                {
+                    int value;
+
+                        //generate ints on and around the boundaries
+                        value = Char.Parse(lower[count]) - 1;
+                        t.Add(value);
+
+                        value = Char.Parse(lower[count]);
+                        t.Add(value);
+
+                        value = Char.Parse(lower[count]) + 1;
+                        t.Add(value);
+                 
+                  
+                        value = Char.Parse(upper[count]) - 1;
+                        t.Add(value);
+
+                        value = Char.Parse(upper[count]);
+                        t.Add(value);
+
+                        value = Char.Parse(upper[count]) + 1;
+                        t.Add(value);                  
+                
+                        //take a nominal value
+                        value = (Char.Parse(lower[count]) + Char.Parse(upper[count])) / 2;
+                        t.Add(value);
+
+                        if (level > 0)
+                        {
+                            t.Add(Int32.MaxValue);
+                            t.Add(Int32.MinValue);
+                        }
+
+                }
+                else if (v.type == "double" || v.type == "float")
+                {
+                    double value;
+                   
+                        //generate floating points on and around the boundaries
+                        value = Double.Parse(lower[count]) - rand.NextDouble();
+                        t.Add(value.ToString("0.##"));
+
+                        value = Double.Parse(lower[count]);
+                        t.Add(value.ToString("0.##"));
+
+                        value = Double.Parse(lower[count]) + rand.NextDouble();
+                        t.Add(value.ToString("0.##"));                  
+                   
+                        value = Double.Parse(upper[count]) - rand.NextDouble();
+                        t.Add(value.ToString("0.##"));
+
+                        value = Double.Parse(upper[count]);
+                        t.Add(value.ToString("0.##"));
+
+                        value = Double.Parse(upper[count]) + rand.NextDouble();
+                        t.Add(value.ToString("0.##"));                   
+                
+                        //take a nominal value
+                        value = (Double.Parse(lower[count]) + Double.Parse(upper[count])) / 2.0;
+                        t.Add(value.ToString("0.##"));
+
+                        if (level > 0)
+                        {
+                            t.Add(Double.MaxValue);
+                            t.Add(Double.MinValue);
+                        }
+                }
+
+                else if (v.type == "string")
+                {
+                    string randomString = "";
+                    int sLength;
+
+                    //The length of the string is the important factor here
+               
+                    if (Int32.Parse(lower[count]) >= 0)
+                    {
+                        sLength = Int32.Parse(lower[count]) - 1;
+                        randomString = randomStringGen(sLength);
+                        t.Add(randomString);
+
+                        sLength = Int32.Parse(lower[count]);
+                        randomString = randomStringGen(sLength);
+                        t.Add(randomString);
+
+
+                        sLength = Int32.Parse(lower[count]) + 1;
+                        randomString = randomStringGen(sLength);
+                        t.Add(randomString);
+                    }
+                   
+                        sLength = Int32.Parse(upper[count]) - 1;
+                        randomString = randomStringGen(sLength);
+                        t.Add(randomString);
+
+                        sLength = Int32.Parse(upper[count]);
+                        randomString = randomStringGen(sLength);
+                        t.Add(randomString);
+
+                        sLength = Int32.Parse(upper[count]) + 1;
+                        randomString = randomStringGen(sLength);
+                        t.Add(randomString);                 
+                 
+                        //take a nominal value
+                        sLength = (Int32.Parse(lower[count]) + Int32.Parse(upper[count])) / 2;
+                        randomString = randomStringGen(sLength);
+                        t.Add(randomString);
+
+                        if (level > 0)
+                        {
+                            sLength = Int32.MaxValue;
+                            randomString = randomStringGen(sLength);
+                            t.Add(randomString);
+                           
+                        }
+
+                }
+
+                testCases.Add(t);
+                count++;
+            }
+
+            return testCases;
+        }
+
+        //Purpose: Generates a random string of a specified length
+        //Requires: int length
+        //Returns:: the generated string
+        private string randomStringGen(int length)
+        {
+            char randomChar;
+            string randomString = "";
+            //generate a random string by generating sLength random chars
+            for (int l = 0; l < length; l++)
+            {
+                //generate random char of ascii values between 32 and 127
+                randomChar = Convert.ToChar(rand.Next(32, 127));
+                randomString += randomChar; ;
+            }
+
+            return randomString;
+        }
         //Purpose:Runs a python script that will parse the source file and write data about inputs,
         //and functions to an output file called data.dat.
         //Requires: The source file name, List<String> usr_functs,
