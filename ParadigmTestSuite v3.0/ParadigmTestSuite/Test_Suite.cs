@@ -59,8 +59,11 @@ namespace ParadigmTestSuite
         {
             try
             {
-                ProcessStartInfo startInfo = new ProcessStartInfo(@"UserManual\TestSuiteUserManual.pdf");
-                Process.Start(startInfo);
+                //ProcessStartInfo startInfo = new ProcessStartInfo(@"UserManual\TestSuiteUserManual.pdf");
+                //Process.Start(startInfo);
+                String openPDFFile = System.IO.Directory.GetCurrentDirectory() + @"\TestSuiteUserManual.pdf";
+                System.IO.File.WriteAllBytes(openPDFFile, Properties.Resources.TestSuiteUserManual);
+                System.Diagnostics.Process.Start(openPDFFile);
             }
             catch(Exception ex)
             {
