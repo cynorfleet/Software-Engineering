@@ -1,0 +1,9 @@
+--------------------------------------------
+Functions:
+void addToList(double x, double y)
+void providePoint(int index_num, double& x, double& y)
+int provideCurrentNum()
+--------------------------------------------
+Type:
+--------------------------------------------
+Inputs:
