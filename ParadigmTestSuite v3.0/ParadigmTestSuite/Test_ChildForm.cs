@@ -13,14 +13,18 @@ using System.Collections;
 
 namespace ParadigmTestSuite
 {
-    public partial class TestSuite : Form
+    public partial class Test_ChildForm : Form
     {
         TestCase testGen = new TestCase();
         TestDriver testDriver = new TestDriver();
 
-        public TestSuite()
+        public Test_ChildForm(string filePath, string safeFileName)
         {
             InitializeComponent();
+
+            //Prevent  menu strip from being merged with any other
+            menuBar.AllowMerge = false;
+
             //Keep users from using functionality not yet accessable
             generateDriverButton.Enabled = false;
             generateTestButton.Enabled = false;
@@ -34,6 +38,29 @@ namespace ParadigmTestSuite
             upperLBox.Enabled = false;
             enterLimitButton.Enabled = false;
             clearButton.Enabled = false;
+
+            fileNameL.Text = safeFileName;
+            this.Text = safeFileName;
+
+            //Disable testing methods that arent implemented
+           for(int i = 0; i < testMethod.Items.Count; i++)
+            {
+                string it = testMethod.Items[i].ToString();
+
+                if(it.ToString() == "Loop"|| it.ToString() == "Functional" || it.ToString() == "Path")
+                {
+                    testMethod.SetItemCheckState(i, CheckState.Indeterminate);
+                }
+            }
+
+            if (filePath.Length != 0)
+            {
+                testGen.readFile(filePath);
+                testDriver.readFile(filePath);
+
+                //Populate the variable list
+                populateVariableBox();
+            }
 
         }
 
@@ -59,28 +86,23 @@ namespace ParadigmTestSuite
 
         private void testMethod_ItemCheck(object sender, ItemCheckEventArgs e)
         {
+           
+            string it = testMethod.Items[e.Index].ToString();
+            
+            //Keep the values Indeterminate for the testing methods that arent implemented
+            if(e.NewValue != CheckState.Indeterminate && (it == "Loop" || it == "Path" || it == "Functional"))
+            {
+                e.NewValue = CheckState.Indeterminate;
+            }
 
             if (e.NewValue == CheckState.Checked)
-            {
+            {              
                 for (int x = 0; x < testMethod.Items.Count; x++)
                 {
                     if (e.Index != x)
                         testMethod.SetItemChecked(x, false);
                 }
-            }
-        }
-
-        private void openFileButton_Click(object sender, EventArgs e)
-        {
-            String[] filePaths;
-            filePaths = openSource();
-            if (filePaths.Length != 0)
-            {
-                testGen.readFile(filePaths[0]);
-                testDriver.readFile(filePaths[0]);
-
-                //Populate the variable list
-                populateVariableBox();
+              
             }
         }
 
@@ -89,11 +111,11 @@ namespace ParadigmTestSuite
         //Returns: nothing
         private void populateVariableBox()
         {
-            List<Variable> testCases = testGen.SourceInputs;
+            List<Variable> testInputs = testGen.SourceInputs;
             string i = "";
 
             variableBox.Items.Clear();
-            foreach (Variable v in testCases)
+            foreach (Variable v in testInputs)
             {
                 i += v.type + " " + v.identifier;
                 variableBox.Items.Add(i);
@@ -188,22 +210,10 @@ namespace ParadigmTestSuite
             }
         }
 
-        private string[] openSource()
-        {
-            OpenFileDialog openFileDialog1 = new OpenFileDialog();
-
-            openFileDialog1.Filter = "C++ files (*.cpp)|*.cpp|header files (*.h)|*.h|All files (*.*)|*.*";
-            openFileDialog1.FilterIndex = 3;
-            openFileDialog1.RestoreDirectory = true;
-            openFileDialog1.ShowDialog();
-
-            fileNameL.Text = openFileDialog1.SafeFileName;
-            return openFileDialog1.FileNames;
-        }
-
+      
         private void openConfig()
         {
-            languageBox.SelectedIndex = Properties.Settings.Default.TestLang;
+            languageBox.SelectedIndex = Properties.Settings.Default.TestLang;          
             testMethod.SetItemCheckState(Properties.Settings.Default.TestMeth, CheckState.Checked);
             testLevel.SelectedIndex = Properties.Settings.Default.TestInt;
         }
@@ -211,7 +221,8 @@ namespace ParadigmTestSuite
         private void saveConfig()
         {
             Properties.Settings.Default.TestLang = languageBox.SelectedIndex;
-            Properties.Settings.Default.TestMeth = testMethod.SelectedIndex;
+            if(testMethod.CheckedIndices.Count != 0)
+                Properties.Settings.Default.TestMeth = testMethod.CheckedIndices[0];
             Properties.Settings.Default.TestInt = testLevel.SelectedIndex;
             Properties.Settings.Default.Save();
         }
@@ -230,23 +241,49 @@ namespace ParadigmTestSuite
         {
             //Load the configuration into a configuration class
             Configuration testConfig = new Configuration();
-            testConfig.TestType = testMethod.SelectedIndex;
-            testConfig.TestIntensity = testLevel.SelectedIndex;
+
+            if(testMethod.CheckedIndices.Count != 0)
+                 testConfig.TestType = testMethod.CheckedIndices[0];
+
+             testConfig.TestIntensity = testLevel.SelectedIndex;
             
             ArrayList testCases;
             List<string> lowerLimits = new List<string>(), upperLimits = new List<string>();
 
-            foreach (string s in limitsLBoxL.Items)
-                lowerLimits.Add(s);
+            if (testConfig.TestType == 1 )
+            {
+                foreach (string s in limitsLBoxL.Items)
+                    lowerLimits.Add(s);
 
-            foreach (string s in limitsLBoxU.Items)
-                upperLimits.Add(s);
+                foreach (string s in limitsLBoxU.Items)
+                    upperLimits.Add(s);
+
+                //Make sure limits for all the inputs have been specified
+                if (lowerLimits.Count == testGen.SourceInputs.Count && 
+                    upperLimits.Count == testGen.SourceInputs.Count)
+                {
+                    //Make the test variables
+                    testCases = testGen.generateTest(testConfig, lowerLimits, upperLimits);
+
+                    //Populate the input box with the generated test cases
+                    populateInputBox(testCases);
+                }
+                else
+                {
+                    string message = @"Each Input has to be assigned appropriate limits. 
+                        Please do so then try again.";
+                    //Message Box
+                    MessageBox.Show(message, "Title", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+            }
+            else
+            {
+                testCases = testGen.generateTest(testConfig, lowerLimits, upperLimits);
+
+                //Populate the input box with the generated test cases
+                populateInputBox(testCases);
+            }                            
          
-            //Make the test variables
-            testCases = testGen.generateTest(testConfig, lowerLimits, upperLimits);
-
-            //Populate the input box with the generated test cases
-            populateInputBox(testCases);
         }
 
         private void generateTestButton_Click(object sender, EventArgs e)
@@ -292,14 +329,10 @@ namespace ParadigmTestSuite
 
         }
 
-        private void newToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Application.Restart();
-        }
 
         private void closeToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
         }
 
         private void HandEnter_KeyDown(object sender, KeyEventArgs e)

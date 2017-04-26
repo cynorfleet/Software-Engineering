@@ -62,22 +62,32 @@
     </Compile>
     <Compile Include="TestCase.cs" />
     <Compile Include="TestDriver.cs" />
-    <Compile Include="TestSuite.cs">
+    <Compile Include="Test_ChildForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TestSuite.Designer.cs">
-      <DependentUpon>TestSuite.cs</DependentUpon>
+    <Compile Include="Test_ChildForm.Designer.cs">
+      <DependentUpon>Test_ChildForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="TestSuite.resx">
-      <DependentUpon>TestSuite.cs</DependentUpon>
+    <Compile Include="Test_Suite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Test_Suite.Designer.cs">
+      <DependentUpon>Test_Suite.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Test_ChildForm.resx">
+      <DependentUpon>Test_ChildForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Test_Suite.resx">
+      <DependentUpon>Test_Suite.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="bin\Debug\UserManual\TestSuiteUserManual.pdf" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -1,6 +1,6 @@
 ﻿namespace ParadigmTestSuite
 {
-    partial class TestSuite
+    partial class Test_ChildForm
     {
         /// <summary>
         /// Required designer variable.
@@ -40,7 +40,6 @@
             this.inputBox = new System.Windows.Forms.ListBox();
             this.variableBox = new System.Windows.Forms.ListBox();
             this.generateTestButton = new System.Windows.Forms.Button();
-            this.openFileButton = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.testLevel = new System.Windows.Forms.ComboBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -78,8 +77,6 @@
             this.inputBoundaryL = new System.Windows.Forms.Label();
             this.PassFail = new System.Windows.Forms.ListBox();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.newToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openConfigToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.saveConfigToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.saveReportToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -88,8 +85,6 @@
             this.generateTestToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.generateDriverToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aboutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.userManualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuBar = new System.Windows.Forms.MenuStrip();
             this.fileNameL = new System.Windows.Forms.Label();
             this.fileL = new System.Windows.Forms.Label();
@@ -132,7 +127,7 @@
             this.loadConfigButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.loadConfigButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.loadConfigButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loadConfigButton.Location = new System.Drawing.Point(146, 47);
+            this.loadConfigButton.Location = new System.Drawing.Point(1033, 85);
             this.loadConfigButton.Name = "loadConfigButton";
             this.loadConfigButton.Size = new System.Drawing.Size(126, 23);
             this.loadConfigButton.TabIndex = 49;
@@ -248,21 +243,6 @@
             this.generateTestButton.UseVisualStyleBackColor = false;
             this.generateTestButton.Click += new System.EventHandler(this.generateTestButton_Click);
             // 
-            // openFileButton
-            // 
-            this.openFileButton.BackColor = System.Drawing.Color.LightBlue;
-            this.openFileButton.BackgroundImage = global::ParadigmTestSuite.Properties.Resources.bluebutton;
-            this.openFileButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.openFileButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.openFileButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.openFileButton.Location = new System.Drawing.Point(15, 47);
-            this.openFileButton.Name = "openFileButton";
-            this.openFileButton.Size = new System.Drawing.Size(125, 23);
-            this.openFileButton.TabIndex = 37;
-            this.openFileButton.Text = "Open File(s)";
-            this.openFileButton.UseVisualStyleBackColor = false;
-            this.openFileButton.Click += new System.EventHandler(this.openFileButton_Click);
-            // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.LightSteelBlue;
@@ -353,9 +333,7 @@
             // newToolStripMenuItem
             // 
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.newToolStripMenuItem.Text = "New";
-            this.newToolStripMenuItem.Click += new System.EventHandler(this.newToolStripMenuItem_Click);
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(32, 19);
             // 
             // openFileToolStripMenuItem
             // 
@@ -618,8 +596,6 @@
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.newToolStripMenuItem1,
-            this.openToolStripMenuItem,
             this.openConfigToolStripMenuItem1,
             this.saveConfigToolStripMenuItem1,
             this.saveReportToolStripMenuItem1,
@@ -628,45 +604,31 @@
             this.toolStripMenuItem1.Size = new System.Drawing.Size(37, 20);
             this.toolStripMenuItem1.Text = "File";
             // 
-            // newToolStripMenuItem1
-            // 
-            this.newToolStripMenuItem1.Name = "newToolStripMenuItem1";
-            this.newToolStripMenuItem1.Size = new System.Drawing.Size(142, 22);
-            this.newToolStripMenuItem1.Text = "New";
-            this.newToolStripMenuItem1.Click += new System.EventHandler(this.newToolStripMenuItem_Click);
-            // 
-            // openToolStripMenuItem
-            // 
-            this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
-            this.openToolStripMenuItem.Text = "Open File";
-            this.openToolStripMenuItem.Click += new System.EventHandler(this.openFileButton_Click);
-            // 
             // openConfigToolStripMenuItem1
             // 
             this.openConfigToolStripMenuItem1.Name = "openConfigToolStripMenuItem1";
-            this.openConfigToolStripMenuItem1.Size = new System.Drawing.Size(142, 22);
+            this.openConfigToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.openConfigToolStripMenuItem1.Text = "Open Config";
             this.openConfigToolStripMenuItem1.Click += new System.EventHandler(this.loadConfigButton_Click);
             // 
             // saveConfigToolStripMenuItem1
             // 
             this.saveConfigToolStripMenuItem1.Name = "saveConfigToolStripMenuItem1";
-            this.saveConfigToolStripMenuItem1.Size = new System.Drawing.Size(142, 22);
+            this.saveConfigToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.saveConfigToolStripMenuItem1.Text = "Save Config";
             this.saveConfigToolStripMenuItem1.Click += new System.EventHandler(this.saveConfigButton_Click);
             // 
             // saveReportToolStripMenuItem1
             // 
             this.saveReportToolStripMenuItem1.Name = "saveReportToolStripMenuItem1";
-            this.saveReportToolStripMenuItem1.Size = new System.Drawing.Size(142, 22);
+            this.saveReportToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.saveReportToolStripMenuItem1.Text = "Save Report";
             this.saveReportToolStripMenuItem1.Click += new System.EventHandler(this.saveReportButton_Click);
             // 
             // closeToolStripMenuItem1
             // 
             this.closeToolStripMenuItem1.Name = "closeToolStripMenuItem1";
-            this.closeToolStripMenuItem1.Size = new System.Drawing.Size(142, 22);
+            this.closeToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.closeToolStripMenuItem1.Text = "Close";
             this.closeToolStripMenuItem1.Click += new System.EventHandler(this.closeToolStripMenuItem1_Click);
             // 
@@ -695,26 +657,9 @@
             // 
             // helpToolStripMenuItem
             // 
-            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aboutToolStripMenuItem1,
-            this.userManualToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.helpToolStripMenuItem.Text = "Help";
-            // 
-            // aboutToolStripMenuItem1
-            // 
-            this.aboutToolStripMenuItem1.Name = "aboutToolStripMenuItem1";
-            this.aboutToolStripMenuItem1.Size = new System.Drawing.Size(140, 22);
-            this.aboutToolStripMenuItem1.Text = "About";
-            this.aboutToolStripMenuItem1.Click += new System.EventHandler(this.aboutToolStripMenuItem1_Click);
-            // 
-            // userManualToolStripMenuItem
-            // 
-            this.userManualToolStripMenuItem.Name = "userManualToolStripMenuItem";
-            this.userManualToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
-            this.userManualToolStripMenuItem.Text = "User Manual";
-            this.userManualToolStripMenuItem.Click += new System.EventHandler(this.userManualToolStripMenuItem_Click);
             // 
             // menuBar
             // 
@@ -724,7 +669,7 @@
             this.helpToolStripMenuItem});
             this.menuBar.Location = new System.Drawing.Point(0, 0);
             this.menuBar.Name = "menuBar";
-            this.menuBar.Size = new System.Drawing.Size(1184, 24);
+            this.menuBar.Size = new System.Drawing.Size(1234, 24);
             this.menuBar.TabIndex = 50;
             this.menuBar.Text = "menuStrip1";
             // 
@@ -733,7 +678,7 @@
             this.fileNameL.AutoSize = true;
             this.fileNameL.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fileNameL.ForeColor = System.Drawing.Color.Green;
-            this.fileNameL.Location = new System.Drawing.Point(377, 57);
+            this.fileNameL.Location = new System.Drawing.Point(89, 57);
             this.fileNameL.Name = "fileNameL";
             this.fileNameL.Size = new System.Drawing.Size(42, 13);
             this.fileNameL.TabIndex = 54;
@@ -742,20 +687,20 @@
             // fileL
             // 
             this.fileL.AutoSize = true;
-            this.fileL.Location = new System.Drawing.Point(304, 56);
+            this.fileL.Location = new System.Drawing.Point(16, 56);
             this.fileL.Name = "fileL";
             this.fileL.Size = new System.Drawing.Size(67, 13);
             this.fileL.TabIndex = 55;
             this.fileL.Text = "File Opened:";
             // 
-            // TestSuite
+            // Test_ChildForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = global::ParadigmTestSuite.Properties.Resources.TestBack;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1184, 711);
+            this.ClientSize = new System.Drawing.Size(1234, 711);
             this.Controls.Add(this.fileL);
             this.Controls.Add(this.fileNameL);
             this.Controls.Add(this.generateDriverButton);
@@ -763,7 +708,6 @@
             this.Controls.Add(this.saveConfigButton);
             this.Controls.Add(this.saveReportButton);
             this.Controls.Add(this.generateTestButton);
-            this.Controls.Add(this.openFileButton);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
@@ -771,7 +715,7 @@
             this.Controls.Add(this.reportBox);
             this.DoubleBuffered = true;
             this.MaximizeBox = false;
-            this.Name = "TestSuite";
+            this.Name = "Test_ChildForm";
             this.Text = "Test Suite";
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
@@ -799,7 +743,6 @@
         private System.Windows.Forms.ListBox inputBox;
         private System.Windows.Forms.ListBox variableBox;
         private System.Windows.Forms.Button generateTestButton;
-        private System.Windows.Forms.Button openFileButton;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.ComboBox testLevel;
         private System.Windows.Forms.GroupBox groupBox3;
@@ -826,8 +769,6 @@
         private System.Windows.Forms.GroupBox reportBox;
         private System.Windows.Forms.ListBox PassFail;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem openConfigToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem runToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
@@ -837,8 +778,6 @@
         private System.Windows.Forms.ToolStripMenuItem closeToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem generateTestToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem generateDriverToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem userManualToolStripMenuItem;
         private System.Windows.Forms.Label fileNameL;
         private System.Windows.Forms.Label fileL;
         private System.Windows.Forms.Label inputBoundaryL;

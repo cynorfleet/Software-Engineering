@@ -16,7 +16,7 @@ namespace ParadigmTestSuite
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TestSuite());
+            Application.Run(new Test_Suite());
         }
     }
 }
