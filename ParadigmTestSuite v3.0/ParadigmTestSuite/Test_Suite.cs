@@ -17,8 +17,13 @@ namespace ParadigmTestSuite
         public Test_Suite()
         {
             InitializeComponent();
+            tabForms.Visible = false;
         }
 
+        //Purpose: Opens a dialog so the user can select a file of choice
+        //Requires: out string safeFileName
+        //Returns: the file path of the selected file and the safeFileName
+        //as an out argument
         private string openSource(out string safeFileName)
         {
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
@@ -33,6 +38,62 @@ namespace ParadigmTestSuite
             return openFileDialog1.FileName;
         }
 
+        //Purpose: When a child form activates, associate it with a new tab page
+        //and by tag. 
+        private void Test_SuiteChildMDIActivate(object sender,
+                                 EventArgs e)
+        {
+
+            if (this.ActiveMdiChild == null)
+                tabForms.Visible = false;
+            // If no any child form, hide tabControl 
+            else
+            {
+                this.ActiveMdiChild.WindowState =
+                FormWindowState.Maximized;
+                // Child form always maximized 
+
+                // If child form is new and no has tabPage, 
+                // create new tabPage 
+                if (this.ActiveMdiChild.Tag == null)
+                {
+                    // Add a tabPage to tabControl with child 
+                    // form caption 
+                    TabPage tp = new TabPage(this.ActiveMdiChild
+                                             .Text);
+                    tp.Tag = this.ActiveMdiChild;
+                    tp.Parent = tabForms;
+                    tabForms.SelectedTab = tp;
+
+                    //Associate the child form via tag with the tab page
+                    this.ActiveMdiChild.Tag = tp;
+
+                    //Add an event to the active mdi child form
+                    //That will close the tab page when the 
+                    //associated child form is closed
+                    this.ActiveMdiChild.FormClosed +=
+                        new FormClosedEventHandler(
+                                        ActiveMdiChild_FormClosed);
+                }
+
+                if (!tabForms.Visible) tabForms.Visible = true;
+
+            }
+        }
+
+        //Purpose: Closes the correspond tab page with the child form
+        private void ActiveMdiChild_FormClosed(object sender,
+                                    FormClosedEventArgs e)
+        {
+            ((sender as Form).Tag as TabPage).Dispose();
+        }
+
+        //Purporse: Activate a tab pages corresponding child form when selected
+        private void tabForms_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if ((tabForms.SelectedTab != null) && (tabForms.SelectedTab.Tag != null))
+                (tabForms.SelectedTab.Tag as Form).Select();
+        }
 
 
         //Purpose: Terminates application

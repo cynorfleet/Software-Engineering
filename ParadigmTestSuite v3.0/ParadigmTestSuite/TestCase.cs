@@ -368,13 +368,13 @@ namespace ParadigmTestSuite
                         randomString = randomStringGen(sLength);
                         t.Add(randomString);
 
-                        if (level > 0)
-                        {
-                            sLength = Int32.MaxValue;
-                            randomString = randomStringGen(sLength);
-                            t.Add(randomString);
+                        //if (level > 0)
+                        //{
+                        //    sLength = Int32.MaxValue;
+                        //    randomString = randomStringGen(sLength);
+                        //    t.Add(randomString);
                            
-                        }
+                        //}
 
                 }
 
