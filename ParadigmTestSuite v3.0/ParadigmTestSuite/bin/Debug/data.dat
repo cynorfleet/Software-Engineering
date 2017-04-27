@@ -4,7 +4,15 @@ int main()
 --------------------------------------------
 Type:
 int
+int
+double
+double
 --------------------------------------------
 Inputs:
-days
-days
+Adult
+Children
+Meal
+SingDessert
+RoomFee
+TaxRate
+Deposit

@@ -607,28 +607,28 @@
             // openConfigToolStripMenuItem1
             // 
             this.openConfigToolStripMenuItem1.Name = "openConfigToolStripMenuItem1";
-            this.openConfigToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.openConfigToolStripMenuItem1.Size = new System.Drawing.Size(142, 22);
             this.openConfigToolStripMenuItem1.Text = "Open Config";
             this.openConfigToolStripMenuItem1.Click += new System.EventHandler(this.loadConfigButton_Click);
             // 
             // saveConfigToolStripMenuItem1
             // 
             this.saveConfigToolStripMenuItem1.Name = "saveConfigToolStripMenuItem1";
-            this.saveConfigToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.saveConfigToolStripMenuItem1.Size = new System.Drawing.Size(142, 22);
             this.saveConfigToolStripMenuItem1.Text = "Save Config";
             this.saveConfigToolStripMenuItem1.Click += new System.EventHandler(this.saveConfigButton_Click);
             // 
             // saveReportToolStripMenuItem1
             // 
             this.saveReportToolStripMenuItem1.Name = "saveReportToolStripMenuItem1";
-            this.saveReportToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.saveReportToolStripMenuItem1.Size = new System.Drawing.Size(142, 22);
             this.saveReportToolStripMenuItem1.Text = "Save Report";
             this.saveReportToolStripMenuItem1.Click += new System.EventHandler(this.saveReportButton_Click);
             // 
             // closeToolStripMenuItem1
             // 
             this.closeToolStripMenuItem1.Name = "closeToolStripMenuItem1";
-            this.closeToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.closeToolStripMenuItem1.Size = new System.Drawing.Size(142, 22);
             this.closeToolStripMenuItem1.Text = "Close";
             this.closeToolStripMenuItem1.Click += new System.EventHandler(this.closeToolStripMenuItem1_Click);
             // 
@@ -717,6 +717,7 @@
             this.MaximizeBox = false;
             this.Name = "Test_ChildForm";
             this.Text = "Test Suite";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);

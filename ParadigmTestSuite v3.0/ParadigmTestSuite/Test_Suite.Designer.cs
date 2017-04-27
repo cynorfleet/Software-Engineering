@@ -104,6 +104,7 @@
             this.tabForms.SelectedIndex = 0;
             this.tabForms.Size = new System.Drawing.Size(1184, 26);
             this.tabForms.TabIndex = 3;
+            this.tabForms.SelectedIndexChanged += new System.EventHandler(this.tabForms_SelectedIndexChanged);
             // 
             // Test_Suite
             // 
