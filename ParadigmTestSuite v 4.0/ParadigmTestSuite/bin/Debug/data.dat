@@ -1,0 +1,16 @@
+--------------------------------------------
+Functions:
+void insertItemFirst(string)
+void insertItemEnd(string)
+void insertItemHere(string)
+void advanceCursor()
+string getName()
+void resetCursor()
+int length()
+void removeItem()
+void changeItem(string)
+void clearList()
+--------------------------------------------
+Type:
+--------------------------------------------
+Inputs:
