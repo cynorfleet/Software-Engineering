@@ -119,3 +119,21 @@ C:\Users\Damien\Downloads\Software-Engineering-master\Software-Engineering-maste
 C:\Users\Damien\Downloads\Software-Engineering-master\Software-Engineering-master\ParadigmTestSuite v3.0\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.csproj.GenerateResource.Cache
 C:\Users\Damien\Downloads\Software-Engineering-master\Software-Engineering-master\ParadigmTestSuite v3.0\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.exe
 C:\Users\Damien\Downloads\Software-Engineering-master\Software-Engineering-master\ParadigmTestSuite v3.0\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.pdb
+C:\Users\Damien\Downloads\Software-Engineering-master\Software-Engineering-master\ParadigmTestSuite v 4.0\ParadigmTestSuite\bin\Debug\ParadigmTestSuite.exe.config
+C:\Users\Damien\Downloads\Software-Engineering-master\Software-Engineering-master\ParadigmTestSuite v 4.0\ParadigmTestSuite\bin\Debug\ParadigmTestSuite.exe
+C:\Users\Damien\Downloads\Software-Engineering-master\Software-Engineering-master\ParadigmTestSuite v 4.0\ParadigmTestSuite\bin\Debug\ParadigmTestSuite.pdb
+C:\Users\Damien\Downloads\Software-Engineering-master\Software-Engineering-master\ParadigmTestSuite v 4.0\ParadigmTestSuite\bin\Debug\IronPython.dll
+C:\Users\Damien\Downloads\Software-Engineering-master\Software-Engineering-master\ParadigmTestSuite v 4.0\ParadigmTestSuite\bin\Debug\Microsoft.Scripting.dll
+C:\Users\Damien\Downloads\Software-Engineering-master\Software-Engineering-master\ParadigmTestSuite v 4.0\ParadigmTestSuite\bin\Debug\Microsoft.Dynamic.dll
+C:\Users\Damien\Downloads\Software-Engineering-master\Software-Engineering-master\ParadigmTestSuite v 4.0\ParadigmTestSuite\bin\Debug\Microsoft.Scripting.Metadata.dll
+C:\Users\Damien\Downloads\Software-Engineering-master\Software-Engineering-master\ParadigmTestSuite v 4.0\ParadigmTestSuite\bin\Debug\IronPython.xml
+C:\Users\Damien\Downloads\Software-Engineering-master\Software-Engineering-master\ParadigmTestSuite v 4.0\ParadigmTestSuite\bin\Debug\Microsoft.Scripting.xml
+C:\Users\Damien\Downloads\Software-Engineering-master\Software-Engineering-master\ParadigmTestSuite v 4.0\ParadigmTestSuite\bin\Debug\Microsoft.Dynamic.xml
+C:\Users\Damien\Downloads\Software-Engineering-master\Software-Engineering-master\ParadigmTestSuite v 4.0\ParadigmTestSuite\bin\Debug\Microsoft.Scripting.Metadata.xml
+C:\Users\Damien\Downloads\Software-Engineering-master\Software-Engineering-master\ParadigmTestSuite v 4.0\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.csprojResolveAssemblyReference.cache
+C:\Users\Damien\Downloads\Software-Engineering-master\Software-Engineering-master\ParadigmTestSuite v 4.0\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.Test_ChildForm.resources
+C:\Users\Damien\Downloads\Software-Engineering-master\Software-Engineering-master\ParadigmTestSuite v 4.0\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.Properties.Resources.resources
+C:\Users\Damien\Downloads\Software-Engineering-master\Software-Engineering-master\ParadigmTestSuite v 4.0\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.Test_Suite.resources
+C:\Users\Damien\Downloads\Software-Engineering-master\Software-Engineering-master\ParadigmTestSuite v 4.0\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.csproj.GenerateResource.Cache
+C:\Users\Damien\Downloads\Software-Engineering-master\Software-Engineering-master\ParadigmTestSuite v 4.0\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.exe
+C:\Users\Damien\Downloads\Software-Engineering-master\Software-Engineering-master\ParadigmTestSuite v 4.0\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.pdb

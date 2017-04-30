@@ -193,8 +193,8 @@ namespace ParadigmTestSuite
 
                 for (int c = 0; c < num; c++)
                 {
-                    //get a random string length not exceeding 20
-                    sLength = rand.Next(0, maxUnsignedVal % 21);
+                    //get a random string length not exceeding 1000
+                    sLength = rand.Next(0, 1000);
 
                     //generate a random string by generating sLength random chars
                     for (int l = 0; l < sLength; l++)
