@@ -40,6 +40,8 @@ namespace ParadigmTestSuite
 
         //Purpose: When a child form activates, associate it with a new tab page
         //and by tag. 
+        //Requires: object sender, EventArgs e
+        //Returns: nothing 
         private void Test_SuiteChildMDIActivate(object sender,
                                  EventArgs e)
         {
@@ -82,6 +84,8 @@ namespace ParadigmTestSuite
         }
 
         //Purpose: Closes the correspond tab page with the child form
+        //Requires: object sender, EventArgs e
+        //Returns: nothing 
         private void ActiveMdiChild_FormClosed(object sender,
                                     FormClosedEventArgs e)
         {
@@ -89,6 +93,8 @@ namespace ParadigmTestSuite
         }
 
         //Purporse: Activate a tab pages corresponding child form when selected
+        //Requires: object sender, EventArgs e
+        //Returns: nothing 
         private void tabForms_SelectedIndexChanged(object sender, EventArgs e)
         {
             if ((tabForms.SelectedTab != null) && (tabForms.SelectedTab.Tag != null))
@@ -99,12 +105,16 @@ namespace ParadigmTestSuite
 
 
         //Purpose: Terminates application
+        //Requires: object sender, EventArgs e
+        //Returns: nothing 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
         //Purpose: Opens a file
+        //Requires: object sender, EventArgs e
+        //Returns: nothing 
         private void openFileToolStripMenuItem_Click(object sender, EventArgs e)
         {
             string safeFileName = "";
@@ -117,7 +127,9 @@ namespace ParadigmTestSuite
             childForm.Show();
         }
 
-        //Open the UserManual using the Systems default pdf viewer
+        //Purporse: Open the UserManual using the Systems default pdf viewer
+        //Requires: object sender, EventArgs e
+        //Returns: nothing
         private void userManualToolStripMenuItem_Click(object sender, EventArgs e)
         {
             try
@@ -133,6 +145,21 @@ namespace ParadigmTestSuite
                 MessageBox.Show("UserManual could not be opened!\n" + ex.ToString(), "User Manual Error",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        //Purpose: Brings up a message box telling the user about the applications
+        //Reuqires: object sender, EventArgs e
+        //Returns: nothing
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string about = "Paradigm Test Suite\n\n";
+            about += "Company: Paradigm \n\n";
+            about += "Programmers: Cavaughn Browne, Damien Moeller, Christian Norfleet, ";
+            about += "and Aimee Phillips\n\n";
+            about += "Version 1.0";
+
+            MessageBox.Show(about, "About Paradigm Test Suite", 
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

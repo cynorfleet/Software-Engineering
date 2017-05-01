@@ -75,7 +75,7 @@ def parseCinGet(lines, keyword, strip=None):
     return resultlist
     
 def parseIfInputs(lines, inputs):              #parseIfInputs looks for inputs that are arguments of if statements
-    resultList = []
+    resultList = []                            #(SCRAPPED IDEA)
     wordList = []  
     for i, line in enumerate(lines):
         words = line.split()
@@ -156,8 +156,8 @@ for intype, parser in inputdic.items(): # for every input command in the code
     var = parseCinGet(lines, parser, True)  # look thru each line and find user inputs
     inputs.extend(var)            # add the results to a outfile buffer to write later
     
-ifInputs = parseIfInputs(lines, inputs)
-print("If Inputs are: ", ifInputs)
+#ifInputs = parseIfInputs(lines, inputs)
+#print("If Inputs are: ", ifInputs)
 datatype, userinputs = sendDataBack(datatype, inputs)
 
 with open(outfile, 'w') as outfile:     # open the outfile for writing

@@ -1,0 +1,18 @@
+--------------------------------------------
+Functions:
+int main()
+--------------------------------------------
+Type:
+int
+int
+double
+double
+--------------------------------------------
+Inputs:
+Adult
+Children
+Meal
+SingDessert
+RoomFee
+TaxRate
+Deposit

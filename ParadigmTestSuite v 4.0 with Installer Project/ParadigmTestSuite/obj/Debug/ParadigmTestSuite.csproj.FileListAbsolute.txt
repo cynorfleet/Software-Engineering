@@ -1,0 +1,173 @@
+c:\users\damien\documents\visual studio 2015\Projects\ParadigmTestSuite\ParadigmTestSuite\bin\Debug\ParadigmTestSuite.exe.config
+c:\users\damien\documents\visual studio 2015\Projects\ParadigmTestSuite\ParadigmTestSuite\bin\Debug\ParadigmTestSuite.exe
+c:\users\damien\documents\visual studio 2015\Projects\ParadigmTestSuite\ParadigmTestSuite\bin\Debug\ParadigmTestSuite.pdb
+c:\users\damien\documents\visual studio 2015\Projects\ParadigmTestSuite\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.TestSuite.resources
+c:\users\damien\documents\visual studio 2015\Projects\ParadigmTestSuite\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.Properties.Resources.resources
+c:\users\damien\documents\visual studio 2015\Projects\ParadigmTestSuite\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.csproj.GenerateResource.Cache
+c:\users\damien\documents\visual studio 2015\Projects\ParadigmTestSuite\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.exe
+c:\users\damien\documents\visual studio 2015\Projects\ParadigmTestSuite\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.pdb
+c:\users\damien\documents\visual studio 2015\Projects\ParadigmTestSuite\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.csprojResolveAssemblyReference.cache
+C:\Users\Damien\Documents\Visual Studio 2015\Projects\ParadigmTestSuite\ParadigmTestSuite\bin\Debug\IronPython.dll
+C:\Users\Damien\Documents\Visual Studio 2015\Projects\ParadigmTestSuite\ParadigmTestSuite\bin\Debug\Microsoft.Scripting.dll
+C:\Users\Damien\Documents\Visual Studio 2015\Projects\ParadigmTestSuite\ParadigmTestSuite\bin\Debug\Microsoft.Dynamic.dll
+C:\Users\Damien\Documents\Visual Studio 2015\Projects\ParadigmTestSuite\ParadigmTestSuite\bin\Debug\Microsoft.Scripting.Metadata.dll
+C:\Users\Damien\Documents\Visual Studio 2015\Projects\ParadigmTestSuite\ParadigmTestSuite\bin\Debug\IronPython.xml
+C:\Users\Damien\Documents\Visual Studio 2015\Projects\ParadigmTestSuite\ParadigmTestSuite\bin\Debug\Microsoft.Scripting.xml
+C:\Users\Damien\Documents\Visual Studio 2015\Projects\ParadigmTestSuite\ParadigmTestSuite\bin\Debug\Microsoft.Dynamic.xml
+C:\Users\Damien\Documents\Visual Studio 2015\Projects\ParadigmTestSuite\ParadigmTestSuite\bin\Debug\Microsoft.Scripting.Metadata.xml
+C:\Users\Cavaughn\Documents\GitHub\Software-Engineering\ParadigmTestSuite\ParadigmTestSuite\bin\Debug\ParadigmTestSuite.exe.config
+C:\Users\Cavaughn\Documents\GitHub\Software-Engineering\ParadigmTestSuite\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.exe
+C:\Users\Cavaughn\Documents\GitHub\Software-Engineering\ParadigmTestSuite\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.pdb
+C:\Users\Cavaughn\Documents\GitHub\Software-Engineering\ParadigmTestSuite\ParadigmTestSuite\bin\Debug\ParadigmTestSuite.exe
+C:\Users\Cavaughn\Documents\GitHub\Software-Engineering\ParadigmTestSuite\ParadigmTestSuite\bin\Debug\ParadigmTestSuite.pdb
+C:\Users\Cavaughn\Documents\GitHub\Software-Engineering\ParadigmTestSuite\ParadigmTestSuite\bin\Debug\IronPython.dll
+C:\Users\Cavaughn\Documents\GitHub\Software-Engineering\ParadigmTestSuite\ParadigmTestSuite\bin\Debug\Microsoft.Scripting.dll
+C:\Users\Cavaughn\Documents\GitHub\Software-Engineering\ParadigmTestSuite\ParadigmTestSuite\bin\Debug\Microsoft.Dynamic.dll
+C:\Users\Cavaughn\Documents\GitHub\Software-Engineering\ParadigmTestSuite\ParadigmTestSuite\bin\Debug\Microsoft.Scripting.Metadata.dll
+C:\Users\Cavaughn\Documents\GitHub\Software-Engineering\ParadigmTestSuite\ParadigmTestSuite\bin\Debug\IronPython.xml
+C:\Users\Cavaughn\Documents\GitHub\Software-Engineering\ParadigmTestSuite\ParadigmTestSuite\bin\Debug\Microsoft.Scripting.xml
+C:\Users\Cavaughn\Documents\GitHub\Software-Engineering\ParadigmTestSuite\ParadigmTestSuite\bin\Debug\Microsoft.Dynamic.xml
+C:\Users\Cavaughn\Documents\GitHub\Software-Engineering\ParadigmTestSuite\ParadigmTestSuite\bin\Debug\Microsoft.Scripting.Metadata.xml
+C:\Users\Cavaughn\Documents\GitHub\Software-Engineering\ParadigmTestSuite\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.csprojResolveAssemblyReference.cache
+C:\Users\Cavaughn\Documents\GitHub\Software-Engineering\ParadigmTestSuite\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.TestSuite.resources
+C:\Users\Cavaughn\Documents\GitHub\Software-Engineering\ParadigmTestSuite\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.Properties.Resources.resources
+C:\Users\Cavaughn\Documents\GitHub\Software-Engineering\ParadigmTestSuite\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.csproj.GenerateResource.Cache
+C:\Users\kumin\GitHub\Software-Engineering\ParadigmTestSuite\ParadigmTestSuite\bin\Debug\ParadigmTestSuite.exe.config
+C:\Users\kumin\GitHub\Software-Engineering\ParadigmTestSuite\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.exe
+C:\Users\kumin\GitHub\Software-Engineering\ParadigmTestSuite\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.pdb
+C:\Users\kumin\GitHub\Software-Engineering\ParadigmTestSuite\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.csprojResolveAssemblyReference.cache
+C:\Users\kumin\GitHub\Software-Engineering\ParadigmTestSuite\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.TestSuite.resources
+C:\Users\kumin\GitHub\Software-Engineering\ParadigmTestSuite\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.Properties.Resources.resources
+C:\Users\kumin\GitHub\Software-Engineering\ParadigmTestSuite\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.csproj.GenerateResource.Cache
+C:\Users\kumin\GitHub\Software-Engineering\ParadigmTestSuite\ParadigmTestSuite\bin\Debug\ParadigmTestSuite.exe
+C:\Users\kumin\GitHub\Software-Engineering\ParadigmTestSuite\ParadigmTestSuite\bin\Debug\ParadigmTestSuite.pdb
+C:\Users\kumin\GitHub\Software-Engineering\ParadigmTestSuite\ParadigmTestSuite\bin\Debug\IronPython.dll
+C:\Users\kumin\GitHub\Software-Engineering\ParadigmTestSuite\ParadigmTestSuite\bin\Debug\Microsoft.Scripting.dll
+C:\Users\kumin\GitHub\Software-Engineering\ParadigmTestSuite\ParadigmTestSuite\bin\Debug\Microsoft.Dynamic.dll
+C:\Users\kumin\GitHub\Software-Engineering\ParadigmTestSuite\ParadigmTestSuite\bin\Debug\Microsoft.Scripting.Metadata.dll
+C:\Users\kumin\GitHub\Software-Engineering\ParadigmTestSuite\ParadigmTestSuite\bin\Debug\IronPython.xml
+C:\Users\kumin\GitHub\Software-Engineering\ParadigmTestSuite\ParadigmTestSuite\bin\Debug\Microsoft.Scripting.xml
+C:\Users\kumin\GitHub\Software-Engineering\ParadigmTestSuite\ParadigmTestSuite\bin\Debug\Microsoft.Dynamic.xml
+C:\Users\kumin\GitHub\Software-Engineering\ParadigmTestSuite\ParadigmTestSuite\bin\Debug\Microsoft.Scripting.Metadata.xml
+C:\Users\Damien\Documents\Visual Studio 2017\Projects\ParadigmTestSuite\ParadigmTestSuite\bin\Debug\ParadigmTestSuite.exe.config
+C:\Users\Damien\Documents\Visual Studio 2017\Projects\ParadigmTestSuite\ParadigmTestSuite\bin\Debug\ParadigmTestSuite.exe
+C:\Users\Damien\Documents\Visual Studio 2017\Projects\ParadigmTestSuite\ParadigmTestSuite\bin\Debug\ParadigmTestSuite.pdb
+C:\Users\Damien\Documents\Visual Studio 2017\Projects\ParadigmTestSuite\ParadigmTestSuite\bin\Debug\IronPython.dll
+C:\Users\Damien\Documents\Visual Studio 2017\Projects\ParadigmTestSuite\ParadigmTestSuite\bin\Debug\Microsoft.Scripting.dll
+C:\Users\Damien\Documents\Visual Studio 2017\Projects\ParadigmTestSuite\ParadigmTestSuite\bin\Debug\Microsoft.Dynamic.dll
+C:\Users\Damien\Documents\Visual Studio 2017\Projects\ParadigmTestSuite\ParadigmTestSuite\bin\Debug\Microsoft.Scripting.Metadata.dll
+C:\Users\Damien\Documents\Visual Studio 2017\Projects\ParadigmTestSuite\ParadigmTestSuite\bin\Debug\IronPython.xml
+C:\Users\Damien\Documents\Visual Studio 2017\Projects\ParadigmTestSuite\ParadigmTestSuite\bin\Debug\Microsoft.Scripting.xml
+C:\Users\Damien\Documents\Visual Studio 2017\Projects\ParadigmTestSuite\ParadigmTestSuite\bin\Debug\Microsoft.Dynamic.xml
+C:\Users\Damien\Documents\Visual Studio 2017\Projects\ParadigmTestSuite\ParadigmTestSuite\bin\Debug\Microsoft.Scripting.Metadata.xml
+C:\Users\Damien\Documents\Visual Studio 2017\Projects\ParadigmTestSuite\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.csprojResolveAssemblyReference.cache
+C:\Users\Damien\Documents\Visual Studio 2017\Projects\ParadigmTestSuite\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.TestSuite.resources
+C:\Users\Damien\Documents\Visual Studio 2017\Projects\ParadigmTestSuite\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.Properties.Resources.resources
+C:\Users\Damien\Documents\Visual Studio 2017\Projects\ParadigmTestSuite\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.csproj.GenerateResource.Cache
+C:\Users\Damien\Documents\Visual Studio 2017\Projects\ParadigmTestSuite\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.exe
+C:\Users\Damien\Documents\Visual Studio 2017\Projects\ParadigmTestSuite\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.pdb
+C:\Users\Cavaughn\Documents\GitHub\Software-Engineering\ParadigmTestSuite v 1.2\ParadigmTestSuite\bin\Debug\ParadigmTestSuite.exe.config
+C:\Users\Cavaughn\Documents\GitHub\Software-Engineering\ParadigmTestSuite v 1.2\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.exe
+C:\Users\Cavaughn\Documents\GitHub\Software-Engineering\ParadigmTestSuite v 1.2\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.pdb
+C:\Users\Cavaughn\Documents\GitHub\Software-Engineering\ParadigmTestSuite v 1.2\ParadigmTestSuite\bin\Debug\ParadigmTestSuite.exe
+C:\Users\Cavaughn\Documents\GitHub\Software-Engineering\ParadigmTestSuite v 1.2\ParadigmTestSuite\bin\Debug\ParadigmTestSuite.pdb
+C:\Users\Cavaughn\Documents\GitHub\Software-Engineering\ParadigmTestSuite v 1.2\ParadigmTestSuite\bin\Debug\IronPython.dll
+C:\Users\Cavaughn\Documents\GitHub\Software-Engineering\ParadigmTestSuite v 1.2\ParadigmTestSuite\bin\Debug\Microsoft.Scripting.dll
+C:\Users\Cavaughn\Documents\GitHub\Software-Engineering\ParadigmTestSuite v 1.2\ParadigmTestSuite\bin\Debug\Microsoft.Dynamic.dll
+C:\Users\Cavaughn\Documents\GitHub\Software-Engineering\ParadigmTestSuite v 1.2\ParadigmTestSuite\bin\Debug\Microsoft.Scripting.Metadata.dll
+C:\Users\Cavaughn\Documents\GitHub\Software-Engineering\ParadigmTestSuite v 1.2\ParadigmTestSuite\bin\Debug\IronPython.xml
+C:\Users\Cavaughn\Documents\GitHub\Software-Engineering\ParadigmTestSuite v 1.2\ParadigmTestSuite\bin\Debug\Microsoft.Scripting.xml
+C:\Users\Cavaughn\Documents\GitHub\Software-Engineering\ParadigmTestSuite v 1.2\ParadigmTestSuite\bin\Debug\Microsoft.Dynamic.xml
+C:\Users\Cavaughn\Documents\GitHub\Software-Engineering\ParadigmTestSuite v 1.2\ParadigmTestSuite\bin\Debug\Microsoft.Scripting.Metadata.xml
+C:\Users\Cavaughn\Documents\GitHub\Software-Engineering\ParadigmTestSuite v 1.2\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.csprojResolveAssemblyReference.cache
+C:\Users\Cavaughn\Documents\GitHub\Software-Engineering\ParadigmTestSuite v 1.2\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.TestSuite.resources
+C:\Users\Cavaughn\Documents\GitHub\Software-Engineering\ParadigmTestSuite v 1.2\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.Properties.Resources.resources
+C:\Users\Cavaughn\Documents\GitHub\Software-Engineering\ParadigmTestSuite v 1.2\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.csproj.GenerateResource.Cache
+C:\Users\Cavaughn\Documents\GitHub\Software-Engineering\ParadigmTestSuite v3.0\ParadigmTestSuite\bin\Debug\ParadigmTestSuite.exe.config
+C:\Users\Cavaughn\Documents\GitHub\Software-Engineering\ParadigmTestSuite v3.0\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.exe
+C:\Users\Cavaughn\Documents\GitHub\Software-Engineering\ParadigmTestSuite v3.0\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.pdb
+C:\Users\Cavaughn\Documents\GitHub\Software-Engineering\ParadigmTestSuite v3.0\ParadigmTestSuite\bin\Debug\ParadigmTestSuite.exe
+C:\Users\Cavaughn\Documents\GitHub\Software-Engineering\ParadigmTestSuite v3.0\ParadigmTestSuite\bin\Debug\ParadigmTestSuite.pdb
+C:\Users\Cavaughn\Documents\GitHub\Software-Engineering\ParadigmTestSuite v3.0\ParadigmTestSuite\bin\Debug\IronPython.dll
+C:\Users\Cavaughn\Documents\GitHub\Software-Engineering\ParadigmTestSuite v3.0\ParadigmTestSuite\bin\Debug\Microsoft.Scripting.dll
+C:\Users\Cavaughn\Documents\GitHub\Software-Engineering\ParadigmTestSuite v3.0\ParadigmTestSuite\bin\Debug\Microsoft.Dynamic.dll
+C:\Users\Cavaughn\Documents\GitHub\Software-Engineering\ParadigmTestSuite v3.0\ParadigmTestSuite\bin\Debug\Microsoft.Scripting.Metadata.dll
+C:\Users\Cavaughn\Documents\GitHub\Software-Engineering\ParadigmTestSuite v3.0\ParadigmTestSuite\bin\Debug\IronPython.xml
+C:\Users\Cavaughn\Documents\GitHub\Software-Engineering\ParadigmTestSuite v3.0\ParadigmTestSuite\bin\Debug\Microsoft.Scripting.xml
+C:\Users\Cavaughn\Documents\GitHub\Software-Engineering\ParadigmTestSuite v3.0\ParadigmTestSuite\bin\Debug\Microsoft.Dynamic.xml
+C:\Users\Cavaughn\Documents\GitHub\Software-Engineering\ParadigmTestSuite v3.0\ParadigmTestSuite\bin\Debug\Microsoft.Scripting.Metadata.xml
+C:\Users\Cavaughn\Documents\GitHub\Software-Engineering\ParadigmTestSuite v3.0\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.csprojResolveAssemblyReference.cache
+C:\Users\Cavaughn\Documents\GitHub\Software-Engineering\ParadigmTestSuite v3.0\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.Properties.Resources.resources
+C:\Users\Cavaughn\Documents\GitHub\Software-Engineering\ParadigmTestSuite v3.0\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.Test_Suite.resources
+C:\Users\Cavaughn\Documents\GitHub\Software-Engineering\ParadigmTestSuite v3.0\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.csproj.GenerateResource.Cache
+C:\Users\Cavaughn\Documents\GitHub\Software-Engineering\ParadigmTestSuite v3.0\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.Test_ChildForm.resources
+C:\Users\Damien\Downloads\Software-Engineering-master\Software-Engineering-master\ParadigmTestSuite v3.0\ParadigmTestSuite\bin\Debug\ParadigmTestSuite.exe.config
+C:\Users\Damien\Downloads\Software-Engineering-master\Software-Engineering-master\ParadigmTestSuite v3.0\ParadigmTestSuite\bin\Debug\ParadigmTestSuite.exe
+C:\Users\Damien\Downloads\Software-Engineering-master\Software-Engineering-master\ParadigmTestSuite v3.0\ParadigmTestSuite\bin\Debug\ParadigmTestSuite.pdb
+C:\Users\Damien\Downloads\Software-Engineering-master\Software-Engineering-master\ParadigmTestSuite v3.0\ParadigmTestSuite\bin\Debug\IronPython.dll
+C:\Users\Damien\Downloads\Software-Engineering-master\Software-Engineering-master\ParadigmTestSuite v3.0\ParadigmTestSuite\bin\Debug\Microsoft.Scripting.dll
+C:\Users\Damien\Downloads\Software-Engineering-master\Software-Engineering-master\ParadigmTestSuite v3.0\ParadigmTestSuite\bin\Debug\Microsoft.Dynamic.dll
+C:\Users\Damien\Downloads\Software-Engineering-master\Software-Engineering-master\ParadigmTestSuite v3.0\ParadigmTestSuite\bin\Debug\Microsoft.Scripting.Metadata.dll
+C:\Users\Damien\Downloads\Software-Engineering-master\Software-Engineering-master\ParadigmTestSuite v3.0\ParadigmTestSuite\bin\Debug\IronPython.xml
+C:\Users\Damien\Downloads\Software-Engineering-master\Software-Engineering-master\ParadigmTestSuite v3.0\ParadigmTestSuite\bin\Debug\Microsoft.Scripting.xml
+C:\Users\Damien\Downloads\Software-Engineering-master\Software-Engineering-master\ParadigmTestSuite v3.0\ParadigmTestSuite\bin\Debug\Microsoft.Dynamic.xml
+C:\Users\Damien\Downloads\Software-Engineering-master\Software-Engineering-master\ParadigmTestSuite v3.0\ParadigmTestSuite\bin\Debug\Microsoft.Scripting.Metadata.xml
+C:\Users\Damien\Downloads\Software-Engineering-master\Software-Engineering-master\ParadigmTestSuite v3.0\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.csprojResolveAssemblyReference.cache
+C:\Users\Damien\Downloads\Software-Engineering-master\Software-Engineering-master\ParadigmTestSuite v3.0\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.Test_ChildForm.resources
+C:\Users\Damien\Downloads\Software-Engineering-master\Software-Engineering-master\ParadigmTestSuite v3.0\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.Properties.Resources.resources
+C:\Users\Damien\Downloads\Software-Engineering-master\Software-Engineering-master\ParadigmTestSuite v3.0\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.Test_Suite.resources
+C:\Users\Damien\Downloads\Software-Engineering-master\Software-Engineering-master\ParadigmTestSuite v3.0\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.csproj.GenerateResource.Cache
+C:\Users\Damien\Downloads\Software-Engineering-master\Software-Engineering-master\ParadigmTestSuite v3.0\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.exe
+C:\Users\Damien\Downloads\Software-Engineering-master\Software-Engineering-master\ParadigmTestSuite v3.0\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.pdb
+C:\Users\Damien\Downloads\Software-Engineering-master\Software-Engineering-master\ParadigmTestSuite v 4.0\ParadigmTestSuite\bin\Debug\ParadigmTestSuite.exe.config
+C:\Users\Damien\Downloads\Software-Engineering-master\Software-Engineering-master\ParadigmTestSuite v 4.0\ParadigmTestSuite\bin\Debug\ParadigmTestSuite.exe
+C:\Users\Damien\Downloads\Software-Engineering-master\Software-Engineering-master\ParadigmTestSuite v 4.0\ParadigmTestSuite\bin\Debug\ParadigmTestSuite.pdb
+C:\Users\Damien\Downloads\Software-Engineering-master\Software-Engineering-master\ParadigmTestSuite v 4.0\ParadigmTestSuite\bin\Debug\IronPython.dll
+C:\Users\Damien\Downloads\Software-Engineering-master\Software-Engineering-master\ParadigmTestSuite v 4.0\ParadigmTestSuite\bin\Debug\Microsoft.Scripting.dll
+C:\Users\Damien\Downloads\Software-Engineering-master\Software-Engineering-master\ParadigmTestSuite v 4.0\ParadigmTestSuite\bin\Debug\Microsoft.Dynamic.dll
+C:\Users\Damien\Downloads\Software-Engineering-master\Software-Engineering-master\ParadigmTestSuite v 4.0\ParadigmTestSuite\bin\Debug\Microsoft.Scripting.Metadata.dll
+C:\Users\Damien\Downloads\Software-Engineering-master\Software-Engineering-master\ParadigmTestSuite v 4.0\ParadigmTestSuite\bin\Debug\IronPython.xml
+C:\Users\Damien\Downloads\Software-Engineering-master\Software-Engineering-master\ParadigmTestSuite v 4.0\ParadigmTestSuite\bin\Debug\Microsoft.Scripting.xml
+C:\Users\Damien\Downloads\Software-Engineering-master\Software-Engineering-master\ParadigmTestSuite v 4.0\ParadigmTestSuite\bin\Debug\Microsoft.Dynamic.xml
+C:\Users\Damien\Downloads\Software-Engineering-master\Software-Engineering-master\ParadigmTestSuite v 4.0\ParadigmTestSuite\bin\Debug\Microsoft.Scripting.Metadata.xml
+C:\Users\Damien\Downloads\Software-Engineering-master\Software-Engineering-master\ParadigmTestSuite v 4.0\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.csprojResolveAssemblyReference.cache
+C:\Users\Damien\Downloads\Software-Engineering-master\Software-Engineering-master\ParadigmTestSuite v 4.0\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.Test_ChildForm.resources
+C:\Users\Damien\Downloads\Software-Engineering-master\Software-Engineering-master\ParadigmTestSuite v 4.0\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.Properties.Resources.resources
+C:\Users\Damien\Downloads\Software-Engineering-master\Software-Engineering-master\ParadigmTestSuite v 4.0\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.Test_Suite.resources
+C:\Users\Damien\Downloads\Software-Engineering-master\Software-Engineering-master\ParadigmTestSuite v 4.0\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.csproj.GenerateResource.Cache
+C:\Users\Damien\Downloads\Software-Engineering-master\Software-Engineering-master\ParadigmTestSuite v 4.0\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.exe
+C:\Users\Damien\Downloads\Software-Engineering-master\Software-Engineering-master\ParadigmTestSuite v 4.0\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.pdb
+C:\Users\Cavaughn\Documents\GitHub\Software-Engineering\ParadigmTestSuite v 4.0\ParadigmTestSuite\bin\Debug\ParadigmTestSuite.exe.config
+C:\Users\Cavaughn\Documents\GitHub\Software-Engineering\ParadigmTestSuite v 4.0\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.exe
+C:\Users\Cavaughn\Documents\GitHub\Software-Engineering\ParadigmTestSuite v 4.0\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.pdb
+C:\Users\Cavaughn\Documents\GitHub\Software-Engineering\ParadigmTestSuite v 4.0\ParadigmTestSuite\bin\Debug\ParadigmTestSuite.exe
+C:\Users\Cavaughn\Documents\GitHub\Software-Engineering\ParadigmTestSuite v 4.0\ParadigmTestSuite\bin\Debug\ParadigmTestSuite.pdb
+C:\Users\Cavaughn\Documents\GitHub\Software-Engineering\ParadigmTestSuite v 4.0\ParadigmTestSuite\bin\Debug\IronPython.dll
+C:\Users\Cavaughn\Documents\GitHub\Software-Engineering\ParadigmTestSuite v 4.0\ParadigmTestSuite\bin\Debug\Microsoft.Scripting.dll
+C:\Users\Cavaughn\Documents\GitHub\Software-Engineering\ParadigmTestSuite v 4.0\ParadigmTestSuite\bin\Debug\Microsoft.Dynamic.dll
+C:\Users\Cavaughn\Documents\GitHub\Software-Engineering\ParadigmTestSuite v 4.0\ParadigmTestSuite\bin\Debug\Microsoft.Scripting.Metadata.dll
+C:\Users\Cavaughn\Documents\GitHub\Software-Engineering\ParadigmTestSuite v 4.0\ParadigmTestSuite\bin\Debug\IronPython.xml
+C:\Users\Cavaughn\Documents\GitHub\Software-Engineering\ParadigmTestSuite v 4.0\ParadigmTestSuite\bin\Debug\Microsoft.Scripting.xml
+C:\Users\Cavaughn\Documents\GitHub\Software-Engineering\ParadigmTestSuite v 4.0\ParadigmTestSuite\bin\Debug\Microsoft.Dynamic.xml
+C:\Users\Cavaughn\Documents\GitHub\Software-Engineering\ParadigmTestSuite v 4.0\ParadigmTestSuite\bin\Debug\Microsoft.Scripting.Metadata.xml
+C:\Users\Cavaughn\Documents\GitHub\Software-Engineering\ParadigmTestSuite v 4.0\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.csprojResolveAssemblyReference.cache
+C:\Users\Cavaughn\Documents\GitHub\Software-Engineering\ParadigmTestSuite v 4.0\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.Test_ChildForm.resources
+C:\Users\Cavaughn\Documents\GitHub\Software-Engineering\ParadigmTestSuite v 4.0\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.Properties.Resources.resources
+C:\Users\Cavaughn\Documents\GitHub\Software-Engineering\ParadigmTestSuite v 4.0\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.Test_Suite.resources
+C:\Users\Cavaughn\Documents\GitHub\Software-Engineering\ParadigmTestSuite v 4.0\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.csproj.GenerateResource.Cache
+C:\Users\Cavaughn\Desktop\ParadigmTestSuite v 4.0\ParadigmTestSuite\bin\Debug\ParadigmTestSuite.exe.config
+C:\Users\Cavaughn\Desktop\ParadigmTestSuite v 4.0\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.exe
+C:\Users\Cavaughn\Desktop\ParadigmTestSuite v 4.0\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.pdb
+C:\Users\Cavaughn\Desktop\ParadigmTestSuite v 4.0\ParadigmTestSuite\bin\Debug\ParadigmTestSuite.exe
+C:\Users\Cavaughn\Desktop\ParadigmTestSuite v 4.0\ParadigmTestSuite\bin\Debug\ParadigmTestSuite.pdb
+C:\Users\Cavaughn\Desktop\ParadigmTestSuite v 4.0\ParadigmTestSuite\bin\Debug\IronPython.dll
+C:\Users\Cavaughn\Desktop\ParadigmTestSuite v 4.0\ParadigmTestSuite\bin\Debug\Microsoft.Scripting.dll
+C:\Users\Cavaughn\Desktop\ParadigmTestSuite v 4.0\ParadigmTestSuite\bin\Debug\Microsoft.Dynamic.dll
+C:\Users\Cavaughn\Desktop\ParadigmTestSuite v 4.0\ParadigmTestSuite\bin\Debug\Microsoft.Scripting.Metadata.dll
+C:\Users\Cavaughn\Desktop\ParadigmTestSuite v 4.0\ParadigmTestSuite\bin\Debug\Microsoft.Dynamic.xml
+C:\Users\Cavaughn\Desktop\ParadigmTestSuite v 4.0\ParadigmTestSuite\bin\Debug\Microsoft.Scripting.Metadata.xml
+C:\Users\Cavaughn\Desktop\ParadigmTestSuite v 4.0\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.Test_ChildForm.resources
+C:\Users\Cavaughn\Desktop\ParadigmTestSuite v 4.0\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.Properties.Resources.resources
+C:\Users\Cavaughn\Desktop\ParadigmTestSuite v 4.0\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.Test_Suite.resources
+C:\Users\Cavaughn\Desktop\ParadigmTestSuite v 4.0\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.csproj.GenerateResource.Cache
+C:\Users\Cavaughn\Desktop\ParadigmTestSuite v 4.0\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.csprojResolveAssemblyReference.cache

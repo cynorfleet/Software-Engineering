@@ -1,23 +1,6 @@
 --------------------------------------------
 Functions:
-void makeFiles(ofstream &outfile, ifstream &infile)
-int readNumCDs(ifstream &infile)
-string readCDName(ifstream &infile)
-void readGarbageLine(ifstream &infile)
-void printCD(ofstream &outfile, string name)
-void printCollection(ofstream &outfile, string name, int collection)
-void printCase(ofstream &outfile, int caseNum)
-void outroText(ofstream &outfile)
-int main()
 --------------------------------------------
 Type:
-string
-string
-int
 --------------------------------------------
 Inputs:
-name
-garbage
-inName
-outName
-numCD
