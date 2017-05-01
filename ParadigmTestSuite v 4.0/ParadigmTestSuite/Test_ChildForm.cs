@@ -167,15 +167,15 @@ namespace ParadigmTestSuite
 
                     foreach (string i in variableBox.Items)
                     {
-                        variPairs.Add("\nInput variable: ");
+                        variPairs.Add("\n\nInput variable: ");
                             variPairs.Add(i);
-                            variPairs.Add("\nTested using values: ");
+                            variPairs.Add("\n\nTested using values: ");
                             variPairs.Add(inputBox.Items[j].ToString());
                             j++;
                     }
                     variPairs.ToArray<string>();
 
-                    using (System.IO.StreamWriter file = new System.IO.StreamWriter(saveFileDialog1.FileName))
+                    using (System.IO.StreamWriter file = new System.IO.StreamWriter(saveFileDialog1.FileName + ".txt"))
                     {
                         foreach (string line in lines)
                         {
@@ -192,7 +192,7 @@ namespace ParadigmTestSuite
                     saveFileDialog1.Filter = "cpp (*.cpp)|*.cpp";
                     saveFileDialog1.FilterIndex = 1;
                     saveFileDialog1.RestoreDirectory = true;
-                    using (System.IO.StreamWriter file = new System.IO.StreamWriter(saveFileDialog1.FileName))
+                    using (System.IO.StreamWriter file = new System.IO.StreamWriter(saveFileDialog1.FileName + ".cpp"))
                     {
                         foreach (string vline in inputBox.Items)
                         {
