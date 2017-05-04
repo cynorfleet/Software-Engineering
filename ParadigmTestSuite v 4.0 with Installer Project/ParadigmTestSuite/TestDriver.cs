@@ -1,4 +1,11 @@
-﻿using System;
+﻿/*
+ Programmers: Cavaughn Browne, Damien Moeller, Christian Norfleet and Aimee Phillips
+
+ TestDriver.cs parses source code and generates test a test driver for the class
+ Should be used with .h files only (with only public methods).
+*/
+
+using System;
 using System.IO;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +21,7 @@ namespace ParadigmTestSuite
 {
     public struct Function
     {
-        
+
         public Function(string type, string fName)
         {
             parameterList = new List<string>();
@@ -34,7 +41,7 @@ namespace ParadigmTestSuite
         private List<Function> functions;
         private string pythonOutfile;
         private Random rand;
-        
+
 
         public TestDriver()
         {
@@ -43,6 +50,9 @@ namespace ParadigmTestSuite
             rand = new Random();
         }
 
+        //Purpose: Read the source file and analyze it for inputs and function data
+        //Requires: string sourceFileName
+        //Returns nothing
         public void readFile(string sourceFileName)
         {
             List<String> usr_functs = new List<String>();
@@ -50,12 +60,12 @@ namespace ParadigmTestSuite
             List<String> usr_inputs = new List<String>();
 
             runPythonScript(sourceFileName, usr_functs, usr_declarations, usr_inputs);
-            
+
             //parse function data
             parseMethods(usr_functs);
         }
 
-      
+
 
         //Purpose:Runs a python script that will parse the source file and write data about inputs,
         //and functions to an output file called data.dat.
@@ -115,12 +125,12 @@ namespace ParadigmTestSuite
             f.name = className;
             functions.Add(f);
 
-            foreach(string s in usr_functs)
+            foreach (string s in usr_functs)
             {
                 foreach (Match m in reg.Matches(s))
                 {
                     l.Add(m.Value);
-                    
+
                 }
 
                 if (l[0] == "void" || l[0] == "char" || l[0] == "int" ||
@@ -134,8 +144,8 @@ namespace ParadigmTestSuite
                     f = new Function("", l[0]);
                     start = 1;
                 }
-                
-                for(int i = start; i < l.Count; i++)
+
+                for (int i = start; i < l.Count; i++)
                 {
                     if (l[i] == "char" || l[i] == "int" ||
                         l[i] == "string" || l[i] == "double" || l[i] == "float")
@@ -156,7 +166,12 @@ namespace ParadigmTestSuite
         //Returns: List<string> - a test driver script
         public List<string> generateDriver()
         {
-            string driver = "#include <iostream>\n";
+            string driver;
+
+            //Shuffle list of functions or methods
+            Shuffle(functions);
+
+            driver = "#include <iostream>\n";
             driver += "#include <string>\n";
             driver += String.Format("#include\"{0}.h\" \n", className);
 
@@ -178,7 +193,7 @@ int main()
             {
                 //create parameterized constructor object
                 if (f.name == className && f.parameterList != null && f.parameterList.Count != 0)
-                {                   
+                {
                     vars = className + " classObject(";
 
                     first = true;
@@ -194,11 +209,11 @@ int main()
                     }
                     vars += ");\n";
                     driver += vars;
-                  
+
                 }//end if
 
                 //f is not a copy constructor, construct a call for that method
-                if(f.name != className)
+                if (f.name != className)
                 {
                     //first figure out what type the method returns
                     //and create a variable to hold the returned value
@@ -235,7 +250,7 @@ int main()
                     if (f.returnType != "void")
                     {
                         vars = "var" + Convert.ToString(varCount - 1) + " = ";
-                                     
+
                     }
 
                     vars += ("classObject." + f.name + "(");
@@ -246,11 +261,11 @@ int main()
                     {
                         if (!first)
                             vars += ", ";
-                      
+
                         //quotes go around strings and chars
                         if (m == "string")
                             vars += "\"" + randomDatGen(m).ToString() + "\"";
-                        else if(m == "char")
+                        else if (m == "char")
                             vars += "\'" + randomDatGen(m).ToString() + "\'";
                         else
                             vars += randomDatGen(m).ToString();
@@ -269,7 +284,7 @@ int main()
             driver += vars;
 
             //Store each line of the driver in a list
-           List<string> driverLines = new List<string>();
+            List<string> driverLines = new List<string>();
             using (StringReader r = new StringReader(driver))
             {
                 string line;
@@ -279,7 +294,7 @@ int main()
                 }
             }
 
-                return driverLines;
+            return driverLines;
         }
 
         //Purpose: Generates random data
@@ -288,15 +303,15 @@ int main()
         private string randomDatGen(string type)
         {
             string randomDat = "";
-         
+
             if (type == "int")
             {
                 int randomInt;
-              
+
                 //gets a random integer in the range
                 randomInt = rand.Next(-10, 11);
                 randomDat = randomInt.ToString();
-                                  
+
             }
             else if (type == "char")
             {
@@ -312,7 +327,7 @@ int main()
 
                 //generate a number of random floating point numbers                   
                 randomFloat = rand.NextDouble() * (11 - (-10)) + (-10);
-                randomDat = randomFloat.ToString();                               
+                randomDat = randomFloat.ToString();
             }
 
             else if (type == "string")
@@ -321,7 +336,7 @@ int main()
                 char randomChar;
                 int sLength;
 
-                  
+
                 //get a random string length
                 sLength = rand.Next(0, 11);
 
@@ -332,10 +347,27 @@ int main()
                     randomChar = Convert.ToChar(rand.Next(65, 127));
                     randomString += randomChar; ;
                 }
-                 randomDat = randomString;
+                randomDat = randomString;
 
             }
             return randomDat;
+        }
+
+        //Purpose: Shuffles a List<Function>
+        //Requires: List<Function> list
+        //Returns: nothing
+        private void Shuffle(List<Function> list)
+        {
+            int n = list.Count;
+            rand = new Random();
+            while (n > 1)
+            {
+                int k = (rand.Next(0, n) % n);
+                n--;
+                Function value = list[k];
+                list[k] = list[n];
+                list[n] = value;
+            }
         }
 
         //Property that returns the list of source code functions

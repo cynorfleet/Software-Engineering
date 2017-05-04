@@ -171,3 +171,18 @@ C:\Users\Cavaughn\Desktop\ParadigmTestSuite v 4.0\ParadigmTestSuite\obj\Debug\Pa
 C:\Users\Cavaughn\Desktop\ParadigmTestSuite v 4.0\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.Test_Suite.resources
 C:\Users\Cavaughn\Desktop\ParadigmTestSuite v 4.0\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.csproj.GenerateResource.Cache
 C:\Users\Cavaughn\Desktop\ParadigmTestSuite v 4.0\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.csprojResolveAssemblyReference.cache
+C:\Users\Cavaughn\Documents\GitHub\Software-Engineering\ParadigmTestSuite v 4.0 with Installer Project\ParadigmTestSuite\bin\Debug\ParadigmTestSuite.exe.config
+C:\Users\Cavaughn\Documents\GitHub\Software-Engineering\ParadigmTestSuite v 4.0 with Installer Project\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.exe
+C:\Users\Cavaughn\Documents\GitHub\Software-Engineering\ParadigmTestSuite v 4.0 with Installer Project\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.pdb
+C:\Users\Cavaughn\Documents\GitHub\Software-Engineering\ParadigmTestSuite v 4.0 with Installer Project\ParadigmTestSuite\bin\Debug\ParadigmTestSuite.exe
+C:\Users\Cavaughn\Documents\GitHub\Software-Engineering\ParadigmTestSuite v 4.0 with Installer Project\ParadigmTestSuite\bin\Debug\ParadigmTestSuite.pdb
+C:\Users\Cavaughn\Documents\GitHub\Software-Engineering\ParadigmTestSuite v 4.0 with Installer Project\ParadigmTestSuite\bin\Debug\IronPython.dll
+C:\Users\Cavaughn\Documents\GitHub\Software-Engineering\ParadigmTestSuite v 4.0 with Installer Project\ParadigmTestSuite\bin\Debug\Microsoft.Scripting.dll
+C:\Users\Cavaughn\Documents\GitHub\Software-Engineering\ParadigmTestSuite v 4.0 with Installer Project\ParadigmTestSuite\bin\Debug\Microsoft.Dynamic.dll
+C:\Users\Cavaughn\Documents\GitHub\Software-Engineering\ParadigmTestSuite v 4.0 with Installer Project\ParadigmTestSuite\bin\Debug\Microsoft.Scripting.Metadata.dll
+C:\Users\Cavaughn\Documents\GitHub\Software-Engineering\ParadigmTestSuite v 4.0 with Installer Project\ParadigmTestSuite\bin\Debug\Microsoft.Dynamic.xml
+C:\Users\Cavaughn\Documents\GitHub\Software-Engineering\ParadigmTestSuite v 4.0 with Installer Project\ParadigmTestSuite\bin\Debug\Microsoft.Scripting.Metadata.xml
+C:\Users\Cavaughn\Documents\GitHub\Software-Engineering\ParadigmTestSuite v 4.0 with Installer Project\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.Test_ChildForm.resources
+C:\Users\Cavaughn\Documents\GitHub\Software-Engineering\ParadigmTestSuite v 4.0 with Installer Project\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.Properties.Resources.resources
+C:\Users\Cavaughn\Documents\GitHub\Software-Engineering\ParadigmTestSuite v 4.0 with Installer Project\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.Test_Suite.resources
+C:\Users\Cavaughn\Documents\GitHub\Software-Engineering\ParadigmTestSuite v 4.0 with Installer Project\ParadigmTestSuite\obj\Debug\ParadigmTestSuite.csproj.GenerateResource.Cache
